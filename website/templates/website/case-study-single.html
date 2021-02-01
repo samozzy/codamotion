@@ -1,0 +1,9 @@
+{% extends 'website/structure/base.html' %}
+
+{% block content %}
+	<h1 class="text-left">{{ case_study }}</h1>
+	<p class="lead">{{ case_study.lead_text }}</p>
+	{% if case_study.image %}<img class="img-responsive mx-auto m-3" src="{{ MEDIA_URL }}/{{ case_study.image }}" alt="{{ case_study }}">{% endif %}
+	{{ case_study.body_text | linebreaks }}
+
+{% endblock %}

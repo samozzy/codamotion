@@ -1,0 +1,15 @@
+						{% for message in messages %}{% spaceless %}
+							<div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %} alert-dismissable fade show" role="alert">
+								<div class="d-flex justify-content-between">
+									<p class="mt-0">
+										{% if message.tags == 'alert' %}
+											<i class="fa fa-fw fa-exclamation-circle"></i>&nbsp;
+										{% else %}
+											<i class="fa fa-fw fa-info-circle"></i>&nbsp;
+										{% endif %}	
+										{{ message }}
+									</p>
+									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								</div>
+							</div>{% endspaceless %}
+						{% endfor %}

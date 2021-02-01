@@ -1,0 +1,28 @@
+<div class="accordion mt-4" id="coda-accordion_{{ id }}">
+	{% for item in items %}
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="acc_{{ id }}_heading_{{ forloop.counter }}">
+				<button class="accordion-button {% if forloop.first %}active{% else %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#acc_{{ id }}_collapse_{{ forloop.counter }}" aria-expanded="true" aria-controls="acc_{{ id }}_collapse_{{ forloop.counter }}">
+					<strong>{{ item }}</strong>
+				</button>
+			</h2>
+			<div id="acc_{{ id }}_collapse_{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="acc_{{ id }}_heading_{{ forloop.counter }}" data-bs-parent="#coda-accordion_{{ id }}">
+				<div class="accordion-body">
+					<div class="row">
+						{% if item.image %}
+							<div class="col-md-4">
+								<img class="img-responsive" src="{{ MEDIA_URL }}/{{ item.image }}" alt='{{ item }}'>
+							</div>
+						{% endif %}
+						<div class="col accordion-content d-flex">
+							{{ item.body_text | linebreaks }}
+							{% if item.link %}
+								<a class="btn btn-primary w-75 align-self-end mx-auto" role="button" href="{{ item.link }}">More information</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

@@ -1,0 +1,29 @@
+{
+  "name": "codamotion",
+  "version": "0.1.0",
+  "description": "Codamotion Website, based in Django",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css_dev": "sass --no-source-map --watch --style=expanded website/static/website/css/codamotion.scss website/static/website/codamotion.css",
+    "css_prod": "sass --no-source-map --style=compressed website/static/website/css/codamotion.scss website/static/website/codamotion.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/samozzy/codamotion"
+  },
+  "author": "Sam Osborne",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta1",
+    "child-process": "^1.0.2",
+    "gulp-changed": "^4.0.2",
+    "gulp-exec": "^5.0.0",
+    "gulp-shell": "^0.8.0",
+    "sass": "^1.32.5"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}

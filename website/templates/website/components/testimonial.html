@@ -1,0 +1,11 @@
+{% load static %}
+			<div class="container-fluid testimonial-block striped-background" style="background-image:url({% static 'website/neurons.jpg' %}">
+				<figure>
+					<blockquote class="blockquote">
+						"{{ page.testimonial.quote }}"
+					</blockquote>
+					<figcaption class="blockquote-footer">
+						{{ page.testimonial.source }}
+					</figcaption>
+				</figure>
+			</div>

@@ -2,14 +2,20 @@ venv/
 *pycache*
 *sqlite3*
 
-*node_modules/
+*/.sass-cache/*
+
+node_modules/
 
 *DS_Store*
 
 # These should be distributed and then placed here on build using `collectstatic`
-
-codamotion/static/
+/static/
+# Just in case 
+!website/static/ 
 
 # Wordpress legacy files
 wwwroot/
 wordpress*/
+
+# Developer notes
+todo/ 

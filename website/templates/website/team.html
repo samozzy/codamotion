@@ -1,0 +1,16 @@
+{% extends 'website/structure/base.html' %}
+
+{% block content %}
+	{% if management %}
+		<h2 class="mb-5">Management</h2>
+		{% include 'website/components/people.html' with people=management %}
+	{% endif %}
+	{% if key_contacts %}
+		<h2 class="mb-5">Key Contacts</h2>
+		{% include 'website/components/people.html' with people=key_contacts %}
+	{% endif %}
+	{% if advisors %}
+		<h2 class="mb-5">Advisors</h2>
+		{% include 'website/components/people.html' with people=advisors %}
+	{% endif %}
+{% endblock %}

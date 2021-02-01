@@ -1,0 +1,17 @@
+{% extends 'website/structure/base.html' %}
+
+{% block content %}
+	<h1>Forthcoming Events</h1>
+	{% if forthcoming_events %}
+		{% include 'website/components/accordion.html' with items=forthcoming_events id='forthcoming' %}
+	{% else %}
+		<p><em>There are no forthcoming events.</em></p>
+	{% endif %}
+	<h1>Past Events</h1>
+	{% if past_events %}
+		{% include 'website/components/accordion.html' with items=past_events id='past' %}
+	{% else %}
+		<p><em>There are no past events.</em></p>
+	{% endif %}
+	<br>
+{% endblock %}

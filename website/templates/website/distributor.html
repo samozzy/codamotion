@@ -1,0 +1,39 @@
+{% extends 'website/structure/base.html' %}
+
+{% block content %}
+
+	<div class="row">
+		<div class="col-md-3 primary-column">
+			<h2>Contacts</h2>
+		</div>
+		<div class="col secondary-column py-4">
+			{% for contact in contacts %}
+				<dl>
+					<dt>{% if forloop.first %}Head Office{% else %}{{ contact.name }}{% endif %}
+					{% if contact.email %}<dd><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></dd>{% endif %}
+					<dd>{{ contact.address | linebreaks }}</dd>
+					<dd>{{ contact.phone_number | default:"" }}</dd>
+				</dl>
+			{% endfor %}
+		</div>
+	</div>
+	{% if distributors %}
+		<div class="row">
+			<div class="col-md-3 primary-column">
+				<h2>Distributors</h2>
+			</div>
+			<div class="col secondary-column py-4">
+				{% for distributor in distributors %}
+					<dl>
+						<dd>{{ distributor.area }}</dd>
+						<dt>{{ distributor.name }}</dt>
+						{% if distributor.website %}<dd><a href="{{ distributor.website }}">{{ distributor.website }}</a></dd>{% endif %}
+						<dd>{{ distributor.address | linebreaks }}</dd>
+						<dd>{{ distributor.phone_number | default:"" }}</dd>
+					</dl>
+					<hr class="my-5">
+				{% endfor %}
+			</div>
+		</div>
+	{% endif %}
+{% endblock %}

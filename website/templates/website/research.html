@@ -1,0 +1,33 @@
+{% extends 'website/structure/base.html' %}
+
+{% block content %}
+
+	<!-- Content block -->
+
+	{% if reasons %}
+		{% include 'website/components/reasons.html' with items=reasons header='Research Facilities' %}
+	{% endif %}
+
+	{% if applications %}
+	<hr>
+		{% include 'website/components/grid-list.html' with items=applications %}
+		<hr>
+		{% for application in applications %}
+			<div class="row">
+				<h2 class="mb-2 text-muted">Research Application</h2>
+				<h2 class="mb-4">{{ application.title }}</h2>
+				{{ application.body_text | linebreaks }}
+				{% if application.product_link %}
+					<div class="px-4">
+						<h3 class="my-3 text-muted">Solutions:</h3>
+						{% include 'website/components/grid-list.html' with items=application.product_link %}
+						<!-- TODO: Make this the Sadie effect?? -->
+					</div>
+				{% endif %}
+			</div>
+		{% endfor %}
+	{% endif %}
+
+<!-- TODO: Related items -->
+
+{% endblock %}

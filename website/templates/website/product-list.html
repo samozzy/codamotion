@@ -1,0 +1,40 @@
+{% extends 'website/structure/base.html' %}
+
+{% block content %}
+	{% if products.count >= 4 %}
+		{% include 'website/components/grid-list.html' with items=products %}
+	{% endif %}
+	{% for product in products %}
+		{% if product.get_components %}
+		<div class="card my-4 style-color-lxmt-bg">
+			<div class="card-body px-4">
+		{% endif %}
+				<div class="row">
+					<div class="col product-content">
+						<h2>{{ product.title }}</h2>
+						{{ product.body_text | linebreaks }}
+					</div>
+					{% if product.image %}
+						<div class="col-md-6">
+							<img class="img-responsive" src="{{ MEDIA_URL }}/{{ product.image }}" alt="{{ product }}">
+						</div>
+					{% endif %}
+				</div>
+				{% if product.get_components %}
+				<div class="row">
+					<div class="col-12 product-component">
+						<h2>Components</h2>
+						{% include 'website/components/tabs.html' with components=product.get_components %}
+					</div>
+				</div>
+				{% endif %}
+		{% if product.get_components %}
+			</div>
+		</div>
+		{% endif %}
+		{% if not forloop.last %}
+			<hr class="my-5">
+		{% endif %}
+	{% endfor %}
+
+{% endblock %}

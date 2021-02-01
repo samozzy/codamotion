@@ -1,0 +1,26 @@
+{% extends 'website/structure/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block full_width %}
+	<div class="container-fluid">
+		<div class="row striped-background text-light p-5" style="background-image:url({% static 'website/neurons.jpg' %})">
+			<div class="primary-column">
+				<h2 class="mt-1">Vacancies</h2>
+			</div>
+			<div class="secondary-column">
+				{% if vacancies %}
+					{% for vacancy in vacancies %}
+						<h3>{{ vacancy.title }}<br><small>{{ vacancy.deadline }}</h3>
+						{{ vacancy.body_text | linebreaks }}
+					{% endfor %}
+				{% else %}
+					<p>We have no specific vacancies at present but you are invited to submit speculative applications to careers@codamotion.com.</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
