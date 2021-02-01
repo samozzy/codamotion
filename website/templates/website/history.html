@@ -1,15 +1,5 @@
 {% extends 'website/structure/base.html' %}
 {% load static %}
-
-{% block content %}
-	<h2>History</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-{% endblock %}
 {% block full_width %}
 	<div class="container-fluid">
 		{% for event in history %}
@@ -20,7 +10,7 @@
 					</div>
 				{% endif %}
 				<div class="secondary-column">
-					<h3>{{ event.year }}</h3>
+					<h3>{{ event.title }}</h3>
 					{{ event.body_text | linebreaks }}
 				</div>
 			</div>

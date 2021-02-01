@@ -14,7 +14,7 @@
 			<div class="secondary-column">
 				{% if vacancies %}
 					{% for vacancy in vacancies %}
-						<h3>{{ vacancy.title }}<br><small>{{ vacancy.deadline }}</h3>
+						<h3>{{ vacancy.title }}<br><small>{{ vacancy.deadline }}</small></h3>
 						{{ vacancy.body_text | linebreaks }}
 					{% endfor %}
 				{% else %}

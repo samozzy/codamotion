@@ -2,14 +2,14 @@
 
 {% block content %}
 
-	<div class="row">
-		<div class="col-md-3 primary-column">
+	<div class="row mt-5">
+		<div class="primary-column">
 			<h2>Contacts</h2>
 		</div>
-		<div class="col secondary-column py-4">
+		<div class="secondary-column py-4">
 			{% for contact in contacts %}
 				<dl>
-					<dt>{% if forloop.first %}Head Office{% else %}{{ contact.name }}{% endif %}
+					<dt class="h3 mt-4 pt-3">{% if forloop.first %}Head Office{% else %}{{ contact.name }}{% endif %}
 					{% if contact.email %}<dd><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></dd>{% endif %}
 					<dd>{{ contact.address | linebreaks }}</dd>
 					<dd>{{ contact.phone_number | default:"" }}</dd>
@@ -19,13 +19,13 @@
 	</div>
 	{% if distributors %}
 		<div class="row">
-			<div class="col-md-3 primary-column">
+			<div class="primary-column">
 				<h2>Distributors</h2>
 			</div>
-			<div class="col secondary-column py-4">
+			<div class="secondary-column py-4">
 				{% for distributor in distributors %}
 					<dl>
-						<dd>{{ distributor.area }}</dd>
+						<dd class="h3 mt-4 pt-3">{{ distributor.area }}</dd>
 						<dt>{{ distributor.name }}</dt>
 						{% if distributor.website %}<dd><a href="{{ distributor.website }}">{{ distributor.website }}</a></dd>{% endif %}
 						<dd>{{ distributor.address | linebreaks }}</dd>

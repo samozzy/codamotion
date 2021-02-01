@@ -1,6 +1,7 @@
 {% extends 'website/structure/base.html' %}
 
 {% block content %}
+{% if products %}
 	{% if products.count >= 4 %}
 		{% include 'website/components/grid-list.html' with items=products %}
 	{% endif %}
@@ -36,5 +37,8 @@
 			<hr class="my-5">
 		{% endif %}
 	{% endfor %}
+{% else %}
+	<p><em>There are no products in this category</em></p>
+{% endif %}
 
 {% endblock %}
