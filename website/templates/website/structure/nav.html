@@ -17,21 +17,48 @@
 		</button>
 		<div class="collapse navbar-collapse" id="codamotion-navbar">
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-movement" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Movement Analysis</a>
+					<ul class="dropdown-menu" aria-labelledby="navbar-dropdown-movement">
+						<li>
+							<a class="dropdown-item" href="{% url 'website:mvmt-research' %}">Research Systems</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="{% url 'website:mvmt-clinical' %}">Clinical Facilities</a>
+						</li>
+					</ul>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href='#' id="navbar-dropdown-product" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 					Products</a>
-					<ul class="dropdown-menu" aria-labelledby="Product dropdown">
-						<li><a class="dropdown-item" href="#">3D Models</a></li>
+					<ul class="dropdown-menu" aria-labelledby="navbar-dropdown-product">
+						{% for p_type in product_type_list %}
+							{% if p_type.get_products %}
+								<li>
+									<a class="dropdown-item" href="{% url 'website:product-list' p_type.slug %}">{{ p_type }}</a>
+								</li>
+							{% endif %}
+						{% endfor %}
 					</ul>
 				</li>
 				{% for item in header_menu %}
-				<li class="nav-item">
-					<a class="nav-link">{{ item }}</a>
-				</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'website:pages' item.slug %}">{{ item }}</a>
+					</li>
 				{% endfor %}
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+					<ul class="dropdown-menu" aria-labelledby="navbar-dropdown-about">
+						<li><a class="dropdown-item" href="{% url 'website:the-team' %}">Team</a></li>
+						<li><a class="dropdown-item" href="{% url 'website:history' %}">History</a></li>
+						<li><a class="dropdown-item" href="{% url 'website:vision-ethos' %}">Vision & Ethos</a></li>
+						<li><a class="dropdown-item" href="{% url 'website:event-list' %}">Forthcoming Events</a></li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'website:contact' %}">Contact</a>
+				</li>
 			</ul>
 		</div>
 	</div>

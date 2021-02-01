@@ -14,6 +14,7 @@ class User(AbstractUser):
 class BaseModel(models.Model):
 	title = models.CharField(max_length=150)
 	body_text = models.TextField(null=True,blank=True)
+	order = models.IntegerField(default=1)
 
 	class Meta:
 		abstract = True 
@@ -49,6 +50,9 @@ class CaseStudy(BaseModel):
 class ProductType(models.Model):
 	name = models.CharField(max_length=50)
 	slug = models.SlugField()
+
+	def get_products(self):
+		return Product.objects.filter(product_type=self)
 
 	def save(self, *args, **kwargs):
 		if not self.pk:
@@ -91,6 +95,16 @@ class Application(BaseModel):
 			text = (self.body_text[:30] + '..') if len(self.body_text) > 30 else self.body_text
 		return text
 
+class History(BaseModel):
+	class Meta:
+		verbose_name_plural = 'History'
+		ordering = ['order']
+
+	image = models.ImageField(blank=True,null=True)
+
+	def __str__(self):
+		return self.title 
+
 class ResearchApplication(BaseModel):
 	lead_text = models.CharField(max_length=300)
 	related_products = models.ManyToManyField(Product) 
@@ -124,11 +138,14 @@ class Page(models.Model):
 	title = models.CharField(max_length=100)
 	slug = models.SlugField(unique=True)
 	image = models.ImageField(blank=True,null=True) # TOOD: Does this exist?
-	body_text = models.TextField(blank=True,null=True)
+	body_text = models.TextField(blank=True,null=True,
+		help_text="This will appear above all the other content on the page")
 	menu = models.ManyToManyField(SiteMenu, blank=True)
 	parent = models.ForeignKey('self', on_delete=models.CASCADE, blank=True, null=True)
-	testimonial = models.ForeignKey('Testimonial', on_delete=models.DO_NOTHING, blank=True, null=True)
+	testimonial = models.ForeignKey('Testimonial', on_delete=models.DO_NOTHING, blank=True, null=True,
+		help_text="This will appear below all the other content on the page")
 	## TODO: Validate that parent cannot be itself 
+	## TODO: Add a computed_slug field that is the slug + the parent's slug and updated on every save
 
 	# 'list-grid.html' can be used to add a list component to a page
 	# model_queryset lists the human-readable name and the corresponding queryset is in views.py, as we can't do querysets in models.py
@@ -151,7 +168,7 @@ class Page(models.Model):
 
 	list_data_choices = []
 	for m in model_queryset:
-		list_data_choices.append((m,m))
+		list_data_choices.append((m,model_queryset[m]))
 
 	list_data = models.CharField(choices=list_data_choices, max_length=100, blank=True, null=True)
 	list_data_heading_links = models.BooleanField(
@@ -235,17 +252,6 @@ class Event(models.Model):
 
 	is_forthcoming.boolean = True 
 
-class History(models.Model):
-	class Meta:
-		verbose_name_plural = 'History'
-
-	year = models.CharField(max_length = 16, unique=True)
-	body_text = models.TextField(blank=True,null=True)
-	image = models.ImageField(blank=True,null=True)
-
-	def __str__(self):
-		return self.year 
-
 class CompanyInfo(models.Model):
 	class Meta:
 		verbose_name = 'Company Info'
@@ -314,8 +320,8 @@ class Vacancy(models.Model):
 
 class Contact(models.Model):
 	class Meta:
-		verbose_name = 'Content Form Response'
-		verbose_name_plural = 'Content Form Responses'
+		verbose_name = 'Contact Form Response'
+		verbose_name_plural = 'Contact Form Responses'
 
 	name = models.CharField(max_length=200)
 	email = models.EmailField()

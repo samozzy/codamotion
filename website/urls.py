@@ -12,7 +12,7 @@ urlpatterns = [
 
 
 	# path('support/', views.PageView.as_view(), name='support'),
-	# path('case-studies/', views.CaseStudyListView.as_view(), name='case-study-list'),
+	path('case-studies/', views.CaseStudyListView.as_view(), name='case-study-list'),
 	path('portfolio/<slug:slug>/', views.CaseStudySingleView.as_view(), name='case-study-single'),
 	path('case-studies/<slug:slug>/', RedirectView.as_view(pattern_name='website:case-study-single', permanent=True)),
 
@@ -28,8 +28,8 @@ urlpatterns = [
 
 	path('contact/', views.DistributorView.as_view(), name='contact'),
 
-	path('<slug:slug>/', views.PageView.as_view(), name='pages'),
 	path('<slug:product_type>/', views.ProductListView.as_view(), name='product-list'),
+	# path('<slug:slug>/', views.PageView.as_view(), name='pages'),
 ]
 
 '''
