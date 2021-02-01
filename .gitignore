@@ -1,0 +1,15 @@
+venv/
+*pycache*
+*sqlite3*
+
+*node_modules/
+
+*DS_Store*
+
+# These should be distributed and then placed here on build using `collectstatic`
+
+codamotion/static/
+
+# Wordpress legacy files
+wwwroot/
+wordpress*/
