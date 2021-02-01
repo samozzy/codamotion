@@ -14,6 +14,8 @@ class ContentObjectInline(admin.TabularInline):
 	extra = 0
 
 class PageMenuInline(admin.TabularInline):
+	# class Meta:
+	verbose_name: "Pages"
 	model = Page.menu.through 
 	min_num = 0 
 	extra = 0 
@@ -23,6 +25,9 @@ class PageAdmin(admin.ModelAdmin):
 	prepopulated_fields = {"slug": ("title",)}
 	inlines = [ContentObjectInline]
 	readonly_fields = ['page_children_html']
+	formfield_overrides = {
+		models.ManyToManyField: {'widget': CheckboxSelectMultiple},
+	}
 
 	fieldsets = (
 		(None, {
@@ -119,9 +124,12 @@ class ProductAdmin(admin.ModelAdmin):
 class ContactAdmin(admin.ModelAdmin):
 	list_display = ['name','email']
 
+class HistoryAdmin(admin.ModelAdmin):
+	list_display = ['title', 'order']
+
 admin.site.register(User, UserAdmin)
 admin.site.register(Event, EventAdmin)
-admin.site.register(History)
+admin.site.register(History, HistoryAdmin)
 admin.site.register(CompanyInfo, CompanyInfoAdmin)
 admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(Distributor, DistributorAdmin)
