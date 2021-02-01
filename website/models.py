@@ -162,9 +162,10 @@ class Page(models.Model):
 		'DISTR': 'Contact Distributors',
 	}
 	# Add the Product Types programmatically 
-	for t in ProductType.objects.all():
-		product_string = 'PR-' + t.name[0:3]
-		model_queryset[product_string] = 'Product - ' + t.name 
+	# TODO: Bring this back
+	# for t in ProductType.objects.all():
+	# 	product_string = 'PR-' + t.name[0:3]
+	# 	model_queryset[product_string] = 'Product - ' + t.name 
 
 	list_data_choices = []
 	for m in model_queryset:
