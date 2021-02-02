@@ -6,7 +6,6 @@ jQuery(document).ready(function($) {
     if ($(window).width() > lg_brkpoint) {
         // Run it at the beginning, and then run it for each scroll event
         function set_classes(currentTop=$(window).scrollTop()) {
-            console.log(currentTop);
             if (currentTop > 0) {
                 // if the user has scrolled down
                 $('.codamotion-nav').addClass('bg-light').addClass('navbar-light').removeClass('navbar-dark')
