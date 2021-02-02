@@ -1,10 +1,12 @@
-// Navigation Scripts to Show Header on Scroll-Up
+// Make the header background change when the user scrolls down
+// (and reset when they reach the top again!)
 
 jQuery(document).ready(function($) {
     var lg_brkpoint = 992;
 
     if ($(window).width() > lg_brkpoint) {
-        // Run it at the beginning, and then run it for each scroll event
+        // The heavy lifting 
+        // The logo sources are defined in base.html so we can use Django static tags
         function set_classes(currentTop=$(window).scrollTop()) {
             if (currentTop > 0) {
                 // if the user has scrolled down
@@ -18,8 +20,11 @@ jQuery(document).ready(function($) {
             return 
         };
         var firstTop = $(window).scrollTop();
+
+        // Run at page load...
         set_classes(firstTop);
 
+        // ... and then for each scroll event
         $(window).on('scroll', {
                 previousTop: 0
             },
