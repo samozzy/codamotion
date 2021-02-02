@@ -16,7 +16,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="codamotion-navbar">
-			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0 my-auto">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-movement" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 					Movement Analysis</a>
@@ -36,7 +36,10 @@
 						{% for p_type in product_type_list %}
 							{% if p_type.get_products %}
 								<li>
-									<a class="dropdown-item" href="{% url 'website:product-list' p_type.slug %}">{{ p_type }}</a>
+									{% comment %}
+									<a class="dropdown-item" href="{% url 'website:product-list' p_type.slug %}">{% endcomment %}
+										{{ p_type }}
+									{% comment %}</a>{% endcomment %}
 								</li>
 							{% endif %}
 						{% endfor %}
