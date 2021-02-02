@@ -20,7 +20,7 @@ urlpatterns = [
 
 	path('about/', include([
 		path('history/', views.HistoryView.as_view(), name='history'),
-		path('vision-ethos/', views.PageView.as_view(), name='vision-ethos'),
+		path('vision-ethos/', views.VisionView.as_view(), name='vision-ethos'),
 		path('working-at-codamotion/', views.VacancyListView.as_view(), name='vacancies'),
 		path('the-team/', RedirectView.as_view(pattern_name='website:the-team', permanent=True)),
 	])),
