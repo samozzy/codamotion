@@ -211,3 +211,17 @@ class DistributorView(BaseView, generic.ListView):
 		context['title'] = 'Contact Codamotion'
 
 		return context 
+
+class VisionView(BaseView, generic.ListView):
+	model = CompanyInfo
+	template_name = 'website/vision.html'
+	context_object_name = 'vision'
+
+	def get_queryset(self, **kwargs):
+		return CompanyInfo.objects.first().vision
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		context['title'] = 'Vision & Ethos'
+
+		return context 
