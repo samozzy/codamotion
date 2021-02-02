@@ -35,10 +35,20 @@ class BaseView(SuccessMessageMixin, CreateView):
 		context['footer_menu'] = SiteMenu.objects.filter(title='F').first().get_pages() or None 
 		context['tagline'] = CompanyInfo.objects.first().tagline 
 		context['company_text'] = CompanyInfo.objects.first().company_text
-		if Testimonial.objects.first():
-			context['page'] = {'testimonial': Testimonial.objects.first()}
 
-		# if Page.objects.get(slug=)
+		if type(self.object).__name__ == 'Page':
+			# Pages will have a Testimonial selected, so if it's not a Page, let's add a Testimonial
+			# We'll put it in context rather than in context.page to make life easier 
+
+			# TODO: Are we going back to context.page if we give non-Pages a context.page... ??? 
+			context['testimonial'] = self.object.testimonial
+		else: 
+			context['page'] = {}
+			# context['page'] = Page.objects.get(computed_slug=self.request.path) or None 
+			# And then we can use some page things to override the layout things 
+			# without going to an actual page??? It feels hacky but it might work 
+
+			context['testimonial'] = Testimonial.objects.first() or None 
 
 		return context
 
