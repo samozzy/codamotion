@@ -7,14 +7,12 @@
 			<h2>Contacts</h2>
 		</div>
 		<div class="secondary-column py-4">
-			{% for contact in contacts %}
-				<dl>
-					<dt class="h3 mt-4 pt-3">{% if forloop.first %}Head Office{% else %}{{ contact.name }}{% endif %}
-					{% if contact.email %}<dd><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></dd>{% endif %}
-					<dd>{{ contact.address | linebreaks }}</dd>
-					<dd>{{ contact.phone_number | default:"" }}</dd>
-				</dl>
-			{% endfor %}
+			<dl>
+				<dt class="h3 mt-4 pt-3">Head Office</dt>
+				{% if head_office.email %}<dd><a href="mailto:{{ head_office.email }}">{{ head_office.email }}</a></dd>{% endif %}
+				<dd>{{ head_office.address | linebreaks | default:"" }}</dd>
+				<dd>{{ head_office.phone_number | default:"" }}</dd>
+			</dl>
 		</div>
 	</div>
 	{% if distributors %}

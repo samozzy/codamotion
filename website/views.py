@@ -197,8 +197,7 @@ class DistributorView(BaseView, generic.ListView):
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
-		head_office = CompanyInfo.objects.first() 
-		context['contacts'] = head_office
+		context['head_office'] = CompanyInfo.objects.first() 
 		context['title'] = 'Contact Codamotion'
 
 		return context 
