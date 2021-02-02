@@ -49,50 +49,52 @@
 				</div>
 			</div>
 		</div>
-		<div class="container page-content mb-5">
-			<div class="row">
-				<div class="col-12 pb-4">
-					{% block messages %}
-						{% include 'website/structure/messages.html' %}
-					{% endblock %}
-					{% block content %}
-						{% if page.body_text %}
-							{{ page.body_text | linebreaks }}
-						{% endif %}
-					{% endblock %}
-					{% block content_blocks %}
-						{% if page.get_content %}
-							<div class="mt-4">
-								{% for content in page.get_content %}
-									<div class="row mb-4">
-										{% if content.title %}
-											<div class="primary-column">
-												<h2 class="mt-2">{{ content.title }}</h2>
+		<div class="page-content mb-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						{% block messages %}
+							{% include 'website/structure/messages.html' %}
+						{% endblock %}
+						{% block content %}
+							{% if page.body_text %}
+								{{ page.body_text | linebreaks }}
+							{% endif %}
+						{% endblock %}
+						{% block content_blocks %}
+							{% if page.get_content %}
+								<div class="mt-4">
+									{% for content in page.get_content %}
+										<div class="row mb-4">
+											{% if content.title %}
+												<div class="primary-column">
+													<h2 class="mt-2">{{ content.title }}</h2>
+												</div>
+											{% endif %}
+											<div class="secondary-column pt-4">
+												{{ content.body_text | linebreaks }}
 											</div>
-										{% endif %}
-										<div class="secondary-column pt-4">
-											{{ content.body_text | linebreaks }}
 										</div>
-									</div>
-								{% endfor %}
-							</div>
-						{% endif %}
-					{% endblock %}
-					{% block list_data %}
-						{% if include_string %}
-							{% include include_string %}
-						{% endif %}
-						{% if page.list_data_format == 'grid' %}
-							{% include 'website/components/grid-list.html' with items=list_data_items %}
-						{% elif page.list_data_format == 'accordion' %}
-							{% include 'website/components/accordion.html' with items=list_data_items %}
-						{% endif %}
-					{% endblock %}
+									{% endfor %}
+								</div>
+							{% endif %}
+						{% endblock %}
+						{% block list_data %}
+							{% if include_string %}
+								{% include include_string %}
+							{% endif %}
+							{% if page.list_data_format == 'grid' %}
+								{% include 'website/components/grid-list.html' with items=list_data_items %}
+							{% elif page.list_data_format == 'accordion' %}
+								{% include 'website/components/accordion.html' with items=list_data_items %}
+							{% endif %}
+						{% endblock %}
+					</div>
 				</div>
 			</div>
+			{% block full_width %}{% endblock %}
 		</div>
-		{% block full_width %}{% endblock %}
-		{% if page.testimonial %}
+		{% if testimonial %}
 			{% include 'website/components/testimonial.html' %}
 		{% endif %}
 		<div class="container-fluid footer-block mt-auto">
