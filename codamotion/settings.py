@@ -29,7 +29,7 @@ if not DEBUG:
 else:
     SECRET_KEY = '(vun=w5id#m!0(0d4^#!y1w05crrxyw^%1zdrjg5-bgig+vr&%'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'samosborne.me', 'codamotion.herokuapp.com', 'codamotion.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'codamotion.herokuapp.com', 'codamotion.com']
 INTERNAL_IPS = ['localhost', '127.0.0.1']
 
 # Application definition
