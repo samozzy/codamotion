@@ -125,6 +125,14 @@
 	@extend .lead;
 }
 
+.anchor:target::before {
+	// When clicking on # links, account for the header navbar
+	content: "";
+	display: block;
+	height: 150px;
+	margin: -150px 0 0;
+}
+
 .nav-tabs .nav-link {
 	color: inherit;
 	border: none;
