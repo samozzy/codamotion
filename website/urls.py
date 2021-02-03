@@ -5,7 +5,13 @@ from . import views
 
 app_name = 'website'
 
-urlpatterns = [
+product_types = ['complete-movement-analysis-systems','other-measurement-components','data-hubs','software','3d-measurement']
+
+urlpatterns = [] 
+for product in product_types:
+	urlpatterns += path((product+'/'), views.ProductListView.as_view(), name=('product-'+product), kwargs={'product_type':product}),
+
+urlpatterns += [
 	path('', views.HomeView.as_view(), name='index'),
 	path('movement-analysis-for-research-facilities/', views.MovementAnalysisResearchView.as_view(), name='mvmt-research'),
 	path('movement-analysis-for-clinical-services/', views.MovementAnalysisClinicalView.as_view(), name='mvmt-clinical'),
@@ -28,8 +34,7 @@ urlpatterns = [
 
 	path('contact/', views.DistributorView.as_view(), name='contact'),
 
-	path('<slug:product_type>/', views.ProductListView.as_view(), name='product-list'),
-	# path('<slug:slug>/', views.PageView.as_view(), name='pages'),
+	path('<slug:slug>/', views.PageView.as_view(), name='pages'),
 ]
 
 '''
