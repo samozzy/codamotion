@@ -1,7 +1,7 @@
 {% load static %}
 
 {% spaceless %}
-<div class="mt-3 row row-cols-{{ cols | default:4 }}">
+<div class="mt-3 row row-cols-lg-{{ cols | default:4 }} row-cols-sm-2 row-cols-1">
 	{% for item in items.all %}
 		<div class="col">
 			<a class="d-block rounded-3 coda-button d-flex" href="{{ item.slug }}">
