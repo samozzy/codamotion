@@ -74,6 +74,12 @@ class Product(BaseModel):
 	def slug(self):
 		return slugify(self.title)
 
+	def full_slug(self):
+		# Slightly dependent on this matching urls.py until the end of time 
+		base = self.product_type.slug 
+		product = self.slug() 
+		return '/' + str(base) + '#' + str(product)
+
 	def get_components(self):
 		return Component.objects.filter(product_link=self)
 

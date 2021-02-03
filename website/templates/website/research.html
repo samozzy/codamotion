@@ -10,12 +10,12 @@
 
 	{% if applications %}
 	<hr>
-		{% include 'website/components/grid-list.html' with items=applications %}
+		{% include 'website/components/grid-list.html' with items=applications anchors="true" %}
 		<hr>
 		{% for application in applications %}
 			<div class="row">
-				<h2 class="mb-2 text-muted">Research Application</h2>
-				<h2 class="mb-4">{{ application.title }}</h2>
+				<h2 class="mb-2 text-muted anchor" id="{{ application.title | slugify }}">Research Application</h2>
+				<h2 class="mb-4 anchor">{{ application.title }}</h2>
 				{{ application.body_text | linebreaks }}
 				{% if application.product_link %}
 					<div class="px-4">

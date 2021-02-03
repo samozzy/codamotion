@@ -4,7 +4,9 @@
 <div class="mt-3 row row-cols-lg-{{ cols | default:4 }} row-cols-sm-2 row-cols-1">
 	{% for item in items.all %}
 		<div class="col">
-			<a class="d-block rounded-3 coda-button d-flex" href="{{ item.slug }}">
+			<a class="d-block rounded-3 coda-button d-flex" 
+				href="{% if item.full_slug and not anchors %}{{ item.full_slug }}{% else %}{% if anchors %}#{% endif %}{{ item.slug | default:item.title | slugify }}{% endif %}"
+			>
 				{% if not text_below %}
 					<div class="caption d-flex flex-wrap align-content-center"><span>{{ item.title }}</span></div>
 				{% endif %}

@@ -3,7 +3,10 @@
 {% block content %}
 {% if products %}
 	{% if products.count >= 4 %}
-		{% include 'website/components/grid-list.html' with items=products %}
+		{% include 'website/components/grid-list.html' with items=products anchors="true" %}
+		<hr class="my-3 text-muted w-75">
+	{% else %}
+		<div class="my-4"></div>
 	{% endif %}
 	{% for product in products %}
 		{% if product.get_components %}
@@ -12,7 +15,7 @@
 		{% endif %}
 				<div class="row">
 					<div class="col product-content">
-						<h2>{{ product.title }}</h2>
+						<h2 id="{{ product.slug }}" class="anchor">{{ product.title }}</h2>
 						{{ product.body_text | linebreaks }}
 					</div>
 					{% if product.image %}
