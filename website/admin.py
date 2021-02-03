@@ -117,6 +117,7 @@ class CaseStudyAdmin(admin.ModelAdmin):
 
 class ProductTypeAdmin(admin.ModelAdmin):
 	prepopulated_fields = {"slug": ("name",)}
+	list_display = ['name','slug']
 
 class ProductAdmin(admin.ModelAdmin):
 	inlines = [ComponentInline, ApplicationInline]
