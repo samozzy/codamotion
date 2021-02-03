@@ -34,27 +34,6 @@ urlpatterns += [
 
 	path('contact/', views.DistributorView.as_view(), name='contact'),
 
+	# Any other Page objects caught here: Pages that override the above are handled via views.py
 	path('<slug:slug>/', views.PageView.as_view(), name='pages'),
 ]
-
-'''
-
-/ - index
-/movement-analysis-for-clinical-systems - Applications.filter(clinical)
-/movement-analysis-for-research - Applications.filter(research)
-
-/{ product-type } - Product list Products.all()
-/support - Training and service contracts (Page) ~Nothing~
-
-/case-studies - Case Study list CaseStudy.all()
-/portfolio/{ case study }	CaseStudy.single
-
-/about(/the-team/) - List of team Team.all()
-/about/history - List of history inc. initial bit History.all()
-/about/vision-ethos - Vision and Ethos That.single()
-/forthcoming-events - List of Events Events.all()
-
-/contact - Contact page ~Nothing~
-
-/about/working-at-codamotion - Vacancies list Vacancies.all() 
-'''
