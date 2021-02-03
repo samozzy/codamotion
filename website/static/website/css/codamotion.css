@@ -10726,6 +10726,13 @@ textarea.form-control-lg {
   margin-top: 0px;
 }
 
+.anchor:target::before {
+  content: "";
+  display: block;
+  height: 150px;
+  margin: -150px 0 0;
+}
+
 .nav-tabs .nav-link {
   color: inherit;
   border: none;
