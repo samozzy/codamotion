@@ -6739,7 +6739,7 @@ textarea.form-control-lg {
   margin-bottom: 1.5rem !important;
 }
 
-.mb-5 {
+.mb-5, .page-content {
   margin-bottom: 3rem !important;
 }
 
@@ -7055,11 +7055,11 @@ textarea.form-control-lg {
   color: #dc3545 !important;
 }
 
-.text-light, .testimonial-block figure .blockquote, .testimonial-block figure .blockquote-footer {
+.text-light, .testimonial-block figure .blockquote, .testimonial-block figure .blockquote-footer, .footer-block a, .footer-block {
   color: #f8f9fa !important;
 }
 
-.text-dark {
+.text-dark, .footer-block .footer-contact {
   color: #212529 !important;
 }
 
@@ -10621,7 +10621,6 @@ textarea.form-control-lg {
 }
 .page-header {
   min-height: 17rem;
-  background: blue;
   color: white;
 }
 .page-header h1, .page-header .h1 {
@@ -10629,7 +10628,6 @@ textarea.form-control-lg {
 }
 .page-header.home-header {
   min-height: 100vh;
-  background: teal;
 }
 .page-header.home-header h1, .page-header.home-header .h1 {
   font-size: 75px;
@@ -10638,6 +10636,13 @@ textarea.form-control-lg {
 .codamotion-nav {
   border-bottom: 1px solid #ccc;
   min-height: 7rem;
+  transition: all;
+  transition-duration: 0.5s;
+}
+.codamotion-nav .navbar-nav > .nav-item {
+  margin-right: 2rem;
+  font-size: 1.05rem;
+  font-weight: 400;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -10646,6 +10651,15 @@ textarea.form-control-lg {
 
 .navbar-light .navbar-nav .nav-link {
   color: black;
+}
+
+.dropdown-toggle::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  border: none;
+  vertical-align: 0;
+  margin-left: 0.4em;
 }
 
 .page-content {
@@ -10666,7 +10680,6 @@ textarea.form-control-lg {
 .footer-block .footer-contact [class*=card-] > :first-child {
   margin-top: inherit;
 }
-
 .coda-button {
   height: 10rem;
   text-align: center;
@@ -10743,7 +10756,7 @@ textarea.form-control-lg {
   border-top: 1px solid black;
 }
 
-.text-light .primary-column, .testimonial-block figure .blockquote .primary-column, .testimonial-block figure .blockquote-footer .primary-column {
+.text-light .primary-column, .testimonial-block figure .blockquote .primary-column, .testimonial-block figure .blockquote-footer .primary-column, .footer-block .primary-column {
   border-color: #fff;
 }
 
@@ -10768,4 +10781,7 @@ textarea.form-control-lg {
 }
 .testimonial-block figure {
   width: 60%;
+}
+.bg-brand-gradient, .page-header, .footer-block {
+  background: linear-gradient(to right, #00d0ff 0%, #0c50ce 50%, #6442ff 88%);
 }

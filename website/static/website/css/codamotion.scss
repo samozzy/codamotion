@@ -2,7 +2,6 @@
 
 .page-header {
 	min-height: 17rem;
-	background: blue;
 	color: white;
 
 	h1 {
@@ -10,7 +9,6 @@
 	}
 	&.home-header {
 		min-height: 100vh;
-		background: teal;
 		h1 {
 			font-size: 75px;
 		}
@@ -20,12 +18,27 @@
 .codamotion-nav {
 	border-bottom: 1px solid #ccc;
 	min-height: 7rem;
+	.navbar-nav>.nav-item {
+		margin-right: 2rem;
+		font-size: 1.05rem;
+		font-weight: 400;
+	}
+	transition: all;
+	transition-duration: 0.5s;
 }
 .navbar-dark .navbar-nav .nav-link {
 	color: white;
 }
 .navbar-light .navbar-nav .nav-link {
 	color: black;
+}
+.dropdown-toggle::after{
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f078";
+	border: none;
+	vertical-align: 0;
+	margin-left: 0.4em;
 }
 
 .page-title {
@@ -34,19 +47,25 @@
 .page-content {
 	/*min-height: 5rem; TODO: Set minimum height without it ending up being max-height???; */
 	padding-top: 1rem;
+	@extend .mb-5;
 }
 .footer-block {
 	padding-bottom: 2rem;
 	background: lavender;
+	@extend .text-light;
 
 	.footer-contact {
 		margin-top: -1.5rem; // TODO: Make this md and above only 
+		@extend .text-dark; 
 		[class*="card-"] {
 			padding: 1.5rem 2rem;
 			> :first-child { 
 				margin-top: inherit;
 			}
 		}
+	}
+	a {
+		@extend .text-light; 
 	}
 }
 
@@ -172,4 +191,12 @@
 			@extend .h3, .mt-4, .fw-lighter;
 		}
 	}
+}
+
+.bg-brand-gradient {
+	background: linear-gradient(to right, #00d0ff 0%,#0c50ce 50%,#6442ff 88%);
+}
+
+.page-header, .footer-block {
+	@extend .bg-brand-gradient;
 }
