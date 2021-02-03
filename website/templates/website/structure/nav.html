@@ -33,10 +33,11 @@
 						{% for p_type in product_type_list %}
 							{% if p_type.get_products %}
 								<li>
-									{% comment %}
-									<a class="dropdown-item" href="{% url 'website:product-list' p_type.slug %}">{% endcomment %}
+									{% with 'website:product-'|add:p_type.slug as url_name %}
+									<a class="dropdown-item" href="{% url url_name %}">
 										{{ p_type }}
-									{% comment %}</a>{% endcomment %}
+									</a>
+									{% endwith %}
 								</li>
 							{% endif %}
 						{% endfor %}
