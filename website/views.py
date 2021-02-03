@@ -99,7 +99,7 @@ class HomeView(BaseView):
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
 		# context['featured_list'] = featured_list
-		context['title'] = "Codamotion"
+		context['title'] = "Welcome to Codamotion"
 		context['home_header'] = True 
 		return context 
 
@@ -153,6 +153,11 @@ class CaseStudySingleView(generic.DetailView, BaseView):
 	model = CaseStudy
 	template_name = 'website/case-study-single.html' 
 	context_object_name = 'case_study'
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		context['title'] = self.object.title 
+		return context 
 
 class TeamView(BaseView, generic.ListView):
 	template_name = 'website/team.html'
