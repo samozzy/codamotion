@@ -44,20 +44,20 @@ INSTALLED_APPS = [
 
     'website.apps.WebsiteConfig',
 
-    'wagtail.contrib.forms',
-    'wagtail.contrib.redirects',
-    'wagtail.embeds',
-    'wagtail.sites',
-    'wagtail.users',
-    'wagtail.snippets',
-    'wagtail.documents',
-    'wagtail.images',
-    'wagtail.search',
-    'wagtail.admin',
-    'wagtail.core',
+    # 'wagtail.contrib.forms',
+    # 'wagtail.contrib.redirects',
+    # 'wagtail.embeds',
+    # 'wagtail.sites',
+    # 'wagtail.users',
+    # 'wagtail.snippets',
+    # 'wagtail.documents',
+    # 'wagtail.images',
+    # 'wagtail.search',
+    # 'wagtail.admin',
+    # 'wagtail.core',
 
     'modelcluster',
-    'taggit',
+    # 'taggit',
 
     'widget_tweaks',
     'debug_toolbar',
@@ -75,7 +75,7 @@ MIDDLEWARE = [
 
 
     'debug_toolbar.middleware.DebugToolbarMiddleware',
-    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+    # 'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
 ROOT_URLCONF = 'codamotion.urls'
@@ -133,9 +133,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-CSRF_COOKIE_SECURE = True 
-SESSION_COOKIE_SECURE = True 
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
