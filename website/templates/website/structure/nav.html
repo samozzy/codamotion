@@ -1,14 +1,11 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg codamotion-nav fixed-top text-light navbar-dark">
+<nav class="navbar navbar-expand-xl codamotion-nav fixed-top text-light navbar-dark">
 	<div class="container-fluid">
 		<div id="main-logo">
 			<a href="{% url 'website:index' %}" class="navbar-brand" data-minheight="14">
 				<div class="logo-image" data-maxheight="55" style="height: 55px;">
-					<img src="{% static 'website/codamotion-logo-light.svg' %}" alt="Codamotion Logo" width="1" height="1" class="img-responsive" id="navbar-logo">
-				</div>
-				<div class="logo-image logo-dark" data-maxheight="55" style="height: 55px;display:none;">
-					<img src="{% static 'website/codamotion-logo-light.svg' %}" alt="Codamotion Logo" width="1" height="1" class="img-responsive">
+					<img src="{% static 'website/codamotion-logo-light.svg' %}" alt="Codamotion Logo" width="100%" height="auto" class="img-responsive" id="navbar-logo">
 				</div>
 			</a>
 		</div>
