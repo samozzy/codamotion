@@ -14,9 +14,12 @@
 		}
 	}
 }
+.nav-border-bottom { 
+	// So it only appears when the navbar scrolls and it's lovely and borderless otherwise
+	border-bottom: 1px solid #ccc;
+}
 
 .codamotion-nav {
-	border-bottom: 1px solid #ccc;
 	min-height: 7rem;
 	.navbar-nav>.nav-item {
 		margin-right: 2rem;

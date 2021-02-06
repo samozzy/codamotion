@@ -10633,8 +10633,11 @@ textarea.form-control-lg {
   font-size: 75px;
 }
 
-.codamotion-nav {
+.nav-border-bottom {
   border-bottom: 1px solid #ccc;
+}
+
+.codamotion-nav {
   min-height: 7rem;
   transition: all;
   transition-duration: 0.5s;

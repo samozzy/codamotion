@@ -10,11 +10,11 @@ jQuery(document).ready(function($) {
         function set_classes(currentTop=$(window).scrollTop()) {
             if (currentTop > 0) {
                 // if the user has scrolled down
-                $('.codamotion-nav').addClass('bg-light').addClass('navbar-light').removeClass('navbar-dark')
+                $('.codamotion-nav').addClass('bg-light shadow-sm nav-border-bottom').addClass('navbar-light').removeClass('navbar-dark')
                 $('#navbar-logo').attr('src', logo_blue);
             } else {
                 // if the user is back at the top 
-                $('.codamotion-nav').removeClass('bg-light').addClass('navbar-dark').removeClass('navbar-light')
+                $('.codamotion-nav').removeClass('bg-light shadow-sm nav-border-bottom').addClass('navbar-dark').removeClass('navbar-light')
                 $('#navbar-logo').attr('src', logo_light);
             }
             return 
