@@ -22,11 +22,13 @@
 						{% block messages %}
 							{% include 'website/structure/messages.html' %}
 						{% endblock %}
-						{% block content %}
+
+						{% block body_text %}
 							{% if page.body_text %}
 								{{ page.body_text | linebreaks }}
 							{% endif %}
 						{% endblock %}
+
 						{% block content_blocks %}
 							{% if page.get_content %}
 								<div class="mt-4">

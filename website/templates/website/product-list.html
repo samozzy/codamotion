@@ -1,6 +1,6 @@
 {% extends 'website/structure/base.html' %}
 
-{% block content %}
+{% block list_data %}
 {% if products %}
 	{% if products.count >= 4 %}
 		{% include 'website/components/grid-list.html' with items=products anchors="true" %}
