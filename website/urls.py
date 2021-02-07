@@ -11,13 +11,12 @@ urlpatterns = []
 for product in product_types:
 	urlpatterns += path((product+'/'), views.ProductListView.as_view(), name=('product-'+product), kwargs={'product_type':product}),
 
+
 urlpatterns += [
 	path('', views.HomeView.as_view(), name='index'),
 	path('movement-analysis-for-research-facilities/', views.MovementAnalysisResearchView.as_view(), name='mvmt-research'),
 	path('movement-analysis-for-clinical-services/', views.MovementAnalysisClinicalView.as_view(), name='mvmt-clinical'),
 
-
-	# path('support/', views.PageView.as_view(), name='support'),
 	path('case-studies/', views.CaseStudyListView.as_view(), name='case-study-list'),
 	path('portfolio/<slug:slug>/', views.CaseStudySingleView.as_view(), name='case-study-single'),
 	path('case-studies/<slug:slug>/', RedirectView.as_view(pattern_name='website:case-study-single', permanent=True)),
@@ -37,3 +36,5 @@ urlpatterns += [
 	# Any other Page objects caught here: Pages that override the above are handled via views.py
 	path('<slug:slug>/', views.PageView.as_view(), name='pages'),
 ]
+
+handler404 = views.PageNotFoundView.as_view()

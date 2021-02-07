@@ -86,6 +86,9 @@ class PageView(generic.DetailView, BaseView):
 
 		return context 
 
+class PageNotFoundView(generic.TemplateView):
+	template_name = 'website/error/404.html'
+
 class HomeView(BaseView):
 	# featured_list = ReasonsToChoose.objects.filter(featured=True)
 	# featured_list += CaseStudy.objects.filter(featured=True)
