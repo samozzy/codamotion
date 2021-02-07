@@ -239,9 +239,9 @@ class Event(models.Model):
 	forthcoming_events = EventForthcomingManager()
 
 	def __str__(self):
-		title_string = self.title + ' from ' + str(self.start_date)
+		title_string = self.title + ' from ' + str(self.start_date.strftime("%a %d %B, %Y"))
 		if self.end_date:
-			title_string += ' to ' + str(self.end_date)
+			title_string += ' to ' + str(self.end_date.strftime("%a %d %B, %Y"))
 		return title_string
 
 	def is_forthcoming(self):
