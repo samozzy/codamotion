@@ -1,13 +1,22 @@
 {% load static %}
-		<script type="text/javascript" src="{% static 'website/js/underscore.min.js' %}"></script>
-		<script type="text/javascript" src="{% static 'website/js/custom.js' %}"></script>
-		<script type="text/javascript" src="{% static 'website/js/plugins.min.js' %}"></script>
-		<!-- <script type="text/javascript" src="{% static 'website/js/app.min.js' %}"></script> -->
-		<script type="text/javascript" src="{% static 'website/js/particles/vcparticlesbackground.js' %}"></script>
-		<script type="text/javascript" src="{% static 'website/js/particles/particles.min.js' %}"></script>
+
+		<script type="text/javascript" src="{% static 'website/js/particles.js' %}"></script>
+		<!-- <script type="text/javascript" src="{% static 'website/js/particles/vcparticlesbackground.js' %}"></script> -->
+		<!-- <script type="text/javascript" src="{% static 'website/js/particles/particles.min.js' %}"></script> -->
 		<script>
 			{% comment %}Use Django static to pass the logos to the JS	{% endcomment %}
 			var logo_light = "{% static 'website/codamotion-logo-light.svg' %}";
 			var logo_blue = "{% static 'website/codamotion-logo-blue.svg' %}";
 		</script>
 		<script type="text/javascript" src="{% static 'website/js/nav.js' %}"></script>
+		{% if form %}
+			<script>
+				$("#contact-form").submit(function(event) {
+					var recaptcha = $("#g-recaptcha-response").val();
+					if (recaptcha === "") {
+						event.preventDefault();
+						alert("Please tick the 'I'm not a robot' box");
+					}
+				});
+			</script>
+ 		{% endif %}

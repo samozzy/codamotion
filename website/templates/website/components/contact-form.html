@@ -1,12 +1,13 @@
 {% load widget_tweaks %}
-
-<form role="form" method="POST">
+<form role="form" method="POST" id="contact-form">
   {% csrf_token %}
   {% for field in form %}
-    <div class="mb-3">
-        {{ field.label_tag | title | safe }}
-        {% render_field field class+="form-control" placeholder+=field.label %}
-    </div>
+	<div class="mb-3">
+		{% if field.label != 'Captcha'%}
+			{{ field.label_tag | title | safe }}
+		{% endif %}
+		{% render_field field class+="form-control" placeholder+=field.label %}
+	</div>
   {% endfor %}
 
   <button type="submit" class="btn btn-primary btn-lg">Send Message</button>

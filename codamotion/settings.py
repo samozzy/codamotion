@@ -32,6 +32,13 @@ else:
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'codamotion.herokuapp.com', 'codamotion.com']
 INTERNAL_IPS = ['localhost', '127.0.0.1']
 
+# Captcha Secret Keys
+if os.environ.get('RECAPTCHA_PUBLIC_KEY') and os.environ.get('RECAPTCHA_PRIVATE_KEY'):
+    RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
+    RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
+elif DEBUG:
+    SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -57,6 +64,7 @@ INSTALLED_APPS = [
     # 'wagtail.core',
 
     'modelcluster',
+    'captcha',
     # 'taggit',
 
     'widget_tweaks',
