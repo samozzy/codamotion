@@ -123,7 +123,7 @@ class ProductAdmin(admin.ModelAdmin):
 	inlines = [ComponentInline, ApplicationInline]
 
 class ContactAdmin(admin.ModelAdmin):
-	list_display = ['name','email']
+	list_display = ['name','email', 'submission_date']
 
 class HistoryAdmin(admin.ModelAdmin):
 	list_display = ['title', 'order']

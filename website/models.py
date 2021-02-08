@@ -2,6 +2,7 @@ from datetime import date
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.template.defaultfilters import slugify
+from django.utils import timezone as dj_timezone 
 from model_utils import Choices 
 
 class User(AbstractUser):
@@ -329,12 +330,14 @@ class Contact(models.Model):
 	class Meta:
 		verbose_name = 'Contact Form Response'
 		verbose_name_plural = 'Contact Form Responses'
+		ordering = ['-submission_date']
 
 	name = models.CharField(max_length=200)
 	email = models.EmailField()
 	message = models.TextField()
+	submission_date = models.DateTimeField(default=dj_timezone.now)
 
 	def __str__(self):
 		message = (self.message[:30] + '..') if len(self.message) > 30 else self.message
-		return self.name + ' "' + message + '"'
+		return self.name + ' "' + message + '" on ' + str(self.submission_date)
 
