@@ -83,10 +83,10 @@ label {
 	@extend .text-light, .bg-brand-gradient;
 
 	.footer-contact {
-		@extend .text-dark, .mt-md-n4; 
+		@extend .text-dark, .mt-md-n5; 
 		[class*="card-"] {
 			// padding: 1.5rem 2rem;
-			@extend .py-4, .px-4;
+			@extend .p-4;
 			> :first-child { 
 				margin-top: inherit;
 			}
@@ -94,6 +94,11 @@ label {
 	}
 	a {
 		@extend .text-light; 
+	}
+	#footer-tagline {
+		@media only screen and (min-width: 768px) {
+			width: 75%;
+		}
 	}
 }
 
@@ -161,7 +166,7 @@ label {
 }
 .codamotion-nav {
 	// min-height: 7rem;
-	@extend .pt-lg-5, .py-4;
+	@extend .pt-lg-4, .py-4;
 	.navbar-nav>.nav-item {
 		margin-right: 2rem;
 		font-size: 1.05rem;

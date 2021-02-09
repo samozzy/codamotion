@@ -6941,7 +6941,7 @@ textarea.form-control-lg {
   padding: 1rem !important;
 }
 
-.p-4 {
+.p-4, .footer-block .footer-contact [class*=card-] {
   padding: 1.5rem !important;
 }
 
@@ -6969,7 +6969,7 @@ textarea.form-control-lg {
   padding-left: 1rem !important;
 }
 
-.px-4, .footer-block .footer-contact [class*=card-] {
+.px-4 {
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important;
 }
@@ -6999,7 +6999,7 @@ textarea.form-control-lg {
   padding-bottom: 1rem !important;
 }
 
-.py-4, .codamotion-nav, .primary-column, .footer-block .footer-contact [class*=card-] {
+.py-4, .codamotion-nav, .primary-column {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
 }
@@ -8750,11 +8750,11 @@ textarea.form-control-lg {
     margin-top: -1rem !important;
   }
 
-  .mt-md-n4, .footer-block .footer-contact {
+  .mt-md-n4 {
     margin-top: -1.5rem !important;
   }
 
-  .mt-md-n5 {
+  .mt-md-n5, .footer-block .footer-contact {
     margin-top: -3rem !important;
   }
 
@@ -9719,11 +9719,11 @@ textarea.form-control-lg {
     padding-top: 1rem !important;
   }
 
-  .pt-lg-4 {
+  .pt-lg-4, .codamotion-nav {
     padding-top: 1.5rem !important;
   }
 
-  .pt-lg-5, .codamotion-nav {
+  .pt-lg-5 {
     padding-top: 3rem !important;
   }
 
@@ -11628,6 +11628,12 @@ label {
 .footer-block .footer-contact [class*=card-] > :first-child {
   margin-top: inherit;
 }
+@media only screen and (min-width: 768px) {
+  .footer-block #footer-tagline {
+    width: 75%;
+  }
+}
+
 .primary-column {
   border-top: 1px solid black;
 }
