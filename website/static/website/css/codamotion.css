@@ -8656,7 +8656,7 @@ textarea.form-control-lg {
     margin-left: 1rem !important;
   }
 
-  .ms-md-4, .testimonial-block figure, .secondary-column {
+  .ms-md-4, #main-logo, .testimonial-block figure, .secondary-column {
     margin-left: 1.5rem !important;
   }
 
@@ -11575,6 +11575,10 @@ textarea.form-control-lg {
   font-family: "SF-Pro-Display", "Helvetica", "Roboto", "Arial", sans-serif !important;
 }
 
+.fa, .far, .fas {
+  font-family: "Font Awesome 5 Free" !important;
+}
+
 h2, .h2, .testimonial-block figure .blockquote {
   font-weight: 400;
 }
@@ -11691,7 +11695,7 @@ label {
   transition-duration: 0.5s;
 }
 .codamotion-nav .navbar-nav > .nav-item {
-  margin-right: 2rem;
+  margin-right: 1rem;
   font-size: 1.05rem;
   font-weight: 400;
 }
@@ -11704,13 +11708,13 @@ label {
   color: black;
 }
 
+.dropdown-toggle i.fa, .dropdown-toggle i.fas, .dropdown-toggle i.far {
+  margin-right: 0 !important;
+}
 .dropdown-toggle::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "";
   border: none;
   vertical-align: 0;
-  margin-left: 0.4em;
+  margin-left: 0;
 }
 
 .anchor:target::before {

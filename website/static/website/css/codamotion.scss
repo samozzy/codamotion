@@ -32,6 +32,10 @@ $primary: $coda-navy;
 * {
 	font-family: 'SF-Pro-Display', 'Helvetica', 'Roboto', 'Arial', sans-serif !important;
 }
+.fa, .far, .fas {
+	// Override
+	font-family: "Font Awesome 5 Free" !important;
+}
 h2 {
 	font-weight: 400;
 }
@@ -171,7 +175,7 @@ label {
 	// min-height: 7rem;
 	@extend .pt-lg-4, .py-4;
 	.navbar-nav>.nav-item {
-		margin-right: 2rem;
+		margin-right: 1rem;
 		font-size: 1.05rem;
 		font-weight: 400;
 	}
@@ -184,13 +188,21 @@ label {
 .navbar-light .navbar-nav .nav-link {
 	color: black;
 }
-.dropdown-toggle::after{
-	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
-	content: "\f078";
-	border: none;
-	vertical-align: 0;
-	margin-left: 0.4em;
+
+#main-logo {
+	@extend .ms-md-4;
+}
+.dropdown-toggle {
+	i.fa, i.fas, i.far {
+		margin-right: 0 !important; 
+	}
+
+	&::after {
+		// Override Bootstrap
+		border: none;
+		vertical-align: 0;
+		margin-left: 0;
+	}
 }
 
 .anchor:target::before {

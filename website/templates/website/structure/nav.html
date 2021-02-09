@@ -13,10 +13,10 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="codamotion-navbar">
-			<ul class="navbar-nav ms-auto mb-2 mb-lg-0 my-auto">
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0 my-auto me-md-5">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-movement" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-					Movement Analysis</a>
+					Movement Analysis <i class="fas fa-fw fa-chevron-down" aria-hidden="true"></i><span class="visually-hidden">Dropdown</span></a>
 					<ul class="dropdown-menu" aria-labelledby="navbar-dropdown-movement">
 						<li>
 							<a class="dropdown-item" href="{% url 'website:mvmt-research' %}">Research Systems</a>
@@ -28,7 +28,7 @@
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href='#' id="navbar-dropdown-product" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-					Products</a>
+					Products <i class="fas fa-fw fa-chevron-down" aria-hidden="true"></i><span class="visually-hidden">Dropdown</span></a>
 					<ul class="dropdown-menu" aria-labelledby="navbar-dropdown-product">
 						{% for p_type in product_type_list %}
 							{% if p_type.get_products %}
@@ -49,7 +49,7 @@
 					</li>
 				{% endfor %}
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+					<a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">About <i class="fas fa-fw fa-chevron-down" aria-hidden="true"></i><span class="visually-hidden">Dropdown</span></a>
 					<ul class="dropdown-menu" aria-labelledby="navbar-dropdown-about">
 						<li><a class="dropdown-item" href="{% url 'website:the-team' %}">Team</a></li>
 						<li><a class="dropdown-item" href="{% url 'website:history' %}">History</a></li>
