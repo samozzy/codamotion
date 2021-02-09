@@ -11,7 +11,7 @@
 			</div>
 			<div class="row mt-auto mb-4 ms-5">
 				<div class="col-12">
-					<h1 class="display-1 text-left page-title">{{ title | default:"Welcome to Codamotion" }}</h1>
+					<h1 class="display-4 text-left page-title">{% block title %}{{ title | default:"Welcome to Codamotion" }}{% endblock %}</h1>
 				</div>
 			</div>
 		</div>

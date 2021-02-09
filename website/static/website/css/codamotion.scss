@@ -1,26 +1,167 @@
+// Bootstrap mods
+$enable-negative-margins: true;
+// Import Bootstrap
 @import "../../../../node_modules/bootstrap/scss/bootstrap";
+
+
+// 		BRANDING
+
+$coda-teal: #00d0ff;
+$coda-navy: #0c50ce;
+$coda-purple: #6442ff;
+$primary: $coda-navy;
+.bg-brand-gradient {
+	background: linear-gradient(to right, $coda-teal 0%,$coda-navy 50%,$coda-purple 88%);
+}
+
+.page-header, .footer-block {
+	@extend .bg-brand-gradient;
+}
+
+// 		TYPOGRAPHY
+
+@font-face { font-family: 'SF-Pro-Display'; src: url('fonts/SF-Pro-Display/SF-Pro-Display-Heavy.woff') format('woff'); font-weight: 800; font-style: normal; }
+@font-face { font-family: 'SF-Pro-Display'; src: url('fonts/SF-Pro-Display/SF-Pro-Display-Bold.woff') format('woff'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'SF-Pro-Display'; src: url('fonts/SF-Pro-Display/SF-Pro-Display-Semibold.woff') format('woff'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'SF-Pro-Display'; src: url('fonts/SF-Pro-Display/SF-Pro-Display-Medium.woff') format('woff'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'SF-Pro-Display'; src: url('fonts/SF-Pro-Display/SF-Pro-Display-Regular.woff') format('woff'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'SF-Pro-Display'; src: url('fonts/SF-Pro-Display/SF-Pro-Display-Light.woff') format('woff'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'SF-Pro-Display'; src: url('fonts/SF-Pro-Display/SF-Pro-Display-Thin.woff') format('woff'); font-weight: 200; font-style: normal; }
+@font-face { font-family: 'SF-Pro-Display'; src: url('fonts/SF-Pro-Display/SF-Pro-Display-Ultralight.woff') format('woff'); font-weight: 100; font-style: normal; }
+
+* {
+	font-family: 'SF-Pro-Display', 'Helvetica', 'Roboto', 'Arial', sans-serif !important;
+}
+h2 {
+	font-weight: 400;
+}
+h3 {
+	font-weight: 300;
+}
+label {
+	font-weight: 300;
+	font-size: 1rem;
+}
+
+.product-content, .component-content, [class*="person-"], .accordion-item, .accordion-content {
+	> :first-child {
+		margin-top: 0px;
+	}
+}
+.product-content p:first-of-type {
+	@extend .lead;
+}
+
+//		STRUCTURE 
 
 .page-header {
 	min-height: 17rem;
 	color: white;
-
 	h1 {
-		font-size: inherit;
+		@include font-size(3rem);
+		word-break: break-word;
 	}
+
 	&.home-header {
-		min-height: 100vh;
 		h1 {
-			font-size: 75px;
+			@include font-size(5rem);
+		}
+		min-height: 95vh;
+	}
+}
+
+.page-title {
+	@extend .ms-lg-4, .ms-n2;
+}
+.page-content {
+	/*min-height: 5rem; TODO: Set minimum height without it ending up being max-height???; */
+	padding-top: 1rem;
+	@extend .mb-5;
+}
+.footer-block {
+	padding-bottom: 2rem;
+	@extend .text-light, .bg-brand-gradient;
+
+	.footer-contact {
+		@extend .text-dark, .mt-md-n4; 
+		[class*="card-"] {
+			// padding: 1.5rem 2rem;
+			@extend .py-4, .px-4;
+			> :first-child { 
+				margin-top: inherit;
+			}
+		}
+	}
+	a {
+		@extend .text-light; 
+	}
+}
+
+.primary-column {
+	border-top: 1px solid black;
+	@extend .col-md-2, .py-4, .mx-md-4;
+}
+.text-light .primary-column {
+	border-color: #fff;
+}
+.secondary-column {
+	border-top: 1px solid #bbb;
+	@extend .col-md, .ms-md-4, .mb-4;
+}
+.primary-column, .secondary-column {
+	@media only screen and (max-width: 768px){
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.striped-background {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: darken;
+	background-color: $coda-navy; // TODO: Replace with brand 
+}
+
+.accordion-header {
+	margin: 0 0 0 0;
+}
+.component-content {
+	@extend .mt-4, .mt-md-0;
+}
+.testimonial-block {
+	padding: 8rem 2rem 5rem 2rem;
+	@media only screen and (max-width: 768px) {
+		padding-top: 4rem;
+	}
+
+	figure {
+		@extend .ms-md-4;
+		@media only screen and (min-width: 768px){
+			width: 60%;
+		}
+		.blockquote, .blockquote-footer {
+			@extend .text-light, .fw-light;
+		}
+		.blockquote {
+			@extend .h2;
+		}
+		.blockquote-footer {
+			@extend .h3, .mt-4;
 		}
 	}
 }
+
+//		NAVIGATION 
+
 .nav-border-bottom { 
 	// So it only appears when the navbar scrolls and it's lovely and borderless otherwise
 	border-bottom: 1px solid #ccc;
 }
-
 .codamotion-nav {
-	min-height: 7rem;
+	// min-height: 7rem;
+	@extend .pt-lg-5, .py-4;
 	.navbar-nav>.nav-item {
 		margin-right: 2rem;
 		font-size: 1.05rem;
@@ -44,39 +185,35 @@
 	margin-left: 0.4em;
 }
 
-.page-title {
-	@extend .ms-4;
+.anchor:target::before {
+	// When clicking on # links, account for the header navbar
+	content: "";
+	display: block;
+	height: 150px;
+	margin: -150px 0 0;
 }
-.page-content {
-	/*min-height: 5rem; TODO: Set minimum height without it ending up being max-height???; */
-	padding-top: 1rem;
-	@extend .mb-5;
+.nav-tabs .nav-link {
+	color: inherit;
+	border: none;
+	&.active, &.active:focus, &.active:hover {
+		color: $coda-navy;
+		border: inherit;
+		border-bottom: 3px solid $coda-purple;
+		background: inherit;
+	}
+	&:hover, &:focus {
+		border: inherit;
+		color: $coda-navy;
+	}
 }
-.footer-block {
-	padding-bottom: 2rem;
-	background: lavender;
-	@extend .text-light;
 
-	.footer-contact {
-		margin-top: -1.5rem; // TODO: Make this md and above only 
-		@extend .text-dark; 
-		[class*="card-"] {
-			padding: 1.5rem 2rem;
-			> :first-child { 
-				margin-top: inherit;
-			}
-		}
-	}
-	a {
-		@extend .text-light; 
-	}
-}
+// 		ELEMENTS
 
 .coda-button {
 	height: 10rem;
 	text-align: center;
 	overflow: hidden;
-	background-color: blue;
+	background-color: $coda-navy;
 	position: relative;
 	margin-bottom: 1rem;
 	/* TODO: make the colour on brand */
@@ -119,38 +256,7 @@
 	}
 }
 
-.product-content, .component-content, [class*="person-"], .accordion-item, .accordion-content {
-	> :first-child {
-		margin-top: 0px;
-	}
-}
-.product-content p:first-of-type {
-	@extend .lead;
-}
-
-.anchor:target::before {
-	// When clicking on # links, account for the header navbar
-	content: "";
-	display: block;
-	height: 150px;
-	margin: -150px 0 0;
-}
-
-.nav-tabs .nav-link {
-	color: inherit;
-	border: none;
-	&.active, &.active:focus, &.active:hover {
-		color: blue;
-		border: inherit;
-		border-bottom: 3px solid purple;
-		background: inherit;
-	}
-	&:hover, &:focus {
-		border: inherit;
-		color: blue;
-	}
-}
-
+//		SPECIFIC DATA TYPES
 .row.person {
 	margin-top: 1rem;
 }
@@ -159,55 +265,4 @@
 	padding-bottom: 2rem;
 	margin-right: 1rem;
 	margin-left: 1rem;
-}
-.primary-column {
-	border-top: 1px solid black;
-	@extend .col-md-2, .py-4, .px-0, .mx-4;
-}
-.text-light .primary-column {
-	border-color: #fff;
-}
-.secondary-column {
-	border-top: 1px solid #bbb;
-	@extend .col, .ms-4, .mb-4;
-}
-
-.striped-background {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-blend-mode: darken;
-	background-color: blue; // TODO: Replace with brand 
-}
-
-.accordion-header {
-	margin: 0 0 0 0;
-}
-
-.testimonial-block {
-	// min-height: 5rem;
-	padding: 8rem 2rem 5rem 2rem;
-
-	figure {
-		// TODO: Make optimised for mobile
-		@extend .ms-4;
-		width: 60%;
-		.blockquote, .blockquote-footer {
-			@extend .text-light;
-		}
-		.blockquote {
-			@extend .h2;
-		}
-		.blockquote-footer {
-			@extend .h3, .mt-4, .fw-lighter;
-		}
-	}
-}
-
-.bg-brand-gradient {
-	background: linear-gradient(to right, #00d0ff 0%,#0c50ce 50%,#6442ff 88%);
-}
-
-.page-header, .footer-block {
-	@extend .bg-brand-gradient;
 }
