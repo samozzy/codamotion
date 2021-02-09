@@ -112,6 +112,9 @@ label {
 .secondary-column {
 	border-top: 1px solid #bbb;
 	@extend .col-md, .ms-md-4, .mb-4;
+	&#footer-tagline {
+		border-color: rgba(255,255,255,0.4);
+	}
 }
 .primary-column, .secondary-column {
 	@media only screen and (max-width: 768px){

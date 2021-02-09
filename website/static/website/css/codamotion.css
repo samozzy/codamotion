@@ -11645,6 +11645,9 @@ label {
 .secondary-column {
   border-top: 1px solid #bbb;
 }
+.secondary-column#footer-tagline {
+  border-color: rgba(255, 255, 255, 0.4);
+}
 
 @media only screen and (max-width: 768px) {
   .primary-column, .secondary-column {

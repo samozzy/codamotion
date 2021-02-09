@@ -1,7 +1,7 @@
 <ul class="nav">
 	{% for item in footer_menu %}
 	<li class="nav-item">
-		<a class="nav-link" href="{% url 'website:pages' item.slug %}">{{ item }}</a>
+		<a class="nav-link {% if forloop.counter == 1 %}ps-0{% endif %}" href="{% url 'website:pages' item.slug %}">{{ item }}</a>
 	</li>
 	{% endfor %}
 </ul>
