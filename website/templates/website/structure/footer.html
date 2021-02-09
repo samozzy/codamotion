@@ -2,7 +2,17 @@
 	<div class="col-lg-4">
 		<div class="secondary-column mt-5 pt-2" id="footer-tagline">
 			<h3>Codamotion</h3>
-			<p>{{ tagline }}</p>
+			<p>{{ company_info.tagline }}</p>
+			{% if company_info.phone_number or company_info.email %}
+				<dl class="ms-0">
+					{% if company_info.phone_number %}
+						<dd><a href="tel:{{ company_info.phone_number }}">{{ company_info.phone_number }}</a></dd>
+					{% endif %}
+					{% if company_info.email %}
+						<dd><a href="mailto:{{ company_info.email }}">{{ company_info.email }}</a></dd>
+					{% endif %}
+				</dl>
+			{% endif %}
 		</div>
 	</div>
 	<div class="col-lg-8 footer-contact">
@@ -23,7 +33,7 @@
 	</div>
 	<div class="row">
 		<div class="col px-4">
-			<p class="small">{{ company_text | linebreaks }}</p>
+			<p class="small">{{ company_info.company_text | linebreaks }}</p>
 		</div>
 	</div>
 </div>

@@ -33,8 +33,7 @@ class BaseView(SuccessMessageMixin, CreateView):
 		context['header_menu'] = SiteMenu.objects.filter(title='H').first().get_pages() or None 
 		context['product_type_list'] = ProductType.objects.all() 
 		context['footer_menu'] = SiteMenu.objects.filter(title='F').first().get_pages() or None 
-		context['tagline'] = CompanyInfo.objects.first().tagline 
-		context['company_text'] = CompanyInfo.objects.first().company_text
+		context['company_info'] = CompanyInfo.objects.first() 
 
 		if type(self.object).__name__ == 'Page':
 			# Pages will have a Testimonial selected, so if it's not a Page, let's add a Testimonial
