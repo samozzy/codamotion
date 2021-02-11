@@ -47,10 +47,10 @@ class PageAdmin(admin.ModelAdmin):
 				('menu', 'parent', 'page_children_html'),
 				),
 			}),
-		('Layout Options', {
-			'fields': (('list_data','list_data_format','list_data_heading_links'),),
-			'classes': ('collapse',),
-		 }),
+		# ('Layout Options', {
+		# 	'fields': (('list_data','list_data_format','list_data_heading_links'),),
+		# 	'classes': ('collapse',),
+		#  }),
 	 )
 
 	actions = [make_featured,remove_featured]
