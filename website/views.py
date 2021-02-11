@@ -17,16 +17,8 @@ class BaseView(SuccessMessageMixin, CreateView):
 	form_class = ContactForm 
 	success_message = 'Message submitted successfully.'
 
-	# self.object WOULD give us the Page item IF we use a DetailView
-	# We somehow need to use a DetailView AND a CreateView
-	# We don't necessarily need the success_message if we can put that 
-	# in the form class?
-	# Could we run the form as a POST into a separate view which then
-	# goes back to the page it came from? Where GET to that view basically 
-	# doesn't exist and just redirects to /home 
-
 	def get_success_url(self):
-		# Stay where we are on success 
+		# Stay where we are on success of the contact form 
 		return self.request.path 
 
 	def get_context_data(self, **kwargs):
@@ -36,19 +28,37 @@ class BaseView(SuccessMessageMixin, CreateView):
 		context['footer_menu'] = SiteMenu.objects.filter(title='F').first().get_pages() or None 
 		context['company_info'] = CompanyInfo.objects.first() 
 
-		if type(self.object).__name__ == 'Page':
-			# Pages will have a Testimonial selected, so if it's not a Page, let's add a Testimonial
-			# We'll put it in context rather than in context.page to make life easier 
-
-			# TODO: Are we going back to context.page if we give non-Pages a context.page... ??? 
-			context['testimonial'] = self.object.testimonial
-		else: 
+		if type(self.object).__name__ != 'Page':
+			# If we're not looking at a Page, we can do some...
+			# 			PAGE OVERRIDES
+			# If Page objects are created for existing pages (in urls.py)
+			# AND have matching slugs, that Page can throw some overrides or body_text, etc.
+			# [It feels a bit hacky but it works]
 			context['page'] = {}
-			# context['page'] = Page.objects.get(computed_slug=self.request.path) or None 
-			# And then we can use some page things to override the layout things 
-			# without going to an actual page??? It feels hacky but it might work 
 
-			context['testimonial'] = Testimonial.objects.first() or None 
+			# Work out if there's a Page matching the final slug in the path
+			page_request = self.request.path 
+			if page_request == '/':
+				# Special case for the home page (as '/' is not a valid Django slug)
+				page_override = Page.objects.filter(slug='home').first() or None 
+			else:
+				# Remove the opening and trailing / 
+				page_request = self.request.path[1:-1]
+				# Go through any parent pages and get to the root slug
+				f = page_request.find('/')
+				while f >= 0:
+					page_request = page_request[(f+1):]
+					f = page_request.find('/')
+
+				page_override = Page.objects.filter(slug=page_request).first() or None 
+				# Would use objects.get() but that gives us an error that filter().first() doesn't
+
+			if page_override:
+				# Use the page if there is one 
+				context['page'] = page_override
+			else:
+				# No page? Here are the defaults 
+				context['page']['testimonial'] = Testimonial.objects.first() or None 
 
 		return context
 
@@ -62,8 +72,10 @@ class PageView(generic.DetailView, BaseView):
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
 		context['title'] = self.object.title 
+
 		if self.object and type(self.object).__name__ == 'Page': 
 			# Handler for Page items using list_data, rather than the more 'simple' list pages.
+			# TODO: Work out if this goes away... [It may simply be heavily reduced]
 			if self.object.list_data:
 				model_queryset = {
 					'Movement Analysis - Clinical': ReasonsToChoose.objects.filter(category="clinical"),
