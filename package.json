@@ -20,6 +20,7 @@
     "gulp-changed": "^4.0.2",
     "gulp-exec": "^5.0.0",
     "gulp-shell": "^0.8.0",
+    "particles.js": "^2.0.0",
     "sass": "^1.32.5"
   },
   "devDependencies": {

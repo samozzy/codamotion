@@ -11601,9 +11601,23 @@ label {
   color: white;
 }
 
+.zi-1 {
+  z-index: 1;
+}
+
+.zi-2 {
+  z-index: 2;
+}
+
+.zi-3 {
+  z-index: 3;
+}
+
 .page-header {
   min-height: 17rem;
   color: white;
+  position: relative;
+  overflow: hidden;
 }
 .page-header h1, .page-header .h1 {
   font-size: calc(1.425rem + 2.1vw);
@@ -11742,6 +11756,18 @@ label {
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
   border: inherit;
   color: #0c50ce;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
 }
 
 .coda-button {

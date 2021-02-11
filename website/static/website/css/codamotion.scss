@@ -62,10 +62,21 @@ label {
 }
 
 //		STRUCTURE 
+.zi-1 {
+	z-index: 1;
+}
+.zi-2 {
+	z-index: 2;
+}
+.zi-3 {
+	z-index: 3;
+}
 
 .page-header {
 	min-height: 17rem;
 	color: white;
+	position: relative;
+	overflow: hidden;
 	h1 {
 		@include font-size(3rem);
 		word-break: break-word;
@@ -233,6 +244,18 @@ label {
 }
 
 // 		ELEMENTS
+
+#particles-js {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.3; 
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	background-position: center;
+	background-size: cover;
+}
 
 .coda-button {
 	height: 10rem;

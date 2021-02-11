@@ -6,10 +6,11 @@
 
 	<body class="d-flex flex-column h-100">
 		<div class="container-fluid page-header {% if home_header %}home-header{% endif %} d-flex">
-			<div class="row" style="margin-bottom:7rem;">
+			<div class="" id="particles-js" style="background-image:url('{% static 'website/neurons.jpg' %}')"></div>
+			<div class="row zi-3" style="margin-bottom:7rem;">
 				{% include 'website/structure/nav.html' %}
 			</div>
-			<div class="row mt-auto mb-4 ms-5">
+			<div class="row mt-auto mb-4 ms-5 zi-3">
 				<div class="col-12">
 					<h1 class="display-4 text-left page-title">{% block title %}{{ title | default:"Welcome to Codamotion" }}{% endblock %}</h1>
 				</div>

@@ -5,8 +5,16 @@ sass.compiler = require('sass');
 
 var SASS_DIR = 'website/static/website/css/*.scss'
 var CSS_DIR = 'website/static/website/css/'
-var JS_DIR = 'website/static/website/js/*.*'
+var JS_DIR = 'website/static/website/js/'
+var JS_MATCH = JS_DIR + '*.js'
+var PARTICLES_DIR = 'node_modules/particles.js/'
 
+gulp.task('particles', function() {
+	// Add the node particles config file to the repo - though is this necessary?? 
+	exec('echo "Adding particles.js"');
+	return gulp.src(PARTICLES_DIR+'particles.js')
+		.pipe(gulp.dest(JS_DIR))
+})
 
 gulp.task('sass', function() {
 	return gulp.src(SASS_DIR)
@@ -30,5 +38,10 @@ gulp.task('collectstatic', function(cb) {
 
 gulp.task('django', function() {
 	gulp.watch(SASS_DIR, gulp.series('sass', 'collectstatic'));
-	gulp.watch(JS_DIR, gulp.series('collectstatic'));
+	gulp.watch(JS_MATCH, gulp.series('collectstatic'));
+	gulp.watch(PARTICLES_DIR, gulp.series('particles'));
+})
+
+gulp.task('deploy', function() {
+	gulp.series('sass','particles','collectstatic');
 })
