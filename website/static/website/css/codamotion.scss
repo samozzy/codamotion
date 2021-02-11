@@ -220,6 +220,22 @@ label {
 		margin-left: 0;
 	}
 }
+.dropdown-menu {
+	border-radius: 0;
+	padding: 1rem;
+	a.dropdown-item {
+		&:hover {
+			background: #ccc;
+		}
+	}
+	@media only screen and (min-width: 768px){
+		// Can't extend .shadow to be on a media query
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+	} 
+	@media only screen and (max-width: 768px) {
+		border: none;
+	}
+}
 
 .anchor:target::before {
 	// When clicking on # links, account for the header navbar
