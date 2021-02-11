@@ -51,21 +51,8 @@ INSTALLED_APPS = [
 
     'website.apps.WebsiteConfig',
 
-    # 'wagtail.contrib.forms',
-    # 'wagtail.contrib.redirects',
-    # 'wagtail.embeds',
-    # 'wagtail.sites',
-    # 'wagtail.users',
-    # 'wagtail.snippets',
-    # 'wagtail.documents',
-    # 'wagtail.images',
-    # 'wagtail.search',
-    # 'wagtail.admin',
-    # 'wagtail.core',
-
     'modelcluster',
     'captcha',
-    # 'taggit',
 
     'widget_tweaks',
     'debug_toolbar',
@@ -83,7 +70,6 @@ MIDDLEWARE = [
 
 
     'debug_toolbar.middleware.DebugToolbarMiddleware',
-    # 'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
 ROOT_URLCONF = 'codamotion.urls'
@@ -209,5 +195,3 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-WAGTAIL_SITE_NAME = 'Codamotion'
