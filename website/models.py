@@ -269,7 +269,6 @@ class CompanyInfo(models.Model):
 	company_text = models.TextField(help_text="About the company, eg. registration info, company number")
 	tagline = models.CharField(max_length=350)
 	vision = models.TextField()
-	about = models.TextField()
 
 	def __str__(self):
 		return 'Company Info'
