@@ -6,7 +6,7 @@
 		</div>
 		{% endif %}
 		<div class="secondary-column">
-			<h3><strong>{{ person.person_name }}</strong> {{ person.role }}</h3>
+			<h3><strong>{{ person.person_name }}</strong> {{ person.role | default:"" }}</h3>
 			{{ person.bio | linebreaks }}
 		</div>
 	</div>
