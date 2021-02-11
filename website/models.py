@@ -153,7 +153,6 @@ class Page(models.Model):
 	testimonial = models.ForeignKey('Testimonial', on_delete=models.DO_NOTHING, blank=True, null=True,
 		help_text="This will appear below all the other content on the page")
 	## TODO: Validate that parent cannot be itself 
-	## TODO: Add a computed_slug field that is the slug + the parent's slug and updated on every save
 
 	# 'list-grid.html' can be used to add a list component to a page
 	# model_queryset lists the human-readable name and the corresponding queryset is in views.py, as we can't do querysets in models.py
@@ -174,6 +173,7 @@ class Page(models.Model):
 	# for t in ProductType.objects.all():
 	# 	product_string = 'PR-' + t.name[0:3]
 	# 	model_queryset[product_string] = 'Product - ' + t.name 
+	# TODO: Work out if list data is actually staying at all... 
 
 	list_data_choices = []
 	for m in model_queryset:
@@ -198,6 +198,13 @@ class Page(models.Model):
 
 	def page_children(self):
 		return Page.objects.filter(parent=self)
+
+	def full_slug(self):
+		slug = '/'
+		if self.parent:
+			slug += self.parent.slug + '/'
+		slug += self.slug + '/'
+		return slug
 
 	def __str__(self):
 		return self.title 
@@ -245,13 +252,9 @@ class Event(models.Model):
 
 	def is_forthcoming(self):
 		# Duplicated due to wanting to display it in the admin
-		# TODO: Can we DRY this up? 
-		if self.end_date:
-			if self.end_date >= date.today():
-				return True 
-			else:
-				return False 
-		elif self.start_date >= date.today():
+		ref_date = self.end_date if self.end_date else self.start_date
+
+		if self.ref_date >= date.today():
 			return True 
 		else:
 			return False 
