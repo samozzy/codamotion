@@ -1,0 +1,16 @@
+								{% if page.get_content %}
+									<div class="mt-4">
+										{% for content in page.get_content %}
+											<div class="row mb-4">
+												{% if content.title %}
+													<div class="primary-column">
+														<h2 class="mt-2">{{ content.title }}</h2>
+													</div>
+												{% endif %}
+												<div class="secondary-column pt-4">
+													{{ content.body_text | linebreaks }}
+												</div>
+											</div>
+										{% endfor %}
+									</div>
+								{% endif %}

@@ -1,0 +1,8 @@
+							{% if include_string %}
+								{% include include_string %}
+							{% endif %}
+							{% if page.list_data_format == 'grid' %}
+								{% include 'website/components/grid-list.html' with items=list_data_items %}
+							{% elif page.list_data_format == 'accordion' %}
+								{% include 'website/components/accordion.html' with items=list_data_items %}
+							{% endif %}

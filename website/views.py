@@ -114,7 +114,7 @@ class MovementAnalysisClinicalView(BaseView):
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
-		context['reasons'] = ReasonsToChoose.objects.filter(category='clinical')
+		context['reasons'] = ReasonsToChoose.objects.filter(category='clinical').all()
 		context['title'] = 'Movement Analysis for Clinical Services'
 
 		return context

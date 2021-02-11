@@ -1,26 +1,31 @@
 {% extends 'website/structure/base.html' %}
 
-{% block list_data %}
-	{% if forthcoming_events %}
-		<div class="card card-primary">
-			<div class="card-body">
-				<h2 class="mt-3 ms-1">Forthcoming Events</h2>
+{% block list_content %}
+	{% block content_block %}
+		{% include 'website/components/content-block.html' %}
+	{% endblock %}
+	{% block list_data %}
+		{% if forthcoming_events %}
+			<div class="card card-primary">
+				<div class="card-body">
+					<h2 class="mt-3 ms-1">Forthcoming Events</h2>
+				</div>
+					{% include 'website/components/accordion.html' with items=forthcoming_events id='forthcoming' add_class='accordion-flush' %}
 			</div>
-				{% include 'website/components/accordion.html' with items=forthcoming_events id='forthcoming' add_class='accordion-flush' %}
-		</div>
-	{% else %}
-		<p><em>There are no forthcoming events.</em></p>
-	{% endif %}
-	<hr class="my-5 w-75 mx-auto text-muted">
-	{% if past_events %}
-		<div class="card card-primary">
-			<div class="card-body">
-				<h2 class="mt-3 ms-1">Past Events</h2>
+		{% else %}
+			<p><em>There are no forthcoming events.</em></p>
+		{% endif %}
+		<hr class="my-5 w-75 mx-auto text-muted">
+		{% if past_events %}
+			<div class="card card-primary">
+				<div class="card-body">
+					<h2 class="mt-3 ms-1">Past Events</h2>
+				</div>
+				{% include 'website/components/accordion.html' with items=past_events id='past' add_class='accordion-flush' %}
 			</div>
-			{% include 'website/components/accordion.html' with items=past_events id='past' add_class='accordion-flush' %}
-		</div>
-	{% else %}
-		<p><em>There are no past events.</em></p>
-	{% endif %}
-	<br>
+		{% else %}
+			<p><em>There are no past events.</em></p>
+		{% endif %}
+		<br>
+	{% endblock %}
 {% endblock %}
