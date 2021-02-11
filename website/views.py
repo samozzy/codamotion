@@ -6,8 +6,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.views.generic.edit import CreateView
 from django.urls import reverse, reverse_lazy
-from .models import (Page, SiteMenu, Application, Product, ProductType, CaseStudy, TeamMember, 
-	History, Vacancy, Event, Contact, CompanyInfo, ReasonsToChoose, Distributor, 
+from itertools import chain 
+from .models import (Page, SiteMenu, Application, ResearchApplication, Product, ProductType, CaseStudy, TeamMember, 
+	History, Vacancy, Event, Contact, Component, CompanyInfo, ReasonsToChoose, Distributor, 
 	Testimonial)
 from .forms import ContactForm 
 
@@ -89,20 +90,23 @@ class PageNotFoundView(generic.TemplateView):
 	template_name = 'website/error/404.html'
 
 class HomeView(BaseView):
-	# featured_list = ReasonsToChoose.objects.filter(featured=True)
-	# featured_list += CaseStudy.objects.filter(featured=True)
-	# featured_list += Product.objects.filter(featured=True)
-	# featured_list += Component.objects.filter(featured=True)
-	# featured_list += Application.objects.filter(featured=True)
-	# featured_list += ResearchApplication.objects.filter(featured=True)
-	model = Page 
-	template_name = 'website/structure/base.html'
+	template_name = 'website/home.html'
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
-		# context['featured_list'] = featured_list
 		context['title'] = "Welcome to Codamotion"
 		context['home_header'] = True 
+
+		featured_list = list(chain(
+			Page.objects.filter(featured=True),
+			ReasonsToChoose.objects.filter(featured=True),
+			CaseStudy.objects.filter(featured=True),
+			Product.objects.filter(featured=True),
+			Component.objects.filter(featured=True),
+			Application.objects.filter(featured=True),
+			ResearchApplication.objects.filter(featured=True),
+		))
+		context['featured_list'] = featured_list
 		return context 
 
 class MovementAnalysisClinicalView(BaseView):
@@ -121,7 +125,7 @@ class MovementAnalysisResearchView(BaseView):
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
 		context['title'] = 'Movement Analysis for Research Facilities'
-		context['applications'] = Application.objects.all()
+		context['applications'] = Application.objects.all().prefetch_related('product_link').values()
 		context['reasons'] = ReasonsToChoose.objects.filter(category='research')
 		return context
 

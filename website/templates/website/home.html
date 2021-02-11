@@ -1,0 +1,5 @@
+{% extends 'website/structure/base.html' %}
+
+	{% block list_data %}
+		{% include 'website/components/grid-list.html' with items=featured_list cols=3 homepage="true" %}
+	{% endblock %}

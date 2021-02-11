@@ -11,11 +11,11 @@ class User(AbstractUser):
 
 
 ## FEATURED ITEMS ##
-# TODO: Make work
 class BaseModel(models.Model):
 	title = models.CharField(max_length=150)
 	body_text = models.TextField(null=True,blank=True)
 	order = models.IntegerField(default=1)
+	featured = models.BooleanField(default=False)
 
 	class Meta:
 		abstract = True 
@@ -145,6 +145,7 @@ class Page(models.Model):
 	title = models.CharField(max_length=100)
 	slug = models.SlugField(unique=True)
 	image = models.ImageField(blank=True,null=True) # TOOD: Does this exist?
+	featured = models.BooleanField(default=False)
 	body_text = models.TextField(blank=True,null=True,
 		help_text="This will appear above all the other content on the page")
 	menu = models.ManyToManyField(SiteMenu, blank=True)
@@ -212,9 +213,6 @@ class ContentObject(models.Model):
 		else:
 			return_string = (self.body_text[:30] + '..') if len(self.body_text) > 30 else self.body_text
 			return return_string
-
-class FeaturedItem(models.Model):
-	page = models.ForeignKey(Page, on_delete=models.DO_NOTHING)
 
 ## DATA TYPES ##
 class EventForthcomingManager(models.Manager):

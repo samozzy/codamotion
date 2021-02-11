@@ -13,6 +13,12 @@ class ContentObjectInline(admin.TabularInline):
 	min_num = 0
 	extra = 0
 
+def make_featured(modeladmin,request,queryset):
+	queryset.update(featured=True)
+
+def remove_featured(modeladmin,request,queryset):
+	queryset.update(featured=False)
+
 class PageMenuInline(admin.TabularInline):
 	# class Meta:
 	verbose_name: "Pages"
@@ -21,7 +27,7 @@ class PageMenuInline(admin.TabularInline):
 	extra = 0 
 
 class PageAdmin(admin.ModelAdmin):
-	list_display = ['title', 'slug', 'parent']
+	list_display = ['title', 'slug', 'parent', 'featured']
 	prepopulated_fields = {"slug": ("title",)}
 	inlines = [ContentObjectInline]
 	readonly_fields = ['page_children_html']
@@ -34,6 +40,7 @@ class PageAdmin(admin.ModelAdmin):
 			'fields':(
 				'title',
 				'slug',
+				'featured',
 				'image',
 				'body_text',
 				'testimonial',
@@ -45,6 +52,8 @@ class PageAdmin(admin.ModelAdmin):
 			'classes': ('collapse',),
 		 }),
 	 )
+
+	actions = [make_featured,remove_featured]
 
 	def page_children_html(self, obj):
 		children = obj.page_children()
@@ -86,11 +95,13 @@ class DistributorAdmin(admin.ModelAdmin):
 
 class ReasonsToChooseAdmin(admin.ModelAdmin):
 	list_display = ['title', 'category']
+	actions = [make_featured,remove_featured]
 
 class ApplicationAdmin(admin.ModelAdmin):
 	formfield_overrides = {
 		models.ManyToManyField: {'widget': CheckboxSelectMultiple},
 	}
+	actions = [make_featured,remove_featured]
 
 class ApplicationInline(admin.TabularInline):
 	model = Application.product_link.through
@@ -111,9 +122,11 @@ class ComponentInline(admin.TabularInline):
 			),
 		}),
 	)
+	actions = [make_featured,remove_featured]
 
 class CaseStudyAdmin(admin.ModelAdmin):
 	prepopulated_fields = {"slug": ("title",)}
+	actions = [make_featured,remove_featured]
 
 class ProductTypeAdmin(admin.ModelAdmin):
 	prepopulated_fields = {"slug": ("name",)}
@@ -121,6 +134,7 @@ class ProductTypeAdmin(admin.ModelAdmin):
 
 class ProductAdmin(admin.ModelAdmin):
 	inlines = [ComponentInline, ApplicationInline]
+	actions = [make_featured,remove_featured]
 
 class ContactAdmin(admin.ModelAdmin):
 	list_display = ['name','email', 'submission_date']
