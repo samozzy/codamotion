@@ -5,6 +5,7 @@ from django.http import FileResponse, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.views.generic.edit import CreateView
+from django.utils.text import slugify 
 from django.urls import reverse, reverse_lazy
 from itertools import chain 
 from .models import (Page, SiteMenu, Application, ResearchApplication, Product, ProductType, CaseStudy, TeamMember, 

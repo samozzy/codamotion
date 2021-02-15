@@ -45,6 +45,9 @@ class CaseStudy(BaseModel):
 			self.slug = slugify(self.title)
 		super(CaseStudy, self).save(*args, **kwargs)
 
+	def full_slug(self):
+		return '/case-studies/' + self.slug
+
 	def __str__(self):
 		return self.title 
 
@@ -94,6 +97,17 @@ class Component(BaseModel):
 class Application(BaseModel):
 	image = models.ImageField(blank=True,null=True)
 	product_link = models.ManyToManyField(Product)
+	reason_categories = Choices('research','clinical')
+	reason_to_choose = models.CharField(choices=reason_categories, default=reason_categories.research, max_length=15,
+		help_text='Does this Application belong to "Clinical Services" or "Research Facilities"?')
+
+	def full_slug(self):
+		if self.reason_to_choose == 'research':
+			slug = '/movement-analysis-for-research-facilities/#'
+		else:
+			slug = '/movement-analysis-for-clinical-services/#'
+		slug += slugify(self.title)
+		return slug 
 
 	def __str__(self):
 		if self.title:
