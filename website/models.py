@@ -177,6 +177,7 @@ class SiteMenu(models.Model):
 class Page(models.Model):
 	title = models.CharField(max_length=100)
 	slug = models.SlugField(unique=True)
+	lead_text = models.CharField(null=True,blank=True,max_length=300)
 	image = models.ImageField(blank=True,null=True) # TOOD: Does this exist?
 	featured = models.BooleanField(default=False)
 	body_text = models.TextField(blank=True,null=True,
@@ -275,7 +276,7 @@ class Event(models.Model):
 		# Duplicated due to wanting to display it in the admin
 		ref_date = self.end_date if self.end_date else self.start_date
 
-		if self.ref_date >= date.today():
+		if ref_date >= date.today():
 			return True 
 		else:
 			return False 
