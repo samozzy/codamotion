@@ -7205,7 +7205,7 @@ textarea.form-control-lg {
   color: #dc3545 !important;
 }
 
-.text-light, .testimonial-block figure .blockquote, .testimonial-block figure .blockquote-footer, .footer-block a, .footer-block, .bg-brand-gradient .accordion-header .accordion-button:not(.collapsed), .page-header .accordion-header .accordion-button:not(.collapsed), .footer-block .accordion-header .accordion-button:not(.collapsed) {
+.text-light, .testimonial-block figure .blockquote, .testimonial-block figure .blockquote-footer, .footer-block a, .footer-block {
   color: #f8f9fa !important;
 }
 
@@ -11523,7 +11523,7 @@ textarea.form-control-lg {
   background: linear-gradient(to right, #00d0ff 0%, #0c50ce 50%, #6442ff 88%);
 }
 
-.bg-transparent-white, .bg-brand-gradient .accordion-header, .page-header .accordion-header, .footer-block .accordion-header {
+.bg-transparent-white, .bg-brand-gradient .accordion-header .accordion-button:not(.collapsed), .page-header .accordion-header .accordion-button:not(.collapsed), .footer-block .accordion-header .accordion-button:not(.collapsed), .bg-brand-gradient .accordion-header, .page-header .accordion-header, .footer-block .accordion-header {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -11599,10 +11599,6 @@ label {
 .bg-brand-gradient .accordion-header, .page-header .accordion-header, .footer-block .accordion-header {
   font-weight: 500;
 }
-.bg-brand-gradient .accordion-header .accordion-button:not(.collapsed), .page-header .accordion-header .accordion-button:not(.collapsed), .footer-block .accordion-header .accordion-button:not(.collapsed) {
-  background-color: #0c50ce;
-}
-
 .product-content > :first-child, .component-content > :first-child, [class*=person-] > :first-child, .accordion-item > :first-child, .accordion-content > :first-child {
   margin-top: 0px;
 }
@@ -11672,7 +11668,7 @@ label {
   border-top: 1px solid black;
 }
 
-.text-light .primary-column, .testimonial-block figure .blockquote .primary-column, .testimonial-block figure .blockquote-footer .primary-column, .bg-brand-gradient .accordion-header .accordion-button:not(.collapsed) .primary-column, .page-header .accordion-header .accordion-button:not(.collapsed) .primary-column, .footer-block .accordion-header .accordion-button:not(.collapsed) .primary-column, .footer-block .primary-column {
+.text-light .primary-column, .testimonial-block figure .blockquote .primary-column, .testimonial-block figure .blockquote-footer .primary-column, .footer-block .primary-column {
   border-color: #fff;
 }
 
@@ -11769,7 +11765,7 @@ label {
   content: "";
   display: block;
   height: 150px;
-  margin: -150px 0 0;
+  margin: -150px 0 0 0;
 }
 
 .nav-tabs .nav-link {
