@@ -72,7 +72,7 @@ hr:not([size]) {
   height: 1px;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, .testimonial-block figure .blockquote-footer, h2, .h2, .testimonial-block figure .blockquote, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, .testimonial-block figure .blockquote-footer, h2, .h2, .testimonial-block figure .blockquote, .site-subtitle, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -88,11 +88,11 @@ h1, .h1 {
   }
 }
 
-h2, .h2, .testimonial-block figure .blockquote {
+h2, .h2, .testimonial-block figure .blockquote, .site-subtitle {
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
-  h2, .h2, .testimonial-block figure .blockquote {
+  h2, .h2, .testimonial-block figure .blockquote, .site-subtitle {
     font-size: 2rem;
   }
 }
@@ -489,13 +489,13 @@ progress {
   }
 }
 
-.display-4 {
+.display-4, .site-title {
   font-size: calc(1.475rem + 2.7vw);
   font-weight: 300;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
-  .display-4 {
+  .display-4, .site-title {
     font-size: 3.5rem;
   }
 }
@@ -11583,7 +11583,7 @@ textarea.form-control-lg {
   font-family: "Font Awesome 5 Free" !important;
 }
 
-h2, .h2, .testimonial-block figure .blockquote {
+h2, .h2, .testimonial-block figure .blockquote, .site-subtitle {
   font-weight: 400;
 }
 
@@ -11594,6 +11594,20 @@ h3, .h3, .testimonial-block figure .blockquote-footer {
 label {
   font-weight: 300;
   font-size: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .site-title-wrapper {
+    width: 75%;
+  }
+}
+
+.site-title {
+  line-height: 1 !important;
+}
+
+.site-subtitle {
+  font-weight: 200;
 }
 
 .bg-brand-gradient .accordion-header, .page-header .accordion-header, .footer-block .accordion-header {

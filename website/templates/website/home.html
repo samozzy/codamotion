@@ -1,5 +1,12 @@
 {% extends 'website/structure/base.html' %}
 
+	{% block title %}
+	<div class="site-title-wrapper">
+		<h1 class="site-title">Welcome to the home of motion capture innovation</h1>
+		<h2 class="site-subtitle">We create advanced technologies to maximise the use of movement analysis around the world, with the goal of enhancing as many lives as possible.</h2>
+	</div>
+	{% endblock %}
+
 	{% block list_data %}
 		{% include 'website/components/grid-list.html' with items=featured_list cols=3 homepage="true" %}
 	{% endblock %}

@@ -52,6 +52,20 @@ label {
 ul {
 	@extend .mt-4;
 }
+.site-title-wrapper {
+	@media only screen and (min-width: 992px) {
+		width: 75%;
+	}
+}
+.site-title {
+	@extend .display-4;
+	line-height: 1 !important;
+}
+.site-subtitle {
+	@extend .h2;
+	font-weight: 200;
+}
+
 .bg-brand-gradient .accordion-header {
 	@extend .bg-transparent-white;
 	font-weight: 500;

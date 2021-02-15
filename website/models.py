@@ -177,7 +177,6 @@ class SiteMenu(models.Model):
 class Page(models.Model):
 	title = models.CharField(max_length=100)
 	slug = models.SlugField(unique=True)
-	lead_text = models.CharField(null=True,blank=True,max_length=300)
 	image = models.ImageField(blank=True,null=True) # TOOD: Does this exist?
 	featured = models.BooleanField(default=False)
 	body_text = models.TextField(blank=True,null=True,

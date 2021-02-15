@@ -11,7 +11,7 @@
 			<div class="row" style="margin-bottom:7rem;">
 				{% include 'website/structure/nav.html' %}
 			</div>
-			<div class="row mt-auto mb-4 ms-5 zi-3">
+			<div class="row mt-auto {% if page.slug == 'home' %}mb-auto{% endif %} mb-4 ms-5 zi-3">
 				<div class="col-12">
 					<h1 class="display-4 text-left page-title">{% block title %}{{ title | default:"Welcome to Codamotion" }}{% endblock %}</h1>
 				</div>
