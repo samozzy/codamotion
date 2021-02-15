@@ -1,3 +1,4 @@
+{% load markdown_extras %}
 {% for person in people %}
 	<div class="row person">
 		{% if person.image %}
@@ -7,7 +8,7 @@
 		{% endif %}
 		<div class="secondary-column">
 			<h3><strong>{{ person.person_name }}</strong> {{ person.role | default:"" }}</h3>
-			{{ person.bio | linebreaks }}
+			{{ person.bio | markdown | safe }}
 		</div>
 	</div>
 {% endfor %}

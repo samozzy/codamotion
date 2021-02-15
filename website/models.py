@@ -13,7 +13,7 @@ class User(AbstractUser):
 ## FEATURED ITEMS ##
 class BaseModel(models.Model):
 	title = models.CharField(max_length=150)
-	body_text = models.TextField(null=True,blank=True)
+	body_text = models.TextField(null=True,blank=True, help_text="You can use Markdown here for rich text.")
 	order = models.IntegerField(default=1)
 	featured = models.BooleanField(default=False)
 
@@ -161,7 +161,7 @@ class Page(models.Model):
 	image = models.ImageField(blank=True,null=True) # TOOD: Does this exist?
 	featured = models.BooleanField(default=False)
 	body_text = models.TextField(blank=True,null=True,
-		help_text="This will appear above all the other content on the page")
+		help_text="This will appear above all the other content on the page. You can use Markdown here.")
 	menu = models.ManyToManyField(SiteMenu, blank=True)
 	testimonial = models.ForeignKey('Testimonial', on_delete=models.DO_NOTHING, blank=True, null=True,
 		help_text="This will appear below all the other content on the page")
@@ -213,7 +213,7 @@ class Page(models.Model):
 
 class ContentObject(models.Model):
 	title = models.CharField(max_length=250,blank=True,null=True)
-	body_text = models.TextField()
+	body_text = models.TextField(help_text="You can use Markdown here.")
 	page = models.ForeignKey(Page, on_delete=models.CASCADE)
 
 	def __str__(self):
@@ -241,7 +241,7 @@ class Event(models.Model):
 	title = models.CharField(max_length=350)
 	link = models.URLField(blank=True,null=True)
 	image = models.ImageField(blank=True,null=True)
-	body_text = models.TextField(blank=True,null=True)
+	body_text = models.TextField(blank=True,null=True, help_text="You can use Markdown here.")
 
 	objects = EventForthcomingManager()
 	forthcoming_events = EventForthcomingManager()
@@ -322,7 +322,7 @@ class Vacancy(models.Model):
 		verbose_name_plural = 'Vacancies'
 
 	title = models.CharField(max_length=200)
-	body_text = models.TextField(blank=True,null=True)
+	body_text = models.TextField(blank=True,null=True, help_text="You can use Markdown here.")
 	deadline = models.DateField(blank=True,null=True)
 
 	def __str__(self):

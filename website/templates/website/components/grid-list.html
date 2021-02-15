@@ -1,4 +1,5 @@
 {% load static %}
+{% load markdown_extras %}
 
 {% spaceless %}
 <div class="mt-3 row row-cols-lg-{{ cols | default:4 }} row-cols-sm-2 row-cols-1">
@@ -16,7 +17,7 @@
 			</a>
 			{% if text_below %}
 				<p class="lead text-center"><a href="{{ item.slug }}">{{ item.title }}</a></p>
-				<p>{{ item.lead_text }}</p>
+				<p>{{ item.list_text | default:item.lead_text | markdown | safe }}</p>
 			{% endif %}
 		</div>
 	{% endfor %}

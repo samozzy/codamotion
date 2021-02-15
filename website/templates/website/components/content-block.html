@@ -1,3 +1,4 @@
+{% load markdown_extras %}
 								{% if page.get_content %}
 									<div class="mt-4">
 										{% for content in page.get_content %}
@@ -8,7 +9,7 @@
 													</div>
 												{% endif %}
 												<div class="secondary-column pt-4">
-													{{ content.body_text | linebreaks }}
+													{{ content.body_text | markdown | safe }}
 												</div>
 											</div>
 										{% endfor %}

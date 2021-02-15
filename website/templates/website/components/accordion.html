@@ -1,3 +1,4 @@
+{% load markdown_extras %}
 <div class="accordion mt-4 {{ add_class }}" id="coda-accordion_{{ id }}">
 	{% for item in items %}
 		<div class="accordion-item">
@@ -15,7 +16,7 @@
 							</div>
 						{% endif %}
 						<div class="col accordion-content d-flex">
-							{{ item.body_text | linebreaks }}
+							{{ item.body_text | markdown | safe }}
 							{% if item.link %}
 								<a class="btn btn-primary w-75 align-self-end mx-auto" role="button" href="{{ item.link }}">More information <i aria-hidden="true" class="fa fa-external-link my-auto d-inline-block"></i><span class="visually-hidden">External link</span></a>
 							{% endif %}

@@ -1,3 +1,4 @@
+{% load markdown_extras %}
 <ul class="nav nav-tabs" id="{{ product | slugify }}-components" role="tablist">
 		{% for component in components %}
 			<li class="nav-item" role="presentation">
@@ -16,7 +17,7 @@
 				{% endif %}
 				<div class="col-auto component-content">
 					<h3>{{ component.title | upper }}</h3>
-					{{ component.body_text | linebreaks }}
+					{{ component.body_text | markdown | safe }}
 				</div>
 			</div>
 		</div>

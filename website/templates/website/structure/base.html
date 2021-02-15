@@ -1,4 +1,5 @@
 {% load static %}
+{% load markdown_extras %}
 
 <!DOCTYPE html>
 <html lang="en-GB" class="h-100">
@@ -26,7 +27,9 @@
 
 						{% block body_text %}
 							{% if page.body_text %}
-								{{ page.body_text | linebreaks }}
+								<div class="body-text mb-4">
+									{{ page.body_text | markdown | safe }}
+								</div>
 							{% endif %}
 						{% endblock %}
 
