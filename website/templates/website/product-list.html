@@ -3,7 +3,7 @@
 
 {% block list_data %}
 {% if products %}
-	{% if products.count >= 4 %}
+	{% if product_type.grid_list %}
 		{% include 'website/components/grid-list.html' with items=products anchors="true" %}
 		<hr class="my-3 text-muted w-75">
 	{% else %}
