@@ -18,8 +18,8 @@ urlpatterns += [
 	path('movement-analysis-for-clinical-services/', views.MovementAnalysisClinicalView.as_view(), name='mvmt-clinical'),
 
 	path('case-studies/', views.CaseStudyListView.as_view(), name='case-study-list'),
-	path('portfolio/<slug:slug>/', views.CaseStudySingleView.as_view(), name='case-study-single'),
-	path('case-studies/<slug:slug>/', RedirectView.as_view(pattern_name='website:case-study-single', permanent=True)),
+	path('case-studies/<slug:slug>/', views.CaseStudySingleView.as_view(), name='case-study-single'),
+	path('portfolio/<slug:slug>/', RedirectView.as_view(pattern_name='website:case-study-single', permanent=True)),
 
 	path('about/', views.TeamView.as_view(), name='the-team'),
 
