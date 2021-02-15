@@ -451,7 +451,7 @@ progress {
   display: none !important;
 }
 
-.lead, .product-content p:first-of-type {
+.lead, .product-content p:first-of-type, .secondary-column p:first-of-type, .body-text p:first-of-type {
   font-size: 1.25rem;
   font-weight: 300;
 }
@@ -6679,7 +6679,7 @@ textarea.form-control-lg {
   margin-top: 1rem !important;
 }
 
-.mt-4, .testimonial-block figure .blockquote-footer, .component-content {
+.mt-4, .testimonial-block figure .blockquote-footer, .component-content, ul {
   margin-top: 1.5rem !important;
 }
 
@@ -7205,7 +7205,7 @@ textarea.form-control-lg {
   color: #dc3545 !important;
 }
 
-.text-light, .testimonial-block figure .blockquote, .testimonial-block figure .blockquote-footer, .footer-block a, .footer-block {
+.text-light, .testimonial-block figure .blockquote, .testimonial-block figure .blockquote-footer, .footer-block a, .footer-block, .bg-brand-gradient .accordion-header .accordion-button:not(.collapsed), .page-header .accordion-header .accordion-button:not(.collapsed), .footer-block .accordion-header .accordion-button:not(.collapsed) {
   color: #f8f9fa !important;
 }
 
@@ -11523,6 +11523,10 @@ textarea.form-control-lg {
   background: linear-gradient(to right, #00d0ff 0%, #0c50ce 50%, #6442ff 88%);
 }
 
+.bg-transparent-white, .bg-brand-gradient .accordion-header, .page-header .accordion-header, .footer-block .accordion-header {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 @font-face {
   font-family: "SF-Pro-Display";
   src: url("fonts/SF-Pro-Display/SF-Pro-Display-Heavy.woff") format("woff");
@@ -11590,6 +11594,13 @@ h3, .h3, .testimonial-block figure .blockquote-footer {
 label {
   font-weight: 300;
   font-size: 1rem;
+}
+
+.bg-brand-gradient .accordion-header, .page-header .accordion-header, .footer-block .accordion-header {
+  font-weight: 500;
+}
+.bg-brand-gradient .accordion-header .accordion-button:not(.collapsed), .page-header .accordion-header .accordion-button:not(.collapsed), .footer-block .accordion-header .accordion-button:not(.collapsed) {
+  background-color: #0c50ce;
 }
 
 .product-content > :first-child, .component-content > :first-child, [class*=person-] > :first-child, .accordion-item > :first-child, .accordion-content > :first-child {
@@ -11661,7 +11672,7 @@ label {
   border-top: 1px solid black;
 }
 
-.text-light .primary-column, .testimonial-block figure .blockquote .primary-column, .testimonial-block figure .blockquote-footer .primary-column, .footer-block .primary-column {
+.text-light .primary-column, .testimonial-block figure .blockquote .primary-column, .testimonial-block figure .blockquote-footer .primary-column, .bg-brand-gradient .accordion-header .accordion-button:not(.collapsed) .primary-column, .page-header .accordion-header .accordion-button:not(.collapsed) .primary-column, .footer-block .accordion-header .accordion-button:not(.collapsed) .primary-column, .footer-block .primary-column {
   border-color: #fff;
 }
 
