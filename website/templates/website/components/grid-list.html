@@ -9,7 +9,7 @@
 				href="{% if item.full_slug and not anchors %}{{ item.full_slug }}{% else %}{% if anchors %}#{% endif %}{{ item.slug | default:item.title | slugify }}{% endif %}"
 			>
 				{% if not text_below %}
-					<div class="caption d-flex flex-wrap align-content-center {% if item.image %}text-outline{% endif %}"><span>{{ item.title }}</span></div>
+					<div class="caption d-flex flex-wrap align-content-center {% if item.image %}text-outline{% endif %}"><span>{% if prefix_name %}{{ item.prefix_name | default:item.title }}{% else %}{{ item.title }}{% endif %}</span></div>
 				{% endif %}
 				<div class="coda-button-background w-100 {% if homepage %}grid-list-homepage{% endif %}" style="background-image:url({% if item.image %}{{ MEDIA_URL }}/{{ item.image }}{% else %}{% static 'website/neurons.jpg'%}{% endif %}">
 					

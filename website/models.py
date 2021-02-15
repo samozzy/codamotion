@@ -38,6 +38,8 @@ class CaseStudy(BaseModel):
 	slug = models.SlugField()
 
 	lead_text = models.CharField(blank=True,null=True, max_length=300)
+	list_text = models.CharField(blank=True,null=True,max_length=300,
+		help_text="If you want something other than the lead text to appear in the Case Study list, put that here.")
 	image = models.ImageField(blank=True,null=True)
 
 	def save(self, *args, **kwargs):
@@ -48,12 +50,19 @@ class CaseStudy(BaseModel):
 	def full_slug(self):
 		return '/case-studies/' + self.slug
 
+	def prefix_name(self):
+		return 'Case Study: ' + self.title 
+
 	def __str__(self):
 		return self.title 
 
 class ProductType(models.Model):
+	class Meta:
+		ordering = ['name']
+
 	name = models.CharField(max_length=50)
 	slug = models.SlugField()
+	grid_list = models.BooleanField(default=False,help_text="Use a grid list at the top of the product list page")
 
 	def get_products(self):
 		return Product.objects.filter(product_type=self)
@@ -68,6 +77,9 @@ class ProductType(models.Model):
 
 
 class Product(BaseModel):
+	class Meta:
+		ordering = ['product_type','order','title']
+
 	product_type = models.ForeignKey(ProductType, on_delete=models.DO_NOTHING)
 
 	image = models.ImageField(blank=True,null=True)
@@ -79,13 +91,19 @@ class Product(BaseModel):
 		return slugify(self.title)
 
 	def full_slug(self):
-		# Slightly dependent on this matching urls.py until the end of time 
+		# Ensure that urls.py matches this
 		base = self.product_type.slug 
 		product = self.slug() 
 		return '/' + str(base) + '#' + str(product)
 
+	def prefix_name(self):
+		return 'Solution: ' + self.title
+
 	def get_components(self):
 		return Component.objects.filter(product_link=self)
+
+	def component_count(self):
+		return self.get_components().count() 
 
 class Component(BaseModel):
 	image = models.ImageField(blank=True,null=True)
@@ -96,7 +114,8 @@ class Component(BaseModel):
 
 class Application(BaseModel):
 	image = models.ImageField(blank=True,null=True)
-	product_link = models.ManyToManyField(Product)
+	product_link = models.ManyToManyField(Product, blank=True)
+	case_study_link = models.ManyToManyField(CaseStudy, blank=True)
 	reason_categories = Choices('research','clinical')
 	reason_to_choose = models.CharField(choices=reason_categories, default=reason_categories.research, max_length=15,
 		help_text='Does this Application belong to "Clinical Services" or "Research Facilities"?')
