@@ -27,10 +27,9 @@ class PageMenuInline(admin.TabularInline):
 	extra = 0 
 
 class PageAdmin(admin.ModelAdmin):
-	list_display = ['title', 'slug', 'parent', 'featured']
+	list_display = ['title', 'slug', 'featured']
 	prepopulated_fields = {"slug": ("title",)}
 	inlines = [ContentObjectInline]
-	readonly_fields = ['page_children_html']
 	formfield_overrides = {
 		models.ManyToManyField: {'widget': CheckboxSelectMultiple},
 	}
@@ -55,15 +54,6 @@ class PageAdmin(admin.ModelAdmin):
 
 	actions = [make_featured,remove_featured]
 
-	def page_children_html(self, obj):
-		children = obj.page_children()
-		return_string = ''
-		for i, child in enumerate(children):
-			return_string += str(child) 
-			if i != (children.count() - 1):
-				return_string += '; '
-		return return_string
-	page_children_html.short_description = 'Child Pages'
 
 class SiteMenuAdmin(admin.ModelAdmin):
 	def has_add_permission(self, request):

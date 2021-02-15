@@ -149,10 +149,8 @@ class Page(models.Model):
 	body_text = models.TextField(blank=True,null=True,
 		help_text="This will appear above all the other content on the page")
 	menu = models.ManyToManyField(SiteMenu, blank=True)
-	parent = models.ForeignKey('self', on_delete=models.CASCADE, blank=True, null=True)
 	testimonial = models.ForeignKey('Testimonial', on_delete=models.DO_NOTHING, blank=True, null=True,
 		help_text="This will appear below all the other content on the page")
-	## TODO: Validate that parent cannot be itself 
 
 	# 'list-grid.html' can be used to add a list component to a page
 	# model_queryset lists the human-readable name and the corresponding queryset is in views.py, as we can't do querysets in models.py
@@ -195,16 +193,6 @@ class Page(models.Model):
 
 	def get_content(self):
 		return ContentObject.objects.filter(page=self)
-
-	def page_children(self):
-		return Page.objects.filter(parent=self)
-
-	def full_slug(self):
-		slug = '/'
-		if self.parent:
-			slug += self.parent.slug + '/'
-		slug += self.slug + '/'
-		return slug
 
 	def __str__(self):
 		return self.title 
