@@ -155,6 +155,7 @@ class ProductListView(BaseView, generic.ListView):
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
 		context['title'] = ProductType.objects.get(slug=self.kwargs['product_type']).name
+		context['product_type'] = ProductType.objects.get(slug=self.kwargs['product_type'])
 		return context 
 
 
