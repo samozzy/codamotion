@@ -21,19 +21,12 @@ from django.conf import settings
 from django.conf.urls import url 
 from django.conf.urls.static import static 
 
-# from wagtail.admin import urls as wagtailadmin_urls
-# from wagtail.core import urls as wagtail_urls
-# from wagtail.documents import urls as wagtaildocs_urls
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include('website.urls')),
 
     path('__debug__/', include(debug_toolbar.urls)),
 
-    # path('wagtail/', include(wagtailadmin_urls)),
-    # path('documents/', include(wagtaildocs_urls)),
-    # path('pages/', include(wagtail_urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = "Codamotion"
