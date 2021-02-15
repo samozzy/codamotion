@@ -19,6 +19,28 @@ def make_featured(modeladmin,request,queryset):
 def remove_featured(modeladmin,request,queryset):
 	queryset.update(featured=False)
 
+def move_down(modeladmin,request,queryset):
+	# Increase number 
+	for item in queryset:
+		item.order += 1 
+		item.save() 
+
+def move_up(modeladmin,request,queryset):
+	# Decrease number
+	for item in queryset:
+		if item.order == 1:
+			continue 
+		else:
+			item.order -= 1
+			item.save() 
+
+def set_order(modeladmin,request,queryset):
+	counter = 1
+	for item in queryset:
+		item.order = counter 
+		item.save() 
+		counter += 1
+
 class PageMenuInline(admin.TabularInline):
 	# class Meta:
 	verbose_name: "Pages"
@@ -116,15 +138,29 @@ class ComponentInline(admin.TabularInline):
 
 class CaseStudyAdmin(admin.ModelAdmin):
 	prepopulated_fields = {"slug": ("title",)}
+	list_display =['title', 'featured']
 	actions = [make_featured,remove_featured]
+
+
+def toggle_grid(modeladmin,request,queryset):
+	for item in queryset:
+		if item.grid_list == True:
+			item.grid_list = False 
+		else:
+			item.grid_list = True 
+		item.save() 
 
 class ProductTypeAdmin(admin.ModelAdmin):
 	prepopulated_fields = {"slug": ("name",)}
-	list_display = ['name','slug']
+	list_display = ['name','slug','grid_list']
+	actions = [toggle_grid]
+
 
 class ProductAdmin(admin.ModelAdmin):
 	inlines = [ComponentInline, ApplicationInline]
-	actions = [make_featured,remove_featured]
+	actions = [make_featured,remove_featured,move_up,move_down,set_order]
+	list_display = ['title', 'product_type', 'order', 'component_count']
+	list_filter = ['product_type']
 
 class ContactAdmin(admin.ModelAdmin):
 	list_display = ['name','email', 'submission_date']
