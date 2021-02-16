@@ -332,7 +332,9 @@ class Testimonial(models.Model):
 
 	def __str__(self):
 		quote = (self.quote[:30] + '..') if len(self.quote) > 30 else self.quote
-		return_string = '"' + quote + '" -' + self.source 
+		return_string = '"' + quote + '"'
+		if self.source:
+			return_string += ' -' + self.source 
 		return return_string
 
 class Vacancy(models.Model):

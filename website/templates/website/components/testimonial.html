@@ -4,8 +4,10 @@
 					<blockquote class="blockquote">
 						"{{ page.testimonial.quote }}"
 					</blockquote>
-					<figcaption class="blockquote-footer">
-						{{ page.testimonial.source }}
-					</figcaption>
+					{% if page.testimonial.source %}
+						<figcaption class="blockquote-footer">
+							{{ page.testimonial.source }}
+						</figcaption>
+					{% endif %}
 				</figure>
 			</div>
