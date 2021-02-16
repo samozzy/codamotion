@@ -24,7 +24,8 @@ class BaseView(SuccessMessageMixin, CreateView):
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
-		context['header_menu'] = SiteMenu.objects.filter(title='H').first().get_pages() or None 
+		context['header_menu'] = SiteMenu.objects.filter(title='H').first().get_pages().exclude(slug='contact') or None 
+		## The contact page should always go at the end of the menu so a quick special case workaround above.
 		context['product_type_list'] = ProductType.objects.all() 
 		context['footer_menu'] = SiteMenu.objects.filter(title='F').first().get_pages() or None 
 		context['company_info'] = CompanyInfo.objects.first() 
@@ -200,6 +201,7 @@ class HistoryView(BaseView, generic.ListView):
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
 		context['title'] = 'The History of Codamotion'
+		context['page']['testimonial'] = None 
 		return context 
 
 class VacancyListView(BaseView, generic.ListView):
@@ -210,7 +212,6 @@ class VacancyListView(BaseView, generic.ListView):
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
 		context['title'] = 'Working at Codamotion'
-		context['page']['testimonial'] = None
 		return context 
 
 class EventListView(BaseView, generic.ListView):

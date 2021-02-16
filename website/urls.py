@@ -26,12 +26,13 @@ urlpatterns += [
 	path('about/', include([
 		path('history/', views.HistoryView.as_view(), name='history'),
 		path('vision-ethos/', views.VisionView.as_view(), name='vision-ethos'),
-		path('working-at-codamotion/', views.VacancyListView.as_view(), name='vacancies'),
+		path('working-at-codamotion/', RedirectView.as_view(pattern_name='website:vacancies', permanent=True)),
 		path('the-team/', RedirectView.as_view(pattern_name='website:the-team', permanent=True)),
 	])),
 	path('forthcoming-events/', views.EventListView.as_view(), name='event-list'),
 
 	path('contact/', views.DistributorView.as_view(), name='contact'),
+	path('careers/', views.VacancyListView.as_view(), name='vacancies'),
 
 	# Any other Page objects caught here: Pages that override the above are handled via views.py
 	path('<slug:slug>/', views.PageView.as_view(), name='pages'),
