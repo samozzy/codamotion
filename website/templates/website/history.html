@@ -1,7 +1,9 @@
 {% extends 'website/structure/base.html' %}
 {% load static %}
+{% load markdown_extras %}
+
 {% block full_width %}
-	<div class="container-fluid">
+	<div class="container-fluid mt-n5">
 		{% for event in history %}
 			<div class="row p-5 {% if forloop.counter|divisibleby:2 %}striped-background text-light{% endif %}" {% if forloop.counter|divisibleby:2 %}style="background-image:url({% static 'website/neurons.jpg' %}"{% endif %}>
 				{% if event.image %}
@@ -11,7 +13,7 @@
 				{% endif %}
 				<div class="secondary-column">
 					<h3>{{ event.title }}</h3>
-					{{ event.body_text | linebreaks }}
+					{{ event.body_text | markdown | safe }}
 				</div>
 			</div>
 		{% endfor %}

@@ -1,3 +1,4 @@
+{% load markdown_extras %}
 <div class="row mx-md-5">
 	<div class="col-lg-4">
 		<div class="secondary-column mt-5 pt-2" id="footer-tagline">
@@ -33,7 +34,7 @@
 	</div>
 	<div class="row">
 		<div class="col px-4">
-			<p class="small">{{ company_info.company_text | linebreaks }}</p>
+			<div class="small light-links tight-lines">{{ company_info.company_text | markdown | safe }}</div>
 		</div>
 	</div>
 </div>

@@ -1,8 +1,9 @@
 {% extends 'website/structure/base.html' %}
 {% load static %}
+{% load markdown_extras %}
 
 {% block full_width %}
-	<div class="container-fluid">
+	<div class="container-fluid mt-n4">
 		<div class="row striped-background text-light p-5" style="background-image:url({% static 'website/neurons.jpg' %})">
 			<div class="primary-column">
 				<h2 class="mt-1">Vacancies</h2>
@@ -11,10 +12,10 @@
 				{% if vacancies %}
 					{% for vacancy in vacancies %}
 						<h3>{{ vacancy.title }}<br><small>{{ vacancy.deadline }}</small></h3>
-						{{ vacancy.body_text | linebreaks }}
+						{{ vacancy.body_text | markdown | safe }}
 					{% endfor %}
 				{% else %}
-					<p>We have no specific vacancies at present but you are invited to submit speculative applications to careers@codamotion.com.</p>
+					<p>We have no specific vacancies at present but you are invited to submit speculative applications to <a href="mailto:careers@codamotion.com">careers@codamotion.com</a>.</p>
 				{% endif %}
 			</div>
 		</div>
