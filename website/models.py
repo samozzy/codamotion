@@ -182,7 +182,7 @@ class Page(models.Model):
 	body_text = models.TextField(blank=True,null=True,
 		help_text="This will appear above all the other content on the page. You can use Markdown here.")
 	menu = models.ManyToManyField(SiteMenu, blank=True)
-	testimonial = models.ForeignKey('Testimonial', on_delete=models.DO_NOTHING, blank=True, null=True,
+	testimonial = models.ForeignKey('Testimonial', on_delete=models.SET_NULL, blank=True, null=True,
 		help_text="This will appear below all the other content on the page")
 
 	# 'list-grid.html' can be used to add a list component to a page
@@ -329,6 +329,9 @@ class Distributor(models.Model):
 class Testimonial(models.Model):
 	quote = models.TextField()
 	source = models.CharField(max_length=200,blank=True,null=True)
+
+	def used_in(self):
+		return list(Page.objects.filter(testimonial=self).all())
 
 	def __str__(self):
 		quote = (self.quote[:30] + '..') if len(self.quote) > 30 else self.quote

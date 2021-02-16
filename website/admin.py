@@ -168,13 +168,17 @@ class ContactAdmin(admin.ModelAdmin):
 class HistoryAdmin(admin.ModelAdmin):
 	list_display = ['title', 'order']
 
+class TestimonialAdmin(admin.ModelAdmin):
+	list_display = ['quote','source','used_in']
+	readonly_fields = ['used_in']
+
 admin.site.register(User, UserAdmin)
 admin.site.register(Event, EventAdmin)
 admin.site.register(History, HistoryAdmin)
 admin.site.register(CompanyInfo, CompanyInfoAdmin)
 admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(Distributor, DistributorAdmin)
-admin.site.register(Testimonial)
+admin.site.register(Testimonial, TestimonialAdmin)
 admin.site.register(ReasonsToChoose, ReasonsToChooseAdmin)
 admin.site.register(CaseStudy, CaseStudyAdmin)
 admin.site.register(ProductType, ProductTypeAdmin)
