@@ -18,6 +18,14 @@ class BaseModel(models.Model):
 	order = models.IntegerField(default=1)
 	featured = models.BooleanField(default=False)
 
+	def has_image(self):
+		# self.image returns True as it has a File reference 
+		if not self.image:
+			return False 
+		else:
+			return True 
+	has_image.boolean = True 
+
 	class Meta:
 		abstract = True 
 

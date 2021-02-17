@@ -138,7 +138,7 @@ class ComponentInline(admin.TabularInline):
 
 class CaseStudyAdmin(admin.ModelAdmin):
 	prepopulated_fields = {"slug": ("title",)}
-	list_display =['title', 'featured']
+	list_display =['title', 'featured','has_image']
 	actions = [make_featured,remove_featured]
 
 
