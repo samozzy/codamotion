@@ -1,4 +1,5 @@
 from datetime import date
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.template.defaultfilters import slugify
@@ -270,6 +271,14 @@ class Event(models.Model):
 		if self.end_date:
 			title_string += ' to ' + str(self.end_date.strftime("%a %d %B, %Y"))
 		return title_string
+
+	def clean(self):
+		if self.end_date < self.start_date:
+			raise ValidationError('Event cannot end before it starts')
+
+	def save(self, *args, **kwargs):
+		self.full_clean() 
+		super(Event, self).save(*args, **kwargs)
 
 	def is_forthcoming(self):
 		# Duplicated due to wanting to display it in the admin
