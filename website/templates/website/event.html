@@ -13,7 +13,7 @@
 				{% include 'website/components/accordion.html' with items=forthcoming_events id='forthcoming' add_class='accordion-flush' %}
 			</div>
 		{% else %}
-			<p><em>There are no forthcoming events.</em></p>
+			<p class="lead text-center"><em>There are no forthcoming events.</em></p>
 		{% endif %}
 		<hr class="my-5 w-75 mx-auto text-muted">
 		{% if past_events %}
@@ -24,7 +24,7 @@
 				{% include 'website/components/accordion.html' with items=past_events id='past' add_class='accordion-flush' %}
 			</div>
 		{% else %}
-			<p><em>There are no past events.</em></p>
+			<p class="lead text-center"><em>There are no past events.</em></p>
 		{% endif %}
 		<br>
 	{% endblock %}

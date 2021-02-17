@@ -291,8 +291,9 @@ class Event(models.Model):
 		return title_string
 
 	def clean(self):
-		if self.end_date < self.start_date:
-			raise ValidationError('Event cannot end before it starts')
+		if self.end_date and self.start_date:
+			if self.end_date < self.start_date:
+				raise ValidationError('Event cannot end before it starts')
 
 	def save(self, *args, **kwargs):
 		self.full_clean() 
