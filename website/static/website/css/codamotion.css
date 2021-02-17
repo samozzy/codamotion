@@ -6117,7 +6117,7 @@ textarea.form-control-lg {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
-.shadow-lg {
+.shadow-lg, .card-codamotion {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 
@@ -7205,7 +7205,7 @@ textarea.form-control-lg {
   color: #dc3545 !important;
 }
 
-.text-light, .testimonial-block figure .blockquote, .testimonial-block figure .blockquote-footer, .footer-block a, .footer-block {
+.text-light, .testimonial-block figure .blockquote, .testimonial-block figure .blockquote-footer, .footer-block a, .footer-block, .card-codamotion {
   color: #f8f9fa !important;
 }
 
@@ -7245,7 +7245,7 @@ textarea.form-control-lg {
   line-height: 1.25 !important;
 }
 
-.lh-base {
+.lh-base, .tight-lines p {
   line-height: 1.5 !important;
 }
 
@@ -11519,11 +11519,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.bg-brand-gradient, .page-header, .footer-block {
+.bg-brand-gradient, .card-codamotion, .page-header, .footer-block {
   background: linear-gradient(to right, #00d0ff 0%, #0c50ce 50%, #6442ff 88%);
 }
 
-.bg-transparent-white, .bg-brand-gradient .accordion-header .accordion-button:not(.collapsed), .page-header .accordion-header .accordion-button:not(.collapsed), .footer-block .accordion-header .accordion-button:not(.collapsed), .bg-brand-gradient .accordion-header, .page-header .accordion-header, .footer-block .accordion-header {
+.bg-transparent-white, .card-codamotion .accordion-header .accordion-button:not(.collapsed), .card-codamotion .accordion-header {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -11610,16 +11610,36 @@ label {
   font-weight: 200;
 }
 
-.bg-brand-gradient .accordion-header, .page-header .accordion-header, .footer-block .accordion-header {
+.card-codamotion {
+  border-color: inherit;
+}
+.card-codamotion .accordion-header {
   font-weight: 500;
 }
-.product-content > :first-child, .component-content > :first-child, [class*=person-] > :first-child, .accordion-item > :first-child, .accordion-content > :first-child {
+.card-codamotion .accordion-collapse, .card-codamotion .accordion-button {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.product-content > :first-child, .component-content > :first-child, [class*=person-] > :first-child, .accordion-item > :first-child, .accordion-content > :first-child,
+.accordion-content .body-text > :first-child {
   margin-top: 0px;
 }
 
 .text-outline {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   color: white;
+}
+
+.tight-lines p {
+  margin-top: 0;
+}
+
+.striped-background.text-light a, .testimonial-block figure .striped-background.blockquote a, .testimonial-block figure .striped-background.blockquote-footer a, .footer-block a.striped-background a, .striped-background.footer-block a, .striped-background.card-codamotion a, .light-links a {
+  color: white;
+  font-weight: 500;
+}
+.striped-background.text-light a:hover, .testimonial-block figure .striped-background.blockquote a:hover, .testimonial-block figure .striped-background.blockquote-footer a:hover, .footer-block a.striped-background a:hover, .striped-background.footer-block a:hover, .striped-background.card-codamotion a:hover, .striped-background.text-light a:focus, .testimonial-block figure .striped-background.blockquote a:focus, .testimonial-block figure .striped-background.blockquote-footer a:focus, .footer-block a.striped-background a:focus, .striped-background.footer-block a:focus, .striped-background.card-codamotion a:focus, .striped-background.text-light a:active, .testimonial-block figure .striped-background.blockquote a:active, .testimonial-block figure .striped-background.blockquote-footer a:active, .footer-block a.striped-background a:active, .striped-background.footer-block a:active, .striped-background.card-codamotion a:active, .light-links a:hover, .light-links a:focus, .light-links a:active {
+  text-decoration: underline;
 }
 
 .zi-1 {
@@ -11682,7 +11702,7 @@ label {
   border-top: 1px solid black;
 }
 
-.text-light .primary-column, .testimonial-block figure .blockquote .primary-column, .testimonial-block figure .blockquote-footer .primary-column, .footer-block .primary-column {
+.text-light .primary-column, .testimonial-block figure .blockquote .primary-column, .testimonial-block figure .blockquote-footer .primary-column, .card-codamotion .primary-column, .footer-block .primary-column {
   border-color: #fff;
 }
 

@@ -75,6 +75,9 @@ ul {
 			@extend .bg-transparent-white;
 		}
 	}
+	.accordion-collapse, .accordion-button {
+		border-color: rgba(255,255,255,0.7);
+	}
 }
 
 .product-content, .component-content, [class*="person-"], .accordion-item, .accordion-content, 
