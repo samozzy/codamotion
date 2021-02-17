@@ -12,7 +12,7 @@
 			<div class="row mt-4">
 				{% if component.image %}
 					<div class="col-md-4">
-						<img class="img-responsive" src="{{ MEDIA_URL }}/{{ component.image }}">
+						<img class="img-responsive" src="{{ component.image.url }}">
 					</div>
 				{% endif %}
 				<div class="col-auto component-content">

@@ -4,7 +4,7 @@
 {% block content_block %}
 	<div class="px-3">
 		<p class="lead">{{ case_study.lead_text }}</p>
-		{% if case_study.image %}<img class="img-responsive mx-auto m-3" src="{{ MEDIA_URL }}/{{ case_study.image }}" alt="{{ case_study }}">{% endif %}
+		{% if case_study.image %}<img class="img-responsive mx-auto m-3" src="{{ case_study.image.url }}" alt="{{ case_study }}">{% endif %}
 		{{ case_study.body_text | markdown | safe }}
 	</div>
 {% endblock %}

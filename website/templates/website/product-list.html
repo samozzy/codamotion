@@ -21,7 +21,7 @@
 					</div>
 					{% if product.image %}
 						<div class="col-md-6">
-							<img class="img-responsive" src="{{ MEDIA_URL }}/{{ product.image }}" alt="{{ product }}">
+							<img class="img-responsive" src="{{ product.image.url }}" alt="{{ product }}">
 						</div>
 					{% endif %}
 				</div>

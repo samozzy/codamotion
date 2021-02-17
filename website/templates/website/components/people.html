@@ -3,7 +3,7 @@
 	<div class="row person">
 		{% if person.image %}
 		<div class="primary-column">
-			<img class="img-responsive" src="{{ MEDIA_URL }}/{{ person.image }}" alt="{{ person }}">
+			<img class="img-responsive" src="{{ person.image.url }}" alt="{{ person }}">
 		</div>
 		{% endif %}
 		<div class="secondary-column">
