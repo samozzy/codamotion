@@ -33,6 +33,7 @@ class ReasonsToChoose(BaseModel):
 	class Meta:
 		verbose_name = 'Reasons to Choose'
 		verbose_name_plural = verbose_name
+		ordering = ['category','order','title']
 
 	category_choices = Choices('research','clinical')
 	category = models.CharField(choices=category_choices, default=category_choices.clinical,max_length=10)
@@ -43,6 +44,7 @@ class ReasonsToChoose(BaseModel):
 class CaseStudy(BaseModel):
 	class Meta:
 		verbose_name_plural = "Case Studies"
+		ordering = ['order','title']
 
 	slug = models.SlugField()
 
@@ -122,6 +124,9 @@ class Component(BaseModel):
 		return self.title + ' (' + str(self.product_link) + ')'
 
 class Application(BaseModel):
+	class Meta:
+		ordering = ['order','title']
+
 	image = models.ImageField(blank=True,null=True)
 	product_link = models.ManyToManyField(Product, blank=True)
 	case_study_link = models.ManyToManyField(CaseStudy, blank=True)
@@ -261,10 +266,15 @@ class EventForthcomingManager(models.Manager):
 		return forthcoming 
 
 class Event(models.Model):
+	class Meta:
+		ordering = ['-start_date','-end_date','title']
+
 	start_date = models.DateField()
 	end_date = models.DateField(blank=True,null=True)
 	location = models.CharField(
 		max_length=200,
+		blank=True,
+		null=True,
 	)
 	title = models.CharField(max_length=350)
 	link = models.URLField(blank=True,null=True)
@@ -315,6 +325,9 @@ class CompanyInfo(models.Model):
 		return 'Company Info'
 
 class TeamMember(models.Model):
+	class Meta:
+		ordering = ['person_type','person_name','role']
+		
 	type_choices = {
 		('MGMT', 'Management'),
 		('KEYC', 'Key Contact'),
@@ -334,8 +347,12 @@ class TeamMember(models.Model):
 		return return_string
 
 class Distributor(models.Model):
+	class Meta:
+		ordering = ['order','area','name']
+
 	area = models.CharField(max_length=100)
 	name = models.CharField(max_length=150)
+	order = models.IntegerField(default=1)
 	website = models.URLField(blank=True,null=True)
 	phone_number = models.CharField(max_length=16,blank=True,null=True)
 	address = models.TextField(blank=True,null=True)

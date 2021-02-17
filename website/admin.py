@@ -103,17 +103,19 @@ class TeamMemberAdmin(admin.ModelAdmin):
 	list_filter = ['person_type']
 
 class DistributorAdmin(admin.ModelAdmin):
-	list_display = ['name', 'area']
+	list_display = ['name', 'area', 'order']
+	actions = [set_order,move_up,move_down]
 
 class ReasonsToChooseAdmin(admin.ModelAdmin):
-	list_display = ['title', 'category']
-	actions = [make_featured,remove_featured]
+	list_display = ['title', 'category','order']
+	actions = [make_featured,remove_featured,set_order,move_up,move_down]
 
 class ApplicationAdmin(admin.ModelAdmin):
 	formfield_overrides = {
 		models.ManyToManyField: {'widget': CheckboxSelectMultiple},
 	}
-	actions = [make_featured,remove_featured]
+	list_display = ['title','featured','order']
+	actions = [make_featured,remove_featured,set_order,move_up,move_down]
 
 class ApplicationInline(admin.TabularInline):
 	model = Application.product_link.through
@@ -138,8 +140,8 @@ class ComponentInline(admin.TabularInline):
 
 class CaseStudyAdmin(admin.ModelAdmin):
 	prepopulated_fields = {"slug": ("title",)}
-	list_display =['title', 'featured','has_image']
-	actions = [make_featured,remove_featured]
+	list_display =['title', 'featured','order','has_image']
+	actions = [make_featured,remove_featured,set_order,move_up,move_down]
 
 
 def toggle_grid(modeladmin,request,queryset):
