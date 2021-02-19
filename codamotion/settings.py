@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import os 
+import urllib.parse 
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'captcha',
+    'storages',
 
     'widget_tweaks',
     'debug_toolbar',
@@ -104,8 +106,18 @@ DATABASES = {
     }
 }
 if not DEBUG:
-    import dj_database_url
-    DATABASES['default'] = dj_database_url.config()
+    if os.environ.get('AZURE'):
+        DATABASES['default'] = {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ.get('AZURE_DB_NAME'),
+            'HOST': os.environ.get('AZURE_DB_HOST') + '.postgres.database.azure.com',
+            'PORT': 5432,
+            'USER': os.environ.get('AZURE_DB_USER') + "@" + os.environ.get('AZURE_DB_HOST'),
+            'PASSWORD': urllib.parse.unquote(os.environ.get('AZURE_DB_PW')),
+        }
+    else:
+        import dj_database_url
+        DATABASES['default'] = dj_database_url.config()
 
 # Custom user auth
 AUTH_USER_MODEL = 'website.User'
@@ -193,5 +205,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+if not DEBUG and os.environ.get('AZURE_STORAGE_ACCOUNT_NAME'):
+    DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+    AZURE_ACCOUNT_NAME = os.environ.get('AZURE_STORAGE_ACCOUNT_NAME')
+    AZURE_ACCOUNT_KEY = os.environ.get('AZURE_STORAGE_ACCOUNT_KEY')
+    AZURE_CONTAINER = os.environ.get('AZURE_STORAGE_CONTAINER')
+    AZURE_LOCATION = os.environ.get('AZURE_STORAGE_LOCATION') or "" 
+    AZURE_ENDPOINT_SUFFIX = os.environ.get('AZURE_STORAGE_ENDPOINT_SUFFIX') or 'core.windows.net'
+    AZURE_CUSTOM_DOMAIN = os.environ.get('AZURE_STORAGE_CUSTOM_DOMAIN') or None 
+    AZURE_TOKEN_CREDENTIAL = os.environ.get('AZURE_STORAGE_TOKEN') or None 
+else:    
+    MEDIA_URL = '/media/'
