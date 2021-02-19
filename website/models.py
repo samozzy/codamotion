@@ -51,7 +51,7 @@ class CaseStudy(BaseModel):
 	lead_text = models.CharField(blank=True,null=True, max_length=300)
 	list_text = models.CharField(blank=True,null=True,max_length=300,
 		help_text="If you want something other than the lead text to appear in the Case Study list, put that here.")
-	image = models.ImageField(blank=True,null=True)
+	image = models.ImageField(blank=True,null=True,upload_to='casestudy')
 
 	def save(self, *args, **kwargs):
 		if not self.pk or not self.slug:
@@ -93,7 +93,7 @@ class Product(BaseModel):
 
 	product_type = models.ForeignKey(ProductType, on_delete=models.DO_NOTHING)
 
-	image = models.ImageField(blank=True,null=True)
+	image = models.ImageField(blank=True,null=True,upload_to='product')
 
 	def __str__(self):
 		return self.title + ' (' + str(self.product_type) + ')'
@@ -117,7 +117,7 @@ class Product(BaseModel):
 		return self.get_components().count() 
 
 class Component(BaseModel):
-	image = models.ImageField(blank=True,null=True)
+	image = models.ImageField(blank=True,null=True,upload_to='component')
 	product_link = models.ForeignKey(Product, on_delete=models.CASCADE)
 
 	def __str__(self):
@@ -127,7 +127,7 @@ class Application(BaseModel):
 	class Meta:
 		ordering = ['order','title']
 
-	image = models.ImageField(blank=True,null=True)
+	image = models.ImageField(blank=True,null=True,upload_to='application')
 	product_link = models.ManyToManyField(Product, blank=True)
 	case_study_link = models.ManyToManyField(CaseStudy, blank=True)
 	reason_categories = Choices('research','clinical')
@@ -154,7 +154,7 @@ class History(BaseModel):
 		verbose_name_plural = 'History'
 		ordering = ['order']
 
-	image = models.ImageField(blank=True,null=True)
+	image = models.ImageField(blank=True,null=True,upload_to='history')
 
 	def __str__(self):
 		return self.title 
@@ -191,7 +191,7 @@ class SiteMenu(models.Model):
 class Page(models.Model):
 	title = models.CharField(max_length=100)
 	slug = models.SlugField(unique=True)
-	image = models.ImageField(blank=True,null=True) # TOOD: Does this exist?
+	image = models.ImageField(blank=True,null=True,upload_to='page') # TOOD: Does this exist?
 	featured = models.BooleanField(default=False)
 	body_text = models.TextField(blank=True,null=True,
 		help_text="This will appear above all the other content on the page. You can use Markdown here.")
@@ -214,7 +214,7 @@ class Page(models.Model):
 		'DISTR': 'Contact Distributors',
 	}
 	# Add the Product Types programmatically 
-	# TODO: Bring this back
+	# TODO: Bring this back?
 	# for t in ProductType.objects.all():
 	# 	product_string = 'PR-' + t.name[0:3]
 	# 	model_queryset[product_string] = 'Product - ' + t.name 
@@ -278,7 +278,7 @@ class Event(models.Model):
 	)
 	title = models.CharField(max_length=350)
 	link = models.URLField(blank=True,null=True)
-	image = models.ImageField(blank=True,null=True)
+	image = models.ImageField(blank=True,null=True,upload_to='event')
 	body_text = models.TextField(blank=True,null=True, help_text="You can use Markdown here.")
 
 	objects = EventForthcomingManager()
@@ -337,7 +337,7 @@ class TeamMember(models.Model):
 	person_type = models.CharField(choices=type_choices, default='KEYC',max_length=4)
 
 	person_name = models.CharField(max_length=200)
-	image = models.ImageField(blank=True,null=True)
+	image = models.ImageField(blank=True,null=True,upload_to='team')
 	role = models.CharField(max_length=140, blank=True,null=True)
 	bio = models.TextField(blank=True,null=True)
 
