@@ -1,5 +1,6 @@
 anyascii==0.1.7
 asgiref==3.3.1
+astroid==2.4.2
 beautifulsoup4==4.8.2
 bleach==3.3.0
 certifi==2020.12.5
@@ -11,6 +12,7 @@ django-filter==2.4.0
 django-model-utils==4.1.1
 django-modelcluster==5.1
 django-recaptcha==2.0.6
+django-storages==1.11.1
 django-taggit==1.3.0
 django-treebeard==4.3.1
 django-widget-tweaks==1.4.8
@@ -20,13 +22,17 @@ et-xmlfile==1.0.1
 gunicorn==20.0.4
 html5lib==1.1
 idna==2.10
+isort==5.7.0
 jdcal==1.4.1
 l18n==2020.6.1
+lazy-object-proxy==1.4.3
 Markdown==3.3.3
+mccabe==0.6.1
 openpyxl==3.0.5
 packaging==20.9
 Pillow==8.1.0
 psycopg2-binary==2.8.6
+pylint==2.6.2
 pyparsing==2.4.7
 pytz==2020.5
 requests==2.25.1
@@ -34,12 +40,13 @@ six==1.15.0
 soupsieve==2.1
 sqlparse==0.4.1
 tablib==3.0.0
+toml==0.10.2
 Unidecode==1.1.2
 urllib3==1.26.2
-wagtail==2.11.3
 webencodings==0.5.1
 whitenoise==5.2.0
 Willow==1.4
+wrapt==1.12.1
 xlrd==2.0.1
 XlsxWriter==1.3.7
 xlwt==1.3.0
