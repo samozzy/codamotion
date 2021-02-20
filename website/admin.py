@@ -63,6 +63,7 @@ class PageAdmin(admin.ModelAdmin):
 				'slug',
 				'featured',
 				'image',
+				'image_url',
 				'body_text',
 				'testimonial',
 				('menu', 'parent', 'page_children_html'),
