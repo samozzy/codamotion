@@ -10,9 +10,9 @@
 	{% for component in components %}
 		<div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="{{ product | slugify }}-component-{{ component.title | slugify }}-content" role="tabpanel" aria-labelledby="{{ product | slugify }}-component-{{ component.title | slugify }}">
 			<div class="row mt-4">
-				{% if component.image %}
+				{% if component.get_image %}
 					<div class="col-md-4">
-						<img class="img-responsive" src="{{ component.image.url }}">
+						<img class="img-responsive" src="{{ component.get_image }}">
 					</div>
 				{% endif %}
 				<div class="col-auto component-content">

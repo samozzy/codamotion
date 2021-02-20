@@ -1,9 +1,9 @@
 {% load markdown_extras %}
 {% for person in people %}
 	<div class="row person">
-		{% if person.image %}
+		{% if person.get_image %}
 		<div class="primary-column">
-			<img class="img-responsive" src="{{ person.image.url }}" alt="{{ person }}">
+			<img class="img-responsive" src="{{ person.get_image }}" alt="{{ person }}">
 		</div>
 		{% endif %}
 		<div class="secondary-column">

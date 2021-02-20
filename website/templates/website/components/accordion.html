@@ -10,9 +10,9 @@
 			<div id="acc_{{ id }}_collapse_{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="acc_{{ id }}_heading_{{ forloop.counter }}" data-bs-parent="#coda-accordion_{{ id }}">
 				<div class="accordion-body">
 					<div class="row">
-						{% if item.image %}
+						{% if item.get_image %}
 							<div class="col-md-4">
-								<img class="img-responsive" src="{{ item.image.url }}" alt='{{ item }}'>
+								<img class="img-responsive" src="{{ item.get_image }}" alt='{{ item }}'>
 							</div>
 						{% endif %}
 						<div class="col accordion-content d-flex flex-column">

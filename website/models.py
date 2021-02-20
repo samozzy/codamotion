@@ -20,11 +20,19 @@ class BaseModel(models.Model):
 
 	def has_image(self):
 		# self.image returns True as it has a File reference 
-		if not self.image:
+		if not self.get_image():
 			return False 
 		else:
 			return True 
 	has_image.boolean = True 
+
+	def get_image(self):
+		if self.image:
+			return self.image.url 
+		elif self.image_url:
+			return self.image_url 
+		else:
+			return None 
 
 	class Meta:
 		abstract = True 
@@ -51,7 +59,10 @@ class CaseStudy(BaseModel):
 	lead_text = models.CharField(blank=True,null=True, max_length=300)
 	list_text = models.CharField(blank=True,null=True,max_length=300,
 		help_text="If you want something other than the lead text to appear in the Case Study list, put that here.")
+	image_url = models.CharField(max_length=500,blank=True,null=True,
+ 		help_text="Full path to an existing image. If using an internal link, in the format <code>/static/image/image.jpg</code>; if external, in the format <code>https://example.com/image.jpg</code>. Overridden by an image upload")
 	image = models.ImageField(blank=True,null=True,upload_to='casestudy')
+
 
 	def save(self, *args, **kwargs):
 		if not self.pk or not self.slug:
@@ -93,7 +104,10 @@ class Product(BaseModel):
 
 	product_type = models.ForeignKey(ProductType, on_delete=models.DO_NOTHING)
 
+	image_url = models.CharField(max_length=500,blank=True,null=True,
+ 		help_text="Full path to an existing image. If using an internal link, in the format <code>/static/image/image.jpg</code>; if external, in the format <code>https://example.com/image.jpg</code>. Overridden by an image upload")
 	image = models.ImageField(blank=True,null=True,upload_to='product')
+
 
 	def __str__(self):
 		return self.title + ' (' + str(self.product_type) + ')'
@@ -117,7 +131,10 @@ class Product(BaseModel):
 		return self.get_components().count() 
 
 class Component(BaseModel):
+	image_url = models.CharField(max_length=500,blank=True,null=True,
+ 		help_text="Full path to an existing image. If using an internal link, in the format <code>/static/image/image.jpg</code>; if external, in the format <code>https://example.com/image.jpg</code>. Overridden by an image upload")
 	image = models.ImageField(blank=True,null=True,upload_to='component')
+
 	product_link = models.ForeignKey(Product, on_delete=models.CASCADE)
 
 	def __str__(self):
@@ -127,7 +144,10 @@ class Application(BaseModel):
 	class Meta:
 		ordering = ['order','title']
 
+	image_url = models.CharField(max_length=500,blank=True,null=True,
+ 		help_text="Full path to an existing image. If using an internal link, in the format <code>/static/image/image.jpg</code>; if external, in the format <code>https://example.com/image.jpg</code>. Overridden by an image upload")
 	image = models.ImageField(blank=True,null=True,upload_to='application')
+
 	product_link = models.ManyToManyField(Product, blank=True)
 	case_study_link = models.ManyToManyField(CaseStudy, blank=True)
 	reason_categories = Choices('research','clinical')
@@ -154,6 +174,8 @@ class History(BaseModel):
 		verbose_name_plural = 'History'
 		ordering = ['order']
 
+	image_url = models.CharField(max_length=500,blank=True,null=True,
+ 		help_text="Full path to an existing image. If using an internal link, in the format <code>/static/image/image.jpg</code>; if external, in the format <code>https://example.com/image.jpg</code>. Overridden by an image upload")
 	image = models.ImageField(blank=True,null=True,upload_to='history')
 
 	def __str__(self):
@@ -191,13 +213,16 @@ class SiteMenu(models.Model):
 class Page(models.Model):
 	title = models.CharField(max_length=100)
 	slug = models.SlugField(unique=True)
-	image = models.ImageField(blank=True,null=True,upload_to='page') # TOOD: Does this exist?
 	featured = models.BooleanField(default=False)
 	body_text = models.TextField(blank=True,null=True,
 		help_text="This will appear above all the other content on the page. You can use Markdown here.")
 	menu = models.ManyToManyField(SiteMenu, blank=True)
 	testimonial = models.ForeignKey('Testimonial', on_delete=models.SET_NULL, blank=True, null=True,
 		help_text="This will appear below all the other content on the page")
+	image_url = models.CharField(max_length=500,blank=True,null=True,
+ 		help_text="Full path to an existing image. If using an internal link, in the format <code>/static/image/image.jpg</code>; if external, in the format <code>https://example.com/image.jpg</code>. Overridden by an image upload")
+	image = models.ImageField(blank=True,null=True,upload_to='product')
+	# Although not often used, may come in handy for when featured = True so that the tile on the homepage has an image
 
 	# 'list-grid.html' can be used to add a list component to a page
 	# model_queryset lists the human-readable name and the corresponding queryset is in views.py, as we can't do querysets in models.py
@@ -241,6 +266,14 @@ class Page(models.Model):
 	def get_content(self):
 		return ContentObject.objects.filter(page=self)
 
+	def get_image(self):
+		if self.image:
+			return self.image.url 
+		elif self.image_url:
+			return self.image_url 
+		else:
+			return None 
+
 	def __str__(self):
 		return self.title 
 
@@ -278,7 +311,10 @@ class Event(models.Model):
 	)
 	title = models.CharField(max_length=350)
 	link = models.URLField(blank=True,null=True)
+	image_url = models.CharField(max_length=500,blank=True,null=True,
+ 		help_text="Full path to an existing image. If using an internal link, in the format <code>/static/image/image.jpg</code>; if external, in the format <code>https://example.com/image.jpg</code>. Overridden by an image upload")
 	image = models.ImageField(blank=True,null=True,upload_to='event')
+
 	body_text = models.TextField(blank=True,null=True, help_text="You can use Markdown here.")
 
 	objects = EventForthcomingManager()
@@ -310,6 +346,14 @@ class Event(models.Model):
 
 	is_forthcoming.boolean = True 
 
+	def get_image(self):
+		if self.image:
+			return self.image.url 
+		elif self.image_url:
+			return self.image_url 
+		else:
+			return None 
+
 class CompanyInfo(models.Model):
 	class Meta:
 		verbose_name = 'Company Info'
@@ -337,9 +381,20 @@ class TeamMember(models.Model):
 	person_type = models.CharField(choices=type_choices, default='KEYC',max_length=4)
 
 	person_name = models.CharField(max_length=200)
+	image_url = models.CharField(max_length=500,blank=True,null=True,
+ 		help_text="Full path to an existing image. If using an internal link, in the format <code>/static/image/image.jpg</code>; if external, in the format <code>https://example.com/image.jpg</code>. Overridden by an image upload")
 	image = models.ImageField(blank=True,null=True,upload_to='team')
+
 	role = models.CharField(max_length=140, blank=True,null=True)
 	bio = models.TextField(blank=True,null=True)
+
+	def get_image(self):
+		if self.image:
+			return self.image.url 
+		elif self.image_url:
+			return self.image_url 
+		else:
+			return None 
 
 	def __str__(self):
 		return_string = self.person_name 

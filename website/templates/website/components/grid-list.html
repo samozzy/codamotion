@@ -11,7 +11,7 @@
 				{% if not text_below %}
 					<div class="caption d-flex flex-wrap align-content-center {% if item.image %}text-outline{% endif %}"><span>{% if prefix_name %}{{ item.prefix_name | default:item.title }}{% else %}{{ item.title }}{% endif %}</span></div>
 				{% endif %}
-				<div class="coda-button-background w-100 {% if homepage %}grid-list-homepage{% endif %}" style="background-image:url({% if item.image %}'{{ item.image.url }}'{% else %}{% static 'website/neurons.jpg'%}{% endif %})">
+				<div class="coda-button-background w-100 {% if homepage %}grid-list-homepage{% endif %}" style="background-image:url({% if item.get_image %}'{{ item.get_image }}'{% else %}{% static 'website/neurons.jpg'%}{% endif %})">
 					
 				</div>
 			</a>

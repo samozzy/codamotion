@@ -133,6 +133,7 @@ class ComponentInline(admin.TabularInline):
 				'title',
 				'body_text',
 				'image', 
+				'image_url',
 			),
 		}),
 	)

@@ -19,9 +19,9 @@
 						<h2 id="{{ product.slug }}" class="anchor">{{ product.title }}</h2>
 						{{ product.body_text | markdown | safe }}
 					</div>
-					{% if product.image %}
+					{% if product.get_image %}
 						<div class="col-md-6">
-							<img class="img-responsive" src="{{ product.image.url }}" alt="{{ product }}">
+							<img class="img-responsive" src="{{ product.get_image }}" alt="{{ product }}">
 						</div>
 					{% endif %}
 				</div>
