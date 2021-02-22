@@ -24,10 +24,12 @@ class BaseView(SuccessMessageMixin, CreateView):
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
-		context['header_menu'] = SiteMenu.objects.filter(title='H').first().get_pages().exclude(slug='contact') or None 
+		if SiteMenu.objects.filter(title='H'): 
+			context['header_menu'] = SiteMenu.objects.filter(title='H').first().get_pages().exclude(slug='contact') or None 
 		## The contact page should always go at the end of the menu so a quick special case workaround above.
 		context['product_type_list'] = ProductType.objects.all() 
-		context['footer_menu'] = SiteMenu.objects.filter(title='F').first().get_pages() or None 
+		if SiteMenu.objects.filter(title='F'):
+			context['footer_menu'] = SiteMenu.objects.filter(title='F').first().get_pages() or None 
 		context['company_info'] = CompanyInfo.objects.first() 
 
 		if type(self.object).__name__ != 'Page':
@@ -250,7 +252,10 @@ class VisionView(BaseView, generic.ListView):
 	context_object_name = 'vision'
 
 	def get_queryset(self, **kwargs):
-		return CompanyInfo.objects.first().vision
+		if CompanyInfo.objects.first():
+			return CompanyInfo.objects.first().vision
+		else:
+			return None 
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
