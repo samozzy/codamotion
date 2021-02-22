@@ -70,7 +70,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
@@ -208,6 +207,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 if not DEBUG and os.environ.get('AZURE_STORAGE_ACCOUNT_NAME'):
+    # The below is not currently in use due to the Azure Storage not being 
+    # set up on the Production server. May come in hand if/when that is set up.
     DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
     AZURE_ACCOUNT_NAME = os.environ.get('AZURE_STORAGE_ACCOUNT_NAME')
     AZURE_ACCOUNT_KEY = os.environ.get('AZURE_STORAGE_ACCOUNT_KEY')
