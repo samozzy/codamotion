@@ -5,7 +5,7 @@
 {% block list_data %}
 
 	{% if reasons %}
-		{% include 'website/components/reasons.html' with items=reasons header='Research Facilities' %}
+		{% include 'website/components/reasons.html' with items=reasons header=header %}
 	{% endif %}
 
 	{% if applications %}
@@ -14,7 +14,7 @@
 		<hr>
 		{% for application in applications %}
 			<div class="row mb-4">
-				<h2 class="mb-2 text-muted anchor" id="{{ application.title | slugify }}">Research Application</h2>
+				<h2 class="mb-2 text-muted anchor" id="{{ application.title | slugify }}">{{ application_header | default:"Applications" }}</h2>
 				<h2 class="anchor">{{ application.title }}</h2>
 				<div class="body-text">{{ application.body_text | markdown | safe }}</div>
 				{% app_related_items application.id as related_items %}

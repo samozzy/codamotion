@@ -125,23 +125,28 @@ class HomeView(BaseView):
 		return context 
 
 class MovementAnalysisClinicalView(BaseView):
-	template_name = 'website/clinical.html'
+	template_name = 'website/reasons.html'
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
-		context['reasons'] = ReasonsToChoose.objects.filter(category='clinical').all()
 		context['title'] = 'Movement Analysis for Clinical Services'
+		context['applications'] = Application.objects.filter(reason_to_choose='clinical').prefetch_related('product_link').prefetch_related('case_study_link').values() 
+		context['reasons'] = ReasonsToChoose.objects.filter(category='clinical')
+		context['header'] = 'Clinical Services'
+		context['application_header'] = 'Clinical Applications'
 
 		return context
 
 class MovementAnalysisResearchView(BaseView):
-	template_name = 'website/research.html'
+	template_name = 'website/reasons.html'
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
 		context['title'] = 'Movement Analysis for Research Facilities'
-		context['applications'] = Application.objects.all().prefetch_related('product_link').values()
+		context['applications'] = Application.objects.filter(reason_to_choose='research').prefetch_related('product_link').prefetch_related('case_study_link').values()
 		context['reasons'] = ReasonsToChoose.objects.filter(category='research')
+		context['header'] = 'Research Facilities'
+		context['application_header'] = 'Research Applications'
 		return context
 
 

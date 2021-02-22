@@ -1,9 +1,0 @@
-{% extends 'website/structure/base.html' %}
-
-{% block list_data %}
-
-	{% if reasons %}
-		{% include 'website/components/reasons.html' with items=reasons.all header='Clinical Services' %}
-	{% endif %}
-
-{% endblock %}
