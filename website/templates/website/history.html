@@ -5,7 +5,7 @@
 {% block full_width %}
 	<div class="container-fluid mt-n5">
 		{% for event in history %}
-			<div class="row p-5 {% if forloop.counter|divisibleby:2 %}striped-background text-light{% endif %}" {% if forloop.counter|divisibleby:2 %}style="background-image:url({% static 'website/neurons.jpg' %}"{% endif %}>
+			<div class="row p-md-5 {% if forloop.counter|divisibleby:2 %}striped-background text-light{% endif %}" {% if forloop.counter|divisibleby:2 %}style="background-image:url({% static 'website/neurons.jpg' %}"{% endif %}>
 				{% if event.get_image %}
 					<div class="primary-column">
 						<img class="img-responsive mx-auto w-100" src="{{ event.get_image }}" alt="{{ event.year }}">
