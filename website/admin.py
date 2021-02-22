@@ -115,7 +115,7 @@ class ApplicationAdmin(admin.ModelAdmin):
 	formfield_overrides = {
 		models.ManyToManyField: {'widget': CheckboxSelectMultiple},
 	}
-	list_display = ['title','featured','order']
+	list_display = ['title','featured','order','has_image']
 	actions = [make_featured,remove_featured,set_order,move_up,move_down]
 
 class ApplicationInline(admin.TabularInline):
@@ -155,15 +155,15 @@ def toggle_grid(modeladmin,request,queryset):
 		item.save() 
 
 class ProductTypeAdmin(admin.ModelAdmin):
-	prepopulated_fields = {"slug": ("name",)}
-	list_display = ['name','slug','grid_list']
+	prepopulated_fields = {"slug": ("title",)}
+	list_display = ['title','slug','grid_list']
 	actions = [toggle_grid]
 
 
 class ProductAdmin(admin.ModelAdmin):
 	inlines = [ComponentInline, ApplicationInline]
 	actions = [make_featured,remove_featured,move_up,move_down,set_order]
-	list_display = ['title', 'product_type', 'order', 'component_count']
+	list_display = ['title', 'product_type', 'order', 'component_count', 'has_image','featured']
 	list_filter = ['product_type']
 
 class ContactAdmin(admin.ModelAdmin):
