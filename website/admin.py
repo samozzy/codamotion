@@ -173,7 +173,7 @@ class HistoryAdmin(admin.ModelAdmin):
 	list_display = ['title', 'order']
 
 class TestimonialAdmin(admin.ModelAdmin):
-	list_display = ['quote','source','used_in']
+	list_display = ['quote','source','used_in','get_image']
 	readonly_fields = ['used_in']
 
 admin.site.register(User, UserAdmin)

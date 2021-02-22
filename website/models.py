@@ -421,17 +421,35 @@ class Distributor(models.Model):
 		return self.name + ' (' + self.area + ')'
 
 class Testimonial(models.Model):
+	class Meta:
+		ordering = ['source','quote']
 	quote = models.TextField()
 	source = models.CharField(max_length=200,blank=True,null=True)
+	image_url = models.CharField(max_length=500,blank=True,null=True,
+ 		help_text="Full path to an existing image. If using an internal link, in the format <code>/static/image/image.jpg</code>; if external, in the format <code>https://example.com/image.jpg</code>. Overridden by an image upload")
+	image = models.ImageField(blank=True,null=True,upload_to='testimonial')
+
+	def get_image(self):
+		if self.image:
+			return self.image.url 
+		elif self.image_url:
+			return self.image_url 
+		else:
+			return None 
 
 	def used_in(self):
-		return list(Page.objects.filter(testimonial=self).all())
+		if self.pk: 
+			return list(Page.objects.filter(testimonial=self).all())
+		else:
+			return None 
 
 	def __str__(self):
 		quote = (self.quote[:30] + '..') if len(self.quote) > 30 else self.quote
 		return_string = '"' + quote + '"'
 		if self.source:
 			return_string += ' -' + self.source 
+		if self.get_image():
+			return_string += ' (' + self.get_image() + ')'
 		return return_string
 
 class Vacancy(models.Model):
