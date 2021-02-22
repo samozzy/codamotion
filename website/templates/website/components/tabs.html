@@ -2,20 +2,20 @@
 <ul class="nav nav-tabs" id="{{ product | slugify }}-components" role="tablist">
 		{% for component in components %}
 			<li class="nav-item" role="presentation">
-				<a class="nav-link {% if forloop.first %}active{% endif %}" id="{{ product | slugify }}-component-{{ component.title | slugify }}" data-bs-toggle="tab" href="#{{ product | slugify }}-component-{{ component.title | slugify }}-content" role="tab" aria-controls="{{ product | slugify }}-component-{{ component.title | slugify }}-content" aria-selected="true">{{ component.title | upper }}</a>
+				<a class="nav-link {% if forloop.first %}active{% endif %}" id="{{ product | slugify }}-component-{{ component.title | slugify }}" data-bs-toggle="tab" href="#{{ product | slugify | slice:'5:' }}-component-{{ component.title | slugify | slice:'5:' }}-{{ component.pk }}-content" role="tab" aria-controls="{{ product | slugify }}-component-{{ component.title | slugify }}-content" aria-selected="true">{{ component.title | upper }}</a>
 			</li>
 		{% endfor %}
 </ul>
 <div class="tab-content" id="{{ product | slugify }}-components-content">
 	{% for component in components %}
-		<div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="{{ product | slugify }}-component-{{ component.title | slugify }}-content" role="tabpanel" aria-labelledby="{{ product | slugify }}-component-{{ component.title | slugify }}">
+		<div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="{{ product | slugify | slice:'5:' }}-component-{{ component.title | slugify | slice:'5:' }}-{{ component.pk }}-content" role="tabpanel" aria-labelledby="{{ product | slugify }}-component-{{ component.title | slugify }}">
 			<div class="row mt-4">
 				{% if component.get_image %}
 					<div class="col-md-4">
 						<img class="img-responsive" src="{{ component.get_image }}">
 					</div>
 				{% endif %}
-				<div class="col-auto component-content">
+				<div class="col component-content">
 					<h3>{{ component.title | upper }}</h3>
 					{{ component.body_text | markdown | safe }}
 				</div>
