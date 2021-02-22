@@ -11871,6 +11871,7 @@ label {
   text-align: center;
   color: white;
   z-index: 10;
+  background: rgba(50, 50, 50, 0.5);
 }
 .coda-button .caption span {
   padding: 1rem;
