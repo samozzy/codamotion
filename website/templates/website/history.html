@@ -8,7 +8,7 @@
 			<div class="row p-5 {% if forloop.counter|divisibleby:2 %}striped-background text-light{% endif %}" {% if forloop.counter|divisibleby:2 %}style="background-image:url({% static 'website/neurons.jpg' %}"{% endif %}>
 				{% if event.get_image %}
 					<div class="primary-column">
-						<img class="img-responsive mx-auto" src="{{ event.get_image }}" alt="{{ event.year }}">
+						<img class="img-responsive mx-auto w-100" src="{{ event.get_image }}" alt="{{ event.year }}">
 					</div>
 				{% endif %}
 				<div class="secondary-column">
