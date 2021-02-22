@@ -1,0 +1,1913 @@
+[
+{
+  "model": "website.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$Rfxa1dbCAew8$Oq9cyRR7tUQzSgydhFqw9Ryswkjrtqt3K81dtmzFz+8=",
+    "last_login": "2021-02-19T23:47:05.771Z",
+    "is_superuser": true,
+    "username": "sam",
+    "first_name": "",
+    "last_name": "",
+    "email": "sam@samosborne.me",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-01-07T16:03:29.389Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "website.reasonstochoose",
+  "pk": 1,
+  "fields": {
+    "title": "Total integration",
+    "body_text": "From 3rd party video integration to force plates, Codamotion can supply a complete turnkey solution.\r\nWe have supported clients by way of supplying technology, and consulting services around creating clinical labs. You can capture data from analogue or digital devices and stream it directly into Odin.",
+    "order": 1,
+    "featured": false,
+    "category": "clinical"
+  }
+},
+{
+  "model": "website.reasonstochoose",
+  "pk": 3,
+  "fields": {
+    "title": "Cost effective solution",
+    "body_text": "Codamotion is always on a quest to do things with greater accuracy, deliver results faster, and make technology cheaper to make it more accessible.\r\n\r\nTo that end Codamotion is one of the most cost effective solutions on the market.\r\n\r\nWe’ve been helping develop research labs for 30 years, and in that time we have mastered the art of delivering excellent value for money for users.",
+    "order": 2,
+    "featured": false,
+    "category": "clinical"
+  }
+},
+{
+  "model": "website.reasonstochoose",
+  "pk": 4,
+  "fields": {
+    "title": "Active marker technology",
+    "body_text": "Codamotion is based on an active marker technology.\r\n\r\nA pioneer in the technology – Codamotion delivers serious researchers and clinicians with real-time feedback, low latency, and true data format allowing analysis on first principles, exceptional temporal accuracy and zero marker sorting post acquisition.",
+    "order": 3,
+    "featured": false,
+    "category": "clinical"
+  }
+},
+{
+  "model": "website.reasonstochoose",
+  "pk": 5,
+  "fields": {
+    "title": "Proven accuracy & reliability",
+    "body_text": "NASA and the European Space Agency have chosen Codamotion to track complex movement in space.\r\n\r\nMany papers have been published with data being acquired by the Codamotion system by research institutes all over the world.\r\n\r\nFrom indoor and outdoor systems, with unbeatable accuracy, our Codamotion sensors have simplicity in look, with cutting-edge technology inside, fully calibrated and synchronised with an array of third party research tools.\r\n\r\nOur passion is accuracy, repeatability and ease of use.",
+    "order": 4,
+    "featured": false,
+    "category": "clinical"
+  }
+},
+{
+  "model": "website.reasonstochoose",
+  "pk": 6,
+  "fields": {
+    "title": "Certified medical device",
+    "body_text": "Codamotion technology is registered with both the European agencies and FDA in the US as a medical device. This indicates our adherence to strict procedures and guidelines.",
+    "order": 5,
+    "featured": false,
+    "category": "clinical"
+  }
+},
+{
+  "model": "website.reasonstochoose",
+  "pk": 7,
+  "fields": {
+    "title": "Proven accuracy and repeatability",
+    "body_text": "NASA and the European Space Agency have chosen Codamotion to track complex movement in space. Hundreds of papers have been published with data being acquired by the Codamotion system by research institutes all over the world. From indoor and outdoor systems, with unbeatable accuracy, our Codamotion sensors have simplicity in look, with cutting-edge technology inside, fully calibrated and synchronised with an array of third party research tools. Our passion is accuracy, repeatability and ease of use.",
+    "order": 1,
+    "featured": false,
+    "category": "research"
+  }
+},
+{
+  "model": "website.reasonstochoose",
+  "pk": 8,
+  "fields": {
+    "title": "Indoor and outdoor capture",
+    "body_text": "Codamotion gives you the control to do your research where you want to, when you want to – whether that’s in a lab, on a sports field or in a boxing ring. Winter or summer, indoors or outdoors, we have a system for you.",
+    "order": 2,
+    "featured": false,
+    "category": "research"
+  }
+},
+{
+  "model": "website.reasonstochoose",
+  "pk": 9,
+  "fields": {
+    "title": "Active marker technology",
+    "body_text": "Codamotion is based on an active marker technology.  A pioneer in the technology – Codamotion delivers serious researchers and clinicians with real-time feedback, low latency, and true data format allowing analysis on first principles, exceptional temporal accuracy and zero marker sorting post acquisition.",
+    "order": 3,
+    "featured": false,
+    "category": "research"
+  }
+},
+{
+  "model": "website.reasonstochoose",
+  "pk": 10,
+  "fields": {
+    "title": "Open community based software",
+    "body_text": "Codamotion systems are fully integrated with the ODIN software platform, a software environment which is instantly familiar to engineers and researchers around the world. ODIN lets you manage and share data with colleagues via industry standard formats, produce sophisticated visualisations, and create reports.  With ODIN you can load ready-made analysis protocols or build your own.  The full processing chain is open and visible to you. Advanced users can import Python scripts containing their own analysis algorithms.  ODIN is powerful. It can be pushed as hard as you want to.",
+    "order": 4,
+    "featured": false,
+    "category": "research"
+  }
+},
+{
+  "model": "website.reasonstochoose",
+  "pk": 11,
+  "fields": {
+    "title": "Simple set up and ease of use",
+    "body_text": "Codamotion has made a reputation for itself in the world-wide community of users as a system that is easy to set-up and use. Our one sensor, weighing less than 5kg, is equivalent to two or three typical cameras found in other systems. All our sensors come pre-calibrated meaning that you can simply plug and play. Set-up time can be as little 20 minutes. Our systems are also portable by design, meaning that you can take the system to where you need to, rather than bringing the subject into a fixed laboratory.",
+    "order": 5,
+    "featured": false,
+    "category": "research"
+  }
+},
+{
+  "model": "website.reasonstochoose",
+  "pk": 12,
+  "fields": {
+    "title": "Cost effective solutions",
+    "body_text": "Codamotion is always on a quest to do things with greater accuracy, deliver results faster, and make technology cheaper to make it more accessible. To that end Codamotion is one of the most cost effective solutions on the market. We’ve been helping develop research labs for 30 years, and in that time we have mastered the art of delivering excellent value for money for users.",
+    "order": 6,
+    "featured": false,
+    "category": "research"
+  }
+},
+{
+  "model": "website.casestudy",
+  "pk": 1,
+  "fields": {
+    "title": "Space Applications (NASA & ESA)",
+    "body_text": "Following several years of intensive R&D, Codamotion’s 3D motion capture system was successfully launched into space in February 2017 aboard a Spacex Falcon 9 rocket from the historic launch complex 39A at Kennedy space centre in Florida (the same launch pad used for the Apollo moon missions).  Two days later the Codamotion system arrived at the International Space Station aboard the Dragon resupply module and was successfully installed for use by Astronauts to study perceptual motor skills in microgravity.\r\n\r\nChanges in gravity can be considered as perturbations to the performances of dexterous task, which somehow can be compensated by our brain through adaptive control. Preliminary results performed during exposure in microgravity in parabolic flight show that the central nervous system is able to adapt to the lack of gravity. Scientists also put in evidence that the anticipation of gravity’s effect persists in the short term. Through a long-duration space flight, the scientist team want to understand how the central nervous system adapts to an environment without gravity and what the consequences of long-term adaptation when an individual returns to a normal gravitational field (Earth) are.\r\n\r\nThe system consists of 2 CX1 Units, specially modified according to the space station constraints. Markers will record the hand and arm movements, head position and orientation and the linear acceleration and rotational velocity of a manipulandum the subject is asked to use. Codamotion’s RTNet and SDK software has been incorporated into the mission’s main computer systems to perform the necessary experiments and to record and analyse data.\r\n\r\nWhat are the special modifications? The main modifications are to replace insulation materials to prevent outgasing in the vacuum of space, and protective coatings on circuit board components and on glass windows to prevent glass fragments floating away in zero-gravity in the case of accidental breakage. The basic construction of the system is exactly as we sell it as standard product. If it can withstand the knocks and bangs of a rocket launch and the severe heat cycling of a space mission, you know our system is going to perform reliably in your laboratory.",
+    "order": 8,
+    "featured": false,
+    "slug": "space-applications-nasa-esa",
+    "lead_text": "Codamotion systems have been approved for space flight by both NASA (USA) and the European Space Agency.",
+    "list_text": null,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.casestudy",
+  "pk": 3,
+  "fields": {
+    "title": "QMUL, London, UK",
+    "body_text": "The university now has two Codamotion systems, totalling five CX1 units, two active hubs and a toolbox of other accessories.  The systems are used in conjunction with Kistler force plates and EMG systems from both Noraxon and TMSI.\r\n\r\nResearch Activity\r\nThe tendon research group is interested in characterising tendon mechanobiology in health and disease throughout life. Taking a hierarchical approach, the group investigate tendon behaviour from a whole body level (in vivo) right down to sub-cellular mechanics.\r\n\r\nBy understanding structure, function and mechanics in healthy tissue first, the group are building a picture of the changes which occur in injury and disease and why they occur, so they can begin finding treatments to prevent or cure these.\r\n\r\nMore on the website: <http://www.tendon.qmul.ac.uk/>",
+    "order": 7,
+    "featured": true,
+    "slug": "qmul-london-uk",
+    "lead_text": "Queen Mary University of London is a long standing customer of Codamotion.",
+    "list_text": null,
+    "image_url": "https://placekitten.com/500/500",
+    "image": "nasa.jpg"
+  }
+},
+{
+  "model": "website.casestudy",
+  "pk": 4,
+  "fields": {
+    "title": "The Central Remedial Clinic, Dublin, Ireland",
+    "body_text": "The Central Remedial Clinic (CRC) in Ireland is a national centre for the assessment and treatment of adults and children with physical disabilities, and offered the world’s first Mobile Gait Analysis Service.\r\n\r\nAll services required by a person with a physical disability, ranging from medical to social and technical are provided from CRC’s main centre in Ireland’s capital city, Dublin.\r\n\r\nCRC also provides disability services locally in the South East of Ireland and some specialized services in the Mid West. One of the specialized services offered at the CRC is clinical gait analysis. Gait analysis involves computerised 3-D reconstruction of how a person walks by tracking information from electronic sensors placed on a person’s body and also embedded in a walkway.\r\n\r\nThe objective data provided by gait analysis enables doctors and surgeons to differentiate between a number of medical conditions which result in walking difficulties, to make confident recommendations for surgical and medical treatments and afterwards to monitor patient progress and objectively evaluate the different treatments. The benefits and use of this technology are well documented in the treatment of children with neuromuscular disorders such as cerebral palsy. The CRC gait laboratory team is headed by Prof. Tim O’Brien, orthopaedic surgeon and medical director of the gait laboratory.\r\n\r\nAlthough CRC has a fixed laboratory in Dublin featuring Codamotion equipment, it uses a separate mobile system, consisting of twin CX1 sensor units, A portable walkway, force plate, and EMG system.",
+    "order": 9,
+    "featured": false,
+    "slug": "the-central-remedial-clinic-dublin-ireland",
+    "lead_text": "The Central Remedial Clinic, Dublin, Ireland offered the World's First Mobile Gait Analysis Service.",
+    "list_text": null,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.casestudy",
+  "pk": 5,
+  "fields": {
+    "title": "LAMH, Liège, Belgium",
+    "body_text": "The understanding and tracking of human motion has been a subject of interest in the scientific community for more than one century. The long history of human motion analysis comes from the large scope of applications of such measurement that can be found in medicine, biomechanics, sport, ergonomics, and even civil engineering.\r\n\r\nMore recently, those technologies have also been widely exploited for the development of animation movies and games. Needless to say, the techniques used one century ago significantly differ from those used today.\r\n\r\nThe LAMH, which is the motion analysis laboratory at the University of Liège, shows how such a platform could be the center of a multidisciplinary research and provide valuable information to various communities.\r\n\r\n### Research Areas\r\nArea of interest are diverse and rich such as:\r\n\r\nClinical sciences\r\n\r\n* Ambulatory sensors for the analysis of pathological human gait\r\n* Gait Analysis and Brain Imagery to predict (cognitive and) functional decline in older adults\r\n\r\nSport sciences\r\n\r\n* Injury prevention: shoulder stiffness in high-level athlete populations\r\n* Performance in tennis serve\r\n* Biomechanics of running economy\r\n* Explosive strength activities for lower limb\r\n\r\nEngineering\r\n\r\n* Experimental study about the effects of human excitation of flexible structures\r\n* Modelization of the normal and pathological gait\r\n* Improving 3D measurements accuracy with camera information redundancy\r\n\r\nVeterinary medicine\r\n\r\n* Effect of nutraceuticals in vivo in dogs suffering from osteoarthritis\r\n* This initiative is possible thanks to the support and funding of the Federation Wallonie Bruxelles (CFWB).\r\n\r\nFor more information, visit their website: [http://www.lamh.ulg.ac.be/people.html](http://www.lamh.ulg.ac.be/people.html)",
+    "order": 4,
+    "featured": false,
+    "slug": "lamh-liege-belgium",
+    "lead_text": "The Laboratory of Human Motion Analysis (LAMH), University of Liège, is a 3D Laboratory researching human motion in a range of applications.",
+    "list_text": null,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.casestudy",
+  "pk": 6,
+  "fields": {
+    "title": "Aix-Marseille, France",
+    "body_text": "The University Aix-Marseille, TechnoSport Faculty of Sport Sciences, France, offers a genuine platform dedicated to innovation in sport and movement.  TechnoSport enables the study of performance in its broadest sense, from top-level sport to pathological movement.\r\n\r\nThe institution’s vision is built upon expertise in the interdisciplinary scientific study of the human-machine interface, innovation thanks to TechnoSport’s facilities, with in vivo study of performance, and a desire to streamline R&D’s relationship with industry and all those involved in sport\r\n\r\n### Objectives\r\n\r\n* Develop an interdisciplinary approach to the study of sports performance and movement:\r\n* Multiple disciplines investigating the same scientific issue\r\n* Multiple disciplines working together on joint projects\r\n* Interdisciplinary projects enabling work to be undertaken at the boundaries of our respective fields\r\n* Disciplines represented:\r\n    * Physiology\r\n    * Neurosciences\r\n    * Psychology\r\n    * Biomechanics\r\n    * Robotics\r\n    * Sociology\r\n\r\n### Laboratories\r\nTechnoSport has ties with two research laboratories:\r\n\r\nThe Institute of the Sciences of Movement (ISM) Etienne-Jules Marey is a mixed research unit linking Aix-Marseille University\r\n\r\nThe French National Centre for Scientific Research through the Institute of Bioligical Science (INSB), the Institute for incorporating primary and secondary Institutes.",
+    "order": 1,
+    "featured": false,
+    "slug": "aix-marseille-france",
+    "lead_text": "The University Aix-Marseille, TechnoSport Faculty of Sport Sciences, France, offers a genuine platform dedicated to innovation in sport and movement. TechnoSport enables the study of performance in its broadest sense, from top-level sport to pathological movement.",
+    "list_text": "The University Aix-Marseille, France offers a genuine platform dedicated to innovation in sport and movement.",
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.casestudy",
+  "pk": 7,
+  "fields": {
+    "title": "Institute of Neurology, UK",
+    "body_text": "The Whole-body Sensorimotor laboratory in Queens Square London is part of University College London, and has one of the biggest and most sophisticated Codamotion systems in the world.\r\n\r\nIt consists of 8 CX1 units and several active control hubs with a customised extension such that up to 96 channels of analogue data can be combined and integrated with the 3D motion data.  Integrated third party data sources include multiple forceplates and eyetrackers.\r\n\r\nThe flexibility of the system is such that the equipment is either split between two laboratories, or combined into one large system when large area data capture is required in a particular experiment.\r\n\r\nThis image is from this ‘Sit to Stand’ project which includes a full body cluster set up: [http://www.ncbi.nlm.nih.gov/pubmed/25085609](http://www.ncbi.nlm.nih.gov/pubmed/25085609)\r\n\r\nThis image is from an ongoing Pull Test project in which patients with Parkinson’s disease (and age-matched controls) receive pulls in the forward and backward direction. A full-body cluster set-up with force plates and EMG is used to analyse responses to the pulls.\r\n\r\nFor more information see their website: [www.ucl.ac.uk/ion/departments/sobell/Research](www.ucl.ac.uk/ion/departments/sobell/Research)",
+    "order": 3,
+    "featured": false,
+    "slug": "institute-of-neurology-uk",
+    "lead_text": "The Sobell Department within the University College London, Institute of Neurology is a perfect example of integrating many data streams into a single system.",
+    "list_text": null,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.casestudy",
+  "pk": 8,
+  "fields": {
+    "title": "PAU, France",
+    "body_text": "### Research Areas\r\n\r\nIn a general theme for the study of human movement, our work is based on two very specific areas:\r\n\r\nHuman equilibration (study of the impact of exercise and changes in environmental conditions on postural balance in healthy subjects and/or pathological).\r\n\r\nSet in motion by the physical and sports activities (study of the factors and techniques that promote physical activity and improving athletic performance).\r\n\r\nPAU, France\r\nThe Laboratory Physical Activity, Performance and Health is a research unit (EA 4445 ) in Sciences and Techniques of Physical and Sports Activities (STAPS) attached to the University of Pau and Pays de l’Adour.\r\n\r\n\r\nResearch Areas\r\nIn a general theme for the study of human movement, our work is based on two very specific areas:\r\n\r\nHuman equilibration (study of the impact of exercise and changes in environmental conditions on postural balance in healthy subjects and/or pathological).\r\n\r\nSet in motion by the physical and sports activities (study of the factors and techniques that promote physical activity and improving athletic performance).\r\n\r\nFor more information please see their website: <http://lapps.univ-pau.fr/live/>",
+    "order": 6,
+    "featured": false,
+    "slug": "pau-france",
+    "lead_text": "The Laboratory Physical Activity, Performance and Health is a research unit (EA 4445 ) in Sciences and Techniques of Physical and Sports Activities (STAPS) attached to the University of Pau and Pays de l’Adour.",
+    "list_text": "The Laboratory Physical Activity, Performance and Health is a research unit (EA 4445 ) attached to the University of Pau and Pays de l'Adour.",
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.casestudy",
+  "pk": 9,
+  "fields": {
+    "title": "UGECAM, Coubert, France",
+    "body_text": "4 CODA CX1 Units and the latest CodaHub are connected to two Kistler force plates and a Delsys EMG system. This is supported by a Video-Vector System (VALI) that allows the user to do a ‘quick’ analysis of a new patient using highspeed video and force plates before committing to the full 3D analysis protocol.\r\n\r\nThe system was supplied on a turn-key basis including an overhead projector for beaming results directly onto a projection screen at the back of the lab.",
+    "order": 10,
+    "featured": false,
+    "slug": "ugecam-coubert-france",
+    "lead_text": "UGECAM in Coubert, close to Paris, is a new laboratory (2013) that features many of Codamotion’s latest technologies.",
+    "list_text": "UGECAM in Coubert, close to Paris is a new laboratory (2013) that features many of Codamotion's latest technologies - 4 CODA CX1 Units and the latest CodaHub.",
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.casestudy",
+  "pk": 10,
+  "fields": {
+    "title": "MossRehab, Philadelphia, USA",
+    "body_text": "The MossRehab facility in Philadelphia is part of the Einstein Healthcare Network.\r\n\r\nThere are currently 2 gait laboratories equipped with Codamotion systems in use there. Each has 4 of the latest CX1 units, a control hub plus the usual array of markers, marker drive boxes and gait wands.\r\n\r\nThe first system is used in a clinical setting for gait analysis of patients as part of the rehabilitation process. This system provides the normal integration of 5 Bertec force plates and Motion Labs MA300 32 EMGs. It is configured to produce Gait Analysis reports onto a standard template output with normative data for comparison.\r\n\r\nThe second system is used for mobility research, and utilises the ODIN software suite to allow a highly flexible approach to modelling and analysis of biomechanical data. Whereas most gait trials in the clinical setting are usually of the order of 4-10 seconds in duration, this system has been used for extended trials lasting up to 30 minutes.\r\n\r\n[See more about MossRehab on their website](http://www.mossrehab.com/).",
+    "order": 5,
+    "featured": false,
+    "slug": "mossrehab-philadelphia-usa",
+    "lead_text": "MossRehab is a leading USA rehabilitaion and research facility with a global reputation.",
+    "list_text": "MossRehab is a leading USA rehabilitation and research facility with a global reputation, located in Philadelphia and a part of the Einstein Healthcare Network.",
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.casestudy",
+  "pk": 11,
+  "fields": {
+    "title": "Cardiff School of Sport, UK",
+    "body_text": "The Sport Biomechanics group within Cardiff School of Sport is based at the extensive National Indoor Athletic Centre. It is the perfect example of the versatility of Codamotion systems: multisport research in a large configurable sports hall, as well as outdoor research on surrounding playing fields, and programmes with outside sporting bodies where systems are trasnported and set up in new venues on a regular basis.\r\n\r\nThe group has a 4 CX1 unit Codamotion system which is used in the analysis of sports movements, plus a 2 CXS unit CodaSport system for use in its outdoor applications. Areas of study include gymnastics, athletics, football, and basic jumping and landing skills.\r\n\r\nThroughout its sixty year history, the Cardiff School of Sport has built an international reputation for the quality of its academic, professional, research and extra-curricular work.\r\n\r\nThe research team is part of a number of large multi-centre projects, developing wired and wireless technologies for improving athlete performance and, within this programme, have used their Codamotion system to study a range of sprinting activities including starting and maximum velocity running. The growth in terms of Cardiff’s sports facilities has assisted in ranking the university consistently within the top three UK universities for sport.",
+    "order": 2,
+    "featured": false,
+    "slug": "cardiff-school-of-sport-uk",
+    "lead_text": "The Cardiff School of Sport (Cardiff Metropolitan University) is the largest provider of undergraduate and postgraduate sport-related degrees in UK.",
+    "list_text": null,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.producttype",
+  "pk": 1,
+  "fields": {
+    "name": "3D Measurement",
+    "slug": "3d-measurement",
+    "grid_list": false
+  }
+},
+{
+  "model": "website.producttype",
+  "pk": 2,
+  "fields": {
+    "name": "Software",
+    "slug": "software",
+    "grid_list": false
+  }
+},
+{
+  "model": "website.producttype",
+  "pk": 3,
+  "fields": {
+    "name": "Data Hubs",
+    "slug": "data-hubs",
+    "grid_list": false
+  }
+},
+{
+  "model": "website.producttype",
+  "pk": 4,
+  "fields": {
+    "name": "Other Measurement Components",
+    "slug": "other-measurement-components",
+    "grid_list": true
+  }
+},
+{
+  "model": "website.producttype",
+  "pk": 5,
+  "fields": {
+    "name": "Complete Movement Analysis Systems",
+    "slug": "complete-movement-analysis-systems",
+    "grid_list": true
+  }
+},
+{
+  "model": "website.product",
+  "pk": 1,
+  "fields": {
+    "title": "Portable Outdoor System",
+    "body_text": "Codamotion outdoor systems are portable, quick to set up, and deliver reliable real-time 3D measurements and totally automatic labelling of marker identities, even in bright sunlight.\r\n\r\nAn outdoor system comprises one or more CXS sensor units, connected to a data hub, together with CXS markers to place on the subject being measured.  The choice of data hub depends on the research goals.\r\n\r\nAs always, the ODIN software platform is used (typically on a laptop) as the command centre for the system; and to provide the analyses which automatically turn raw XYZ marker data into meaningful measurements of objects, humans and animals.",
+    "order": 3,
+    "featured": false,
+    "product_type": 5,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 2,
+  "fields": {
+    "title": "Portable Indoor System",
+    "body_text": "Every Codamotion unit is pre-calibrated in the factory to measure coordinates in 3D and in real-time, with fully automatic marker labelling programmed into the hardware.\r\n\r\nThis makes Codamotion systems portable, and very rapid to set up with no on-site calibration required.  Complete 3D analysis can be achieved using a single Codamotion CX1 unit, and additional units can be added to extend the volume and ensure markers stay visible during complex movements.",
+    "order": 4,
+    "featured": false,
+    "product_type": 5,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 3,
+  "fields": {
+    "title": "3D movement analysis in a confined space",
+    "body_text": "Thanks to unique masked linear array (MLA) technology, each CX1 sensor unit has a very wide field of view – much larger than cameras that use lenses, and measures in 3D without any calibration required.\r\n\r\nThis means they perform well in confined spaces such as corridors, aircraft cockpits, and most famously on board the International Space Station.\r\n\r\nCompared to measurement technologies that depend on reflected light, the automated marker labelling process in a Codamotion system is not distracted by the kind of reflective background clutter that often exists in such environments.",
+    "order": 2,
+    "featured": false,
+    "product_type": 5,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 4,
+  "fields": {
+    "title": "Gait analysis laboratory system",
+    "body_text": "Analysis of human gait is one of the first applications ever developed using Codamotion systems, and is at the core of our company’s vision to use movement analysis to enhance lives.\r\n\r\nA traditional gait analysis system comprises at least two CX1 sensor units placed either side of a walkway.    Every unit measures in 3D, and additional units can be added for a longer walkway.\r\n\r\nSince marker identities are pre-labelled, the process of producing standardised gait reports is highly automated.\r\n\r\nThose who haven’t seen a Codamotion system before are often surprised by how quickly a full printed report appears, within moments of the movement occurring.",
+    "order": 1,
+    "featured": false,
+    "product_type": 5,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 5,
+  "fields": {
+    "title": "Fully-featured research laboratory system",
+    "body_text": "A Codamotion system is the essential workhorse of any laboratory requiring a 3D movement analysis facility for multiple research projects.\r\n\r\nSystems are highly modular and can rapidly be reconfigured for different tasks and volumes of capture, with fully automated marker labelling.\r\n\r\nOrganisations often have multiple CXS or CX1 sensor units and multiple data hubs so that different groups can carry out different experiments at the same time.  Sensor units can be freely and quickly moved between systems to extend measurement volumes as required.\r\n\r\nThe ODIN software acts not only as an analysis and data archiving platform, but also a useful teaching tool for education of new users about the basic building blocks of 3D movement analysis.\r\n\r\nThe device integration features of CodaHubs make it easy to integrate a variety of data sources alongside 3D measurements, all ready to see and analyse using ODIN.\r\n\r\nODIN is also ideal for sharing data and protocol ideas with colleagues and the movement analysis community, using the unique ‘motion bundle’ concept.\r\n\r\nAdvanced users can import their own analysis algorithms as Python scripts, or use dialogue boxes to configure the analysis building blocks already provided.  New users can load ready-made analysis protocols and be ready to go right away.",
+    "order": 7,
+    "featured": false,
+    "product_type": 5,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 6,
+  "fields": {
+    "title": "Treadmill analysis",
+    "body_text": "The robustness to background clutter, speed of setup, and automated marker labelling mean that Codamotion systems represent a turnkey solution for 3D analysis of human movement on a treadmill.\r\n\r\nFor bilateral analysis two CX1 units are typically used.  Each unit measures in 3D, and the units are placed either side of the subject so that they have good visibility of marker clusters placed on the limbs of interest.\r\n\r\nThe ODIN software provides for fully automated analysis and reporting.",
+    "order": 6,
+    "featured": false,
+    "product_type": 5,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 7,
+  "fields": {
+    "title": "Real-time control",
+    "body_text": "Codamotion systems measure the real-time 3D locations of small markers whose identities are uniquely defined in the hardware.\r\n\r\nThere is no latency associated with the marker labelling task, since labels are 100% fixed in the hardware, 100% of the time.\r\n\r\nTogether with portability and quick setup time, this makes Codamotion systems ideal for real-time control experiments in biofeedback, robotics, industrial automation, and human-computer interaction.",
+    "order": 5,
+    "featured": false,
+    "product_type": 5,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 8,
+  "fields": {
+    "title": "ODIN",
+    "body_text": "The ODIN software platform is familiar to movement analysis researchers, clinicians, and biomechanists around the world. ODIN takes you through the entire 3D movement analysis process including:\r\n\r\n* Data acquisition from multiple sensors and measurement devices\r\n* Real-time monitoring of data inputs\r\n* Long-term data storage and retrieval\r\n* Analysis of 3D and spatio-temporal data, and display of results\r\n* Sharing of data and protocols with others in the same location and remotely\r\n* Printed reports",
+    "order": 1,
+    "featured": true,
+    "product_type": 2,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 9,
+  "fields": {
+    "title": "Codamotion RTNet SDK",
+    "body_text": "Whilst the ODIN software provides an easy-to-use graphical interface for movement analysis, it is often the case that computer programmers, engineers, and systems integrators need to work directly with 3D measurements in real-time.  For this purpose Codamotion provides the RTNet Software Development Kit (SDK).  With the RTNet SDK you can:\r\n\r\n* Process streams of fully labelled XYZ 3D marker locations in real-time within your own programs\r\n* Integrate the movement analysis systems with novel output devices, including VR and AR displays\r\n* Make use of a graphical configuration manager to configure additional input devices such as analogue interfaces, force platforms, and EMG systems\r\n* Receive data from additional input devices directly into your own programs, fully synchronised with labelled XYZ 3D marker locations\r\n\r\nThe SDK has client interfaces in C++ and Java, and comes with a suite of example programs.  On request Codamotion can undertake small software development projects to produce bespoke example code to demonstrate how you can use the SDK for your particular integration task.  Please contact us to discuss your requirement.",
+    "order": 2,
+    "featured": false,
+    "product_type": 2,
+    "image_url": null,
+    "image": "odin.png"
+  }
+},
+{
+  "model": "website.product",
+  "pk": 10,
+  "fields": {
+    "title": "CodaHub",
+    "body_text": "A central control unit from a Codamotion system with combined power and data connections for up to eight CODA sensor units.\r\n\r\nThe active control hub (CodaHub) is recommended for those users who want to:\r\n\r\n* Run large numbers of CODA units (more than 2)\r\n* Integrate third party data streams such as from EMG or force plates\r\n* Minimise real-time latency\r\n\r\nThe standard unit comes with a connection panel for 4 CODA units (expandable to 8), and with 32 channels of A/D for integrating third party data (expandable to 64 channels). Inputs and outputs for TTL triggering and for driving strobe units are also available as options.",
+    "order": 1,
+    "featured": false,
+    "product_type": 3,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 11,
+  "fields": {
+    "title": "Mini Hub",
+    "body_text": "A MiniHub provides power and data connections for one or two CX1 or CXS units.\r\n\r\nThe MiniHub is the most portable way to connect a Codamotion system together, weighing 2kg and with overall dimensions 320 x 85 x 115mm.  It feeds data to a control computer (running ODIN software or similar) via a USB output.",
+    "order": 2,
+    "featured": false,
+    "product_type": 3,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 12,
+  "fields": {
+    "title": "CX1 CODA Sensor Units",
+    "body_text": "The CX1 sensor unit (CODA unit) is at the heart of every Codamotion 3D system for indoor applications.\r\n\r\nUniquely, the CX1 combines three motion sensing arrays into one unit. This allows a standalone CX1 unit to make a complete 3D measurement without reference to any other units. It also means that the unit can be pre-calibrated and sealed. All the user does is to point the unit at the action.\r\n\r\nA CX1 unit is just 800mm long and weighs just 5kg!  A user can move a CX1 unit to a new location, set up and start recording data in minutes.\r\n\r\nThe unique Codamotion sensing technology allows the CX1 to achieve resolutions as high as 1 in 70,000 within its field of view (equivalent to 1/10th of a pixel in a 50 Megapixel camera).\r\n\r\nA CX1 uniquely identifies each marker with 100% reliability, so 3D marker trajectories are available for immediate analysis and display on a host computer with achievable latency (delays) of less than 0.5 milliseconds, perfect for real time applications.\r\n\r\nThe captured field expands at 1.6 x the distance from the CODA unit.  Nominal operating range is between 2.0m and 4.5m from the unit (nominal capture volume approximately 75 cubic metres), though it is possible to go out to 10m and beyond with high power markers under normal laboratory conditions.",
+    "order": 1,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 13,
+  "fields": {
+    "title": "CXS CODA Sensor Units",
+    "body_text": "The CXS sensor unit (CODA unit) is capable of operating in bright sunlight up to 90,000 Lux.\r\n\r\nLike its indoor sister product, the CXS combines three motion sensing arrays into one unit. This allows a standalone CXS unit to make a complete 3D measurement without reference to any other units. It also means that the unit can be pre-calibrated and sealed. All the user does is to point the unit at the action.\r\n\r\nA CXS unit is usable indoors or outdoors.\r\n\r\nA CXS unit is just 800mm long and weighs just 5kg! A user can move a CXS unit to a new location, set up and start recording data in minutes, with no on-site calibration required.\r\n\r\nThe unique Codamotion sensing technology allows the CXS to achieve resolutions as high as 1 in 20,000 within its field of view (equivalent to less than a half pixel in a 50 Megapixel camera).  A CXS uniquely identifies each marker with 100% reliability, so 3D marker trajectories are available for immediate analysis and display on a host computer with achievable latency (delays) of less than 0.5 milliseconds, perfect for real time applications.\r\n\r\nThe captured field expands at 1.6 x the distance from the CODA unit.  Nominal range is between 2.0m and 4.5m distance from the unit (the nominal capture volume is approximately 75 cubic metres), though it is possible to go out to 8m and beyond with high power markers under good conditions.",
+    "order": 1,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 14,
+  "fields": {
+    "title": "Markers: Standard",
+    "body_text": "All markers are compatible with the complete family of Codamotion marker drive boxes. They take their marker ID from the marker drive box.\r\n\r\nStandard markers are recommended for experimental set ups where markers will be closer than 3 metres from the CODA sensor units (although the markers will generally function up to 6 or 7 metres from the unit.)  They are ideal for use in capturing, for example, reaching tasks where fine detail is measured by placing the senor unit close to the subject.",
+    "order": 1,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 15,
+  "fields": {
+    "title": "Markers: High Powered",
+    "body_text": "This High Power option comes in a variety of lead lengths from 100 to 600mm. All markers are compatible with the complete family of Codamotion marker drive boxes. They take their marker ID from the marker drive box.\r\n\r\nThe brighter High Power markers (identified by their blue shell) are recommended for experimental set ups where the markers are more than 3 metres from the CODA sensor units (although the markers will normally function down to 2 – 2.5 metres from the unit). They are ideal for capturing, for example, sporting activity, since they will typically measure up to 10+ metres from the CODA sensor.",
+    "order": 2,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 16,
+  "fields": {
+    "title": "Markers: Drive Boxes",
+    "body_text": "Codamotion active markers are available individually or within a ready-made cluster that has power on board.  When Codamotion active markers are used individually, they are powered by our latest quad marker drive boxes.\r\n\r\nCodamotion’s 4-marker drive box is half the size of a matchbox and lighter than a silver dollar. It allows the user to power a set of active markers (see sections on standard and high power markers) on a body segment, adding a mass of no more than 22 grams.  Each drive box has the capacity to power up to 4 active markers, is chargeable and programmable via a USB socket and is fully compatible both with existing 2- and 8-marker drive boxes and with the recently introduced range of marker clusters.\r\n\r\nThe drive doxes come in two varieties:  QMDB for use with the CX1 unit systems, and QMDB-SP for use with CXS Codasport units",
+    "order": 3,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 17,
+  "fields": {
+    "title": "Marker Clusters & Pointers: Standard Cluster",
+    "body_text": "Codamotion clusters define a rigid body that gives 6-degree of freedom information when attached to, for example, limb segments.\r\n\r\nThey are lightweight and easy to apply, making for easier and simpler marker protocols with our ODIN software.\r\n\r\nClusters eliminate the need for wires to active markers and allow the user to easily define a rigid body.  The sophisticated 4-marker rigid cluster is both straightforward and quick to attach and remove from different limb contours.\r\n\r\nThey are available in two sizes, and in three versions: low power indoor (for use with CX1), high power indoor (for use with CX1), and high power outdoor (for use with CXS). Users will normally require and anatomical pointer to work with protocols involving clusters)",
+    "order": 4,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 18,
+  "fields": {
+    "title": "Marker Clusters & Pointers: Mini Cluster",
+    "body_text": "The mini cluster plate can be used as a rigid body with four markers to give 6 DoF data for the body (as in our cluster product range), but the plate comes without a marker drive box or markers intergrated into it, allowing users to form their own rigid bodies.\r\n\r\nIt is small and therefore very useful for tracking the position of the radius and ulna styloids and the orientation of the lower arm.\r\n\r\nIt can also be used for deploying a cluster protocol on very small children and small animals.",
+    "order": 5,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 19,
+  "fields": {
+    "title": "Marker Clusters & Pointers: Acromion Cluster",
+    "body_text": "The acromion marker cluster is a 4-marker cluster especially designed to track the movement of the scapula.\r\n\r\nThe acromion marker cluster has been specially designed according to the International Society of Biomechanics (ISB) recommendations to provide scapula position estimation close to palpation recordings by reducing skin movement artefact. This device needs to be positioned on the top of the acromion process and after a static acquisition, the recording of the acromion cluster provides the calculated position of the scapula.",
+    "order": 6,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 20,
+  "fields": {
+    "title": "Pointer",
+    "body_text": "A simple active pointer for use with clusters etc. when marking anatomical points in static trials in ODIN Software Suite.",
+    "order": 7,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 21,
+  "fields": {
+    "title": "Pelvic Frame",
+    "body_text": "The pelvic frame has been specially designed to track the pelvis position and orientation, and to work effectively when sensor units are placed bilaterally.\r\n\r\nThis can be used in gait protocols using leg wands or clusters, depending on the anatomical model being preferred.  It uses a special elasticated belt material to provide a firm base on the pelvis.  The frame itself fixes onto the belt once it is secure and is adjustable over a wide range of pelvic widths.\r\n\r\nThe Pelvic Frame contains 6 integrated markers (2 on each wand and 2 on the tail); and all of the electronics are embedded in the device.  It has been to provide tracking according to the International Society of Biomechanics (ISB) recommendations.\r\n\r\nThe Pelvic frame can be purchased as a separate item (GAIT-PELVIC) or as part of one of our gait wand sets.\r\n\r\nThe device is resizable and can be used for adults and children. The optional tail (GAIT-SACRAL) is detachable and will dislodge itself in case of a fall.",
+    "order": 8,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 22,
+  "fields": {
+    "title": "Gait Wands",
+    "body_text": "Gait Wand Sets help to provide fast, accurate measurements of human gait, using a proven derivative of the Helen Hayes model as a basis.\r\n\r\n### Gait Wand Set\r\n\r\nEach Gait Wand Set includes a pelvic frame, thigh wands, shank wands, an ankle alignment jig. The required markers and marker drive boxes for feet and knees come from our standard range of markers and drive boxes. Each component can be charged and/or reprogrammed to alternative marker ID numbers to suit the user’s customized marker protocol through an integral mini USB port (with USB lead supplied). Gait Wand Sets come in either adult or child sizes.\r\n\r\n### Thigh & Shank Wands\r\n\r\nThigh and shank wands attached around the femur and tibia use a pair of markers to define the axial orientation of their host segment. These wands are a convenient solution for faithfully registering bone-pose whilst permitting rapid attachment to non-anatomical positions. Silicone rubber coated pads give high shear grip to skin.\r\n\r\n### Floor Alignment Jig\r\n\r\nThe floor alignment jig provides a rapid way to define the 3D coordinate system to use as the reference for measurements.",
+    "order": 9,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 23,
+  "fields": {
+    "title": "Pelvic Frame",
+    "body_text": "The pelvis is represented by markers on a frame which clamps around the pelvis.\r\n\r\nThe sides of the frame lie in the plane of ASIS & PSIS pelvic landmarks. The physical alignment of the PSIS markers ensure a faithful representation of the pelvis segment and its hip-joint centres modelled according to Bell’s method.",
+    "order": 10,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 24,
+  "fields": {
+    "title": "Wrist Plate",
+    "body_text": "The Codamotion wrist plate allows you to attach the marker drive box to the body using straps very simply without the use of tape.",
+    "order": 11,
+    "featured": false,
+    "product_type": 1,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 25,
+  "fields": {
+    "title": "EMG Systems",
+    "body_text": "For human movement analysis, measurements of muscle activity can be used to complement the 3D measurements from Codamotion systems to provide greater understanding of the biomechanics taking place.\r\n\r\nCodamotion works with EMG system providers to provide a fully integrated experience. Acquiring and analysing synchronised data from an EMG system from within the ODIN software platform works is as simple as plugging the system in and selecting an appropriate protocol.\r\n\r\n### EMG Technology Partners\r\n\r\n* Delsys\r\n* Motion Labs\r\n* Noraxon",
+    "order": 1,
+    "featured": false,
+    "product_type": 4,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 26,
+  "fields": {
+    "title": "Force Platforms & Walkways",
+    "body_text": "To understand the kinetics (forces, torques, moments, powers) within the skeleton as a human moves, movement data from a Codamotion system can be combined with information from force platforms.\r\n\r\nCodamotion works with force platform providers to provide an integrated experience.  Not only is it easy to acquire synchronised force data in the ODIN software, but a full set of kinetic analysis methods are available to automatically compute joint kinetics and present it alongside the kinematic information.\r\n\r\nForce Platform Technology Partners\r\n\r\n* AMTI\r\n* Arsalis\r\n* Bertec\r\n* Kistler",
+    "order": 2,
+    "featured": false,
+    "product_type": 4,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.product",
+  "pk": 27,
+  "fields": {
+    "title": "Video Systems",
+    "body_text": "Contextual video aids understanding of marker measurements undertaken by a Codamotion system.\r\n\r\nThe ODIN software allows video acquisitions to be directly linked to movement acquisitions, so that both can be see side-by-side, and managed within the same data archive.  Please contact us to discuss your video requirements in more detail.",
+    "order": 3,
+    "featured": false,
+    "product_type": 4,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.component",
+  "pk": 1,
+  "fields": {
+    "title": "CXS MARKERS",
+    "body_text": "CXS Markers or marker clusters on the subject to be measured.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "cxs.jpg",
+    "product_link": 1
+  }
+},
+{
+  "model": "website.component",
+  "pk": 2,
+  "fields": {
+    "title": "Component 1",
+    "body_text": "Things!",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "odin_software.jpg",
+    "product_link": 9
+  }
+},
+{
+  "model": "website.component",
+  "pk": 3,
+  "fields": {
+    "title": "Component 2",
+    "body_text": "Other things!",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 9
+  }
+},
+{
+  "model": "website.component",
+  "pk": 4,
+  "fields": {
+    "title": "CXS SENSOR UNIT",
+    "body_text": "One or more CXS sensor units. Every unit measures coordinates in 3D.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "cxs_sensor.png",
+    "product_link": 1
+  }
+},
+{
+  "model": "website.component",
+  "pk": 5,
+  "fields": {
+    "title": "MARKERS & WANDS",
+    "body_text": "Markers and wands placed on the subject to be measured.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 4
+  }
+},
+{
+  "model": "website.component",
+  "pk": 6,
+  "fields": {
+    "title": "CX1 SENSOR UNIT",
+    "body_text": "Two or more CX1 units placed either side of a walkway.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 4
+  }
+},
+{
+  "model": "website.component",
+  "pk": 7,
+  "fields": {
+    "title": "DATA+",
+    "body_text": "## Additional inputs\r\n\r\nThe ready-labelled 3D coordinates from Codamotion systems can be synchronised and combined with data from other useful measurement systems such as force plates and EMG, all controlled and processed from the same familiar software tools",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 4
+  }
+},
+{
+  "model": "website.component",
+  "pk": 8,
+  "fields": {
+    "title": "CODAHUB",
+    "body_text": "CodaHub to receive automatically labelled marker data, plus inputs from force platforms and EMG systems.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 4
+  }
+},
+{
+  "model": "website.component",
+  "pk": 9,
+  "fields": {
+    "title": "ODIN SOFTWARE",
+    "body_text": "Platform with clinical analysis protocol. Provides data management and automatically produce standardised gait reports with kinetics and kinematics.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 4
+  }
+},
+{
+  "model": "website.component",
+  "pk": 10,
+  "fields": {
+    "title": "MARKERS",
+    "body_text": "Markers or marker clusters on the subject to be measured.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 5
+  }
+},
+{
+  "model": "website.component",
+  "pk": 11,
+  "fields": {
+    "title": "CX1 & CXS SENSOR UNIT",
+    "body_text": "Many CX1 or CXS sensor units can be used together (for large volume) or separately (to carry out multiple experiments). Every unit measures in 3D.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 5
+  }
+},
+{
+  "model": "website.component",
+  "pk": 12,
+  "fields": {
+    "title": "DATA+",
+    "body_text": "## Additional inputs\r\n\r\nThe ready-labelled 3D coordinates from Codamotion systems can be synchronised and combined with data from other useful measurement systems such as force plates and EMG, all controlled and processed from the same familiar software tools.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 5
+  }
+},
+{
+  "model": "website.component",
+  "pk": 13,
+  "fields": {
+    "title": "CODAHUB",
+    "body_text": "One or more CodaHubs.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 5
+  }
+},
+{
+  "model": "website.component",
+  "pk": 14,
+  "fields": {
+    "title": "ODIN SOFTWARE",
+    "body_text": "Platform for sophisticated 3D analysis, display and reporting.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 5
+  }
+},
+{
+  "model": "website.component",
+  "pk": 15,
+  "fields": {
+    "title": "DATA+",
+    "body_text": "## Additional inputs\r\n\r\nThe ready-labelled 3D coordinates from Codamotion systems can be synchronised and combined with data from other useful measurement systems such as force plates and EMG, all controlled and processed from the same familiar software tools.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 1
+  }
+},
+{
+  "model": "website.component",
+  "pk": 16,
+  "fields": {
+    "title": "DATA HUB",
+    "body_text": "Choose MiniHub or full CodaHub depending on your needs.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 1
+  }
+},
+{
+  "model": "website.component",
+  "pk": 17,
+  "fields": {
+    "title": "ODIN SOFTWARE",
+    "body_text": "Platform for sophisticated 3D analysis, display and reporting.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 1
+  }
+},
+{
+  "model": "website.component",
+  "pk": 18,
+  "fields": {
+    "title": "MARKERS",
+    "body_text": "Markers or marker clusters on the subject to be measured.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 3
+  }
+},
+{
+  "model": "website.component",
+  "pk": 19,
+  "fields": {
+    "title": "CX1 SENSOR UNIT",
+    "body_text": "Single CX1 unit to measure 3D coordinates.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 3
+  }
+},
+{
+  "model": "website.component",
+  "pk": 20,
+  "fields": {
+    "title": "DATA+",
+    "body_text": "## Additional inputs\r\n\r\nThe ready-labelled 3D coordinates from Codamotion systems can be synchronised and combined with data from other useful measurement systems such as force plates and EMG, all controlled and processed from the same familiar software tools.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 3
+  }
+},
+{
+  "model": "website.component",
+  "pk": 21,
+  "fields": {
+    "title": "DATA HUB",
+    "body_text": "Choose MiniHub or full CodaHub depending on your needs.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 3
+  }
+},
+{
+  "model": "website.component",
+  "pk": 22,
+  "fields": {
+    "title": "ODIN SOFTWARE",
+    "body_text": "Platform for sophisticated 3D analysis, display and reporting.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 3
+  }
+},
+{
+  "model": "website.component",
+  "pk": 23,
+  "fields": {
+    "title": "MARKERS",
+    "body_text": "Markers or marker clusters on the subject to be measured.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 2
+  }
+},
+{
+  "model": "website.component",
+  "pk": 24,
+  "fields": {
+    "title": "CX1 SENSOR UNIT",
+    "body_text": "One or more CX1 sensor units. Every unit measures coordinates in 3D.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 2
+  }
+},
+{
+  "model": "website.component",
+  "pk": 25,
+  "fields": {
+    "title": "DATA+",
+    "body_text": "## Additional inputs\r\n\r\nThe ready-labelled 3D coordinates from Codamotion systems can be synchronised and combined with data from other useful measurement systems such as force plates and EMG, all controlled and processed from the same familiar software tools.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 2
+  }
+},
+{
+  "model": "website.component",
+  "pk": 26,
+  "fields": {
+    "title": "MINIHUB",
+    "body_text": "MiniHub and laptop for portable data acquisition.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 2
+  }
+},
+{
+  "model": "website.component",
+  "pk": 27,
+  "fields": {
+    "title": "ODIN SOFTWARE",
+    "body_text": "Platform for sophisticated 3D analysis, display and reporting.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 2
+  }
+},
+{
+  "model": "website.component",
+  "pk": 28,
+  "fields": {
+    "title": "MARKERS",
+    "body_text": "Markers or marker clusters on the subject to be measured.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 7
+  }
+},
+{
+  "model": "website.component",
+  "pk": 29,
+  "fields": {
+    "title": "CX1 SENSOR UNIT",
+    "body_text": "One or more CX1 sensor units. Every unit measures coordinates in 3D.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 7
+  }
+},
+{
+  "model": "website.component",
+  "pk": 30,
+  "fields": {
+    "title": "DATA+",
+    "body_text": "## Additional inputs\r\n\r\nThe ready-labelled 3D coordinates from Codamotion systems can be synchronised and combined with data from many other sources, including analogue inputs.  All of this synchronised data is available through one common API, directly into your own applications.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 7
+  }
+},
+{
+  "model": "website.component",
+  "pk": 31,
+  "fields": {
+    "title": "CODAHUB",
+    "body_text": "",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 7
+  }
+},
+{
+  "model": "website.component",
+  "pk": 32,
+  "fields": {
+    "title": "RTNET SDK",
+    "body_text": "RTNet SDK for real-time streaming of pre-labelled XYZ position data into your real-time application.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 7
+  }
+},
+{
+  "model": "website.component",
+  "pk": 33,
+  "fields": {
+    "title": "MARKER CLUSTERS",
+    "body_text": "Marker clusters on the subject to be measured on treadmill.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 6
+  }
+},
+{
+  "model": "website.component",
+  "pk": 34,
+  "fields": {
+    "title": "CX1 SENSOR UNIT",
+    "body_text": "Two CX1 sensor units for bilateral analytics.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 6
+  }
+},
+{
+  "model": "website.component",
+  "pk": 35,
+  "fields": {
+    "title": "DATA+",
+    "body_text": "## Additional inputs\r\n\r\nThe ready-labelled 3D coordinates from Codamotion systems can be synchronised and combined with data from other useful measurement systems such as treadmill force platforms and EMG, all controlled and processed from the same familiar software tools.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 6
+  }
+},
+{
+  "model": "website.component",
+  "pk": 36,
+  "fields": {
+    "title": "DATA HUB",
+    "body_text": "Choose MiniHub or full CodaHub depending on your needs.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 6
+  }
+},
+{
+  "model": "website.component",
+  "pk": 37,
+  "fields": {
+    "title": "ODIN SOFTWARE",
+    "body_text": "Platform for sophisticated 3D analysis, display and reporting.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "product_link": 6
+  }
+},
+{
+  "model": "website.application",
+  "pk": 1,
+  "fields": {
+    "title": "Ergonomics",
+    "body_text": "We are industry partner of choice when it comes to 3D assessment of human interaction with products, work space and living spaces.\r\n\r\nNeed to undertake the 3D assessment of human interaction with products, work space or living spaces? In use in a wide variety of ergonomic and human factor applications, our systems can help with your motion measurement and analysis needs.",
+    "order": 1,
+    "featured": true,
+    "image_url": "https://placekitten.com/400/400",
+    "image": "",
+    "reason_to_choose": "research",
+    "product_link": [
+      3,
+      1,
+      2,
+      5,
+      8
+    ],
+    "case_study_link": []
+  }
+},
+{
+  "model": "website.application",
+  "pk": 2,
+  "fields": {
+    "title": "Sports Biomechanics",
+    "body_text": "Sports scientists need data acquired where the action is, whether that’s in a remote corner of their sports hall, their gymnasium, or outside on the sports field.\r\n\r\nCodamotion’s unique technology is lightweight and portable, requiring no calibration by the user when set up in a new location. Motion capture can take place just about anywhere.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "reason_to_choose": "research",
+    "product_link": [
+      3,
+      1,
+      2,
+      5
+    ],
+    "case_study_link": [
+      11,
+      5,
+      8,
+      3,
+      9
+    ]
+  }
+},
+{
+  "model": "website.application",
+  "pk": 3,
+  "fields": {
+    "title": "Veterinary & Animal Sciences",
+    "body_text": "Many of our users want to analyse the movement and behaviour of animals.\r\n\r\nCodamotion systems are versatile, portable, indoor and outdoor, and very easy to set-up and use. Examples have included horses, dogs, and sheep.",
+    "order": 2,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "reason_to_choose": "research",
+    "product_link": [
+      1,
+      2,
+      5
+    ],
+    "case_study_link": []
+  }
+},
+{
+  "model": "website.application",
+  "pk": 4,
+  "fields": {
+    "title": "Industrial Sciences & Object Tracking",
+    "body_text": "We’ve been supporting innovation for over 30 years.\r\n\r\nWe have laboratories all over the world tracking robots using our active marker technology. Whether you are tracking fast-moving UAVs, industrial robots, or huge earth movers in hostile environments, our motion tracking systems can be integrated into your application.\r\n\r\nCodamotion systems have very low latency, are easy to set-up and use, and our users can integrate our data into any control system. We are rapidly growing into this area.",
+    "order": 3,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "reason_to_choose": "research",
+    "product_link": [
+      1,
+      2,
+      5
+    ],
+    "case_study_link": [
+      1
+    ]
+  }
+},
+{
+  "model": "website.application",
+  "pk": 5,
+  "fields": {
+    "title": "Novel Research Applications",
+    "body_text": "We’ve been working closely with some of the largest and most prestigious organisations to push the boundaries of what is possible.\r\n\r\nWe’ve worked with the European Space Agency to design and build a motion capture system for object tracking in space. We have worked with the world’s largest manufacturer of earth movers to track the finest movements in hostile environments. We continue to work with organisations who have the ambition and the tenacity to push the boundaries of what can be done.",
+    "order": 4,
+    "featured": false,
+    "image_url": null,
+    "image": "",
+    "reason_to_choose": "research",
+    "product_link": [
+      3,
+      1,
+      2,
+      6,
+      5
+    ],
+    "case_study_link": [
+      5,
+      3,
+      1,
+      9
+    ]
+  }
+},
+{
+  "model": "website.history",
+  "pk": 1,
+  "fields": {
+    "title": "1970s",
+    "body_text": "A number of possible techniques for automated movement analysis were evaluated. These included ultrasound, radar, inertial devices, and video cameras, all of which were rejected as not meeting one or more of the above criteria. So a long odyssey began to find a method that would.\r\n\r\nBy the mid 1970s, a method was developed using solid-state injection lasers as the markers and a hybrid analogue/digital optical mask as the detection device within the cameras. It was also at this time that the concept of three high-resolution uni-axial cameras mounted on a rigid frame was devised. This enabled the system to be pre-calibrated to allow calculation of the 3-D co-ordinates, without the need for the user to carry out on-site calibration.\r\n\r\nThe first system was developed as a research instrument within Loughborough University, United Kingdom and achieved resolutions of 1 part in 4000 at a 1KHz sampling rate. It was not a commercial system and it was felt it did not attain high enough spatial resolution.",
+    "order": 2,
+    "featured": false,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.history",
+  "pk": 2,
+  "fields": {
+    "title": "1980s",
+    "body_text": "The next generation of system was developed within a commercial setting and used passive corner-cube retro-reflecting prisms as markers. This system was termed ‘CODA 3’, which stands for: Cartesian Optical Dynamic Anthropometer (3 dimensional).  It wasn’t until much later that this name morphed into ‘Codamotion’.\r\n\r\nThe prisms were automatically identified by colour using revolving polygonal mirrors as scanning devices. Beams of light were swept across the field of view by the mirrors. When a marker was briefly illuminated by the transiting beam it reflected a pulse of light back via the same mirror. The returning light pulse was detected via a complex set of fibre-optics and photodiode Prism detectors.\r\n\r\nResolutions of better than 1 in 50,000 (approx 0.2mm) at 300Hz sampling rate were achieved with CODA, a small number of which were produced commercially. While its spatio-temporal performance was far better than any other technique available at the time, it suffered from the limitation that only a maximum of 12 prism markers could be uniquely identified by colour.",
+    "order": 3,
+    "featured": false,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.history",
+  "pk": 3,
+  "fields": {
+    "title": "1990s",
+    "body_text": "The power of embedded microprocessors made possible the next generation of the CODA system.\r\n\r\nThis became all solid state, using a unique optical correlation technique to achieve resolutions of up to 1 in 100,000 at sampling rates up to 800Hz.\r\n\r\nThe markers were changed to small infrared LED’s allowing 56 markers to be tracked simultaneously.",
+    "order": 4,
+    "featured": false,
+    "image_url": null,
+    "image": "1990.jpg"
+  }
+},
+{
+  "model": "website.history",
+  "pk": 4,
+  "fields": {
+    "title": "2000s",
+    "body_text": "The desire by researchers to put motion capture experiments into space on the International Space Station led to the development of the sensor units, in a 5kg package that was only 800mm long, yet measured with the accuracy of passive systems that spread cameras widely apart on lab walls.\r\n\r\nLight weight, portability and the fact that such systems need no on-site calibration made this technology the choice of leading researchers and clinicians around the world.  This reputation for reliability, accuracy and ease of use continues to be at the centre of the world’s best motion capture systems.",
+    "order": 5,
+    "featured": false,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.history",
+  "pk": 5,
+  "fields": {
+    "title": "Our Founder",
+    "body_text": "Company founder David Mitchelson can justifiably be regarded as one of the pioneers of automated 3D movement analysis.  Previously, in the 1960s, David worked in the space industry in the USA.  By the 1970s he had moved back to his native UK, and his interest in movement analysis was borne of a desire to apply space-age technology to benefit societies here on Earth.\r\n\r\nHe was particularly interested in understanding human motor control systems for clinical applications, as well as artificial limb control system design.  But the frame-by-frame cine analysis of that era made this a cumbersome and painstaking task.  David felt there had to be a better way.\r\n\r\nDavid began by setting out some basic criteria for a movement analysis system, and it shows his foresight that these features are still widely regarded as the measure of a good system today.  These are: high spatial and temporal resolution and accuracy (sub millimetre and >200Hz),  automatic identification of markers, real-time output of co-ordinate data with millisecond latency, precalibration, ease-of-use, and portability.",
+    "order": 1,
+    "featured": false,
+    "image_url": null,
+    "image": ""
+  }
+},
+{
+  "model": "website.sitemenu",
+  "pk": 1,
+  "fields": {
+    "title": "H"
+  }
+},
+{
+  "model": "website.sitemenu",
+  "pk": 2,
+  "fields": {
+    "title": "F"
+  }
+},
+{
+  "model": "website.page",
+  "pk": 2,
+  "fields": {
+    "title": "Support Services",
+    "slug": "support",
+    "featured": true,
+    "body_text": "",
+    "testimonial": 3,
+    "image_url": null,
+    "image": "",
+    "list_data": null,
+    "list_data_heading_links": false,
+    "list_data_format": "grid",
+    "menu": [
+      1
+    ]
+  }
+},
+{
+  "model": "website.page",
+  "pk": 4,
+  "fields": {
+    "title": "Cookie Policy",
+    "slug": "cookie-policy",
+    "featured": false,
+    "body_text": "",
+    "testimonial": null,
+    "image_url": null,
+    "image": "",
+    "list_data": null,
+    "list_data_heading_links": false,
+    "list_data_format": "grid",
+    "menu": [
+      2
+    ]
+  }
+},
+{
+  "model": "website.page",
+  "pk": 5,
+  "fields": {
+    "title": "Case Studies",
+    "slug": "case-studies",
+    "featured": false,
+    "body_text": "",
+    "testimonial": null,
+    "image_url": null,
+    "image": "",
+    "list_data": "CASE",
+    "list_data_heading_links": false,
+    "list_data_format": "grid",
+    "menu": [
+      1
+    ]
+  }
+},
+{
+  "model": "website.page",
+  "pk": 6,
+  "fields": {
+    "title": "Welcome to Codamotion",
+    "slug": "home",
+    "featured": false,
+    "body_text": "Covid notice",
+    "testimonial": 1,
+    "image_url": null,
+    "image": "",
+    "list_data": null,
+    "list_data_heading_links": false,
+    "list_data_format": "grid",
+    "menu": []
+  }
+},
+{
+  "model": "website.page",
+  "pk": 7,
+  "fields": {
+    "title": "Events",
+    "slug": "forthcoming-events",
+    "featured": false,
+    "body_text": "",
+    "testimonial": 4,
+    "image_url": null,
+    "image": "",
+    "list_data": null,
+    "list_data_heading_links": false,
+    "list_data_format": "grid",
+    "menu": []
+  }
+},
+{
+  "model": "website.page",
+  "pk": 8,
+  "fields": {
+    "title": "Movement Analysis for Clinical Services",
+    "slug": "movement-analysis-for-clinical-services",
+    "featured": false,
+    "body_text": "Codamotion has been pioneering gait analysis since the 1960s. Since those early days, we have always been an innovator in the technology, and our system today is still one of the easiest to set up, with unparalleled accuracy, portable, and supported by powerful software called Odin that can be locked down to cater for your needs. We install. You use. You’re in safe hands.",
+    "testimonial": null,
+    "image_url": null,
+    "image": "",
+    "list_data": null,
+    "list_data_heading_links": false,
+    "list_data_format": "grid",
+    "menu": []
+  }
+},
+{
+  "model": "website.page",
+  "pk": 9,
+  "fields": {
+    "title": "Movement Analysis for Research Facilities",
+    "slug": "movement-analysis-for-research-facilities",
+    "featured": false,
+    "body_text": "Codamotion is the technology provider of choice for organisations which need to establish a world-leading research facility in 3D Movement Analysis, with the flexibility to cater for a wide variety of projects from one powerful general-purpose platform.\r\n\r\nCodamotion has been advancing real-time 3D movement analysis technology for a long time, with a worldwide user base of researchers. Codamotion offers a cost effective solution, while offering uncompromising accuracy, portability with indoor and outdoor systems, real-time 3D data, and powerful software allowing you to build the research environment you want.",
+    "testimonial": null,
+    "image_url": null,
+    "image": "",
+    "list_data": null,
+    "list_data_heading_links": false,
+    "list_data_format": "grid",
+    "menu": []
+  }
+},
+{
+  "model": "website.page",
+  "pk": 10,
+  "fields": {
+    "title": "Privacy Policy",
+    "slug": "privacy-policy",
+    "featured": false,
+    "body_text": "",
+    "testimonial": null,
+    "image_url": null,
+    "image": "",
+    "list_data": null,
+    "list_data_heading_links": false,
+    "list_data_format": "grid",
+    "menu": [
+      2
+    ]
+  }
+},
+{
+  "model": "website.page",
+  "pk": 11,
+  "fields": {
+    "title": "Contact",
+    "slug": "contact",
+    "featured": false,
+    "body_text": "",
+    "testimonial": null,
+    "image_url": null,
+    "image": "",
+    "list_data": null,
+    "list_data_heading_links": false,
+    "list_data_format": "grid",
+    "menu": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "website.page",
+  "pk": 12,
+  "fields": {
+    "title": "Careers",
+    "slug": "careers",
+    "featured": false,
+    "body_text": "Having a job at Codamotion means that you are directly involved in shaping the future of movement analysis.\r\n\r\nThough we are now growing at pace, it remains our mission to maintain a warm family business environment that is a welcoming place to be, and a hive of creative thinking and new ideas. Staff are actively encouraged to undertake learning and development, all are involved in shaping our long-term plans.",
+    "testimonial": null,
+    "image_url": null,
+    "image": "",
+    "list_data": null,
+    "list_data_heading_links": false,
+    "list_data_format": "grid",
+    "menu": [
+      2
+    ]
+  }
+},
+{
+  "model": "website.contentobject",
+  "pk": 1,
+  "fields": {
+    "title": "Training",
+    "body_text": "No matter how simple we make the technology, understanding measurements in the 4-dimensions of time and space is a challenging task.\r\n\r\nThe team of experts at Codamotion works to guide you through this process , from choosing a measurement system through to getting the most out of it for your chosen applications. We also provide continuity and retraining as you hire new staff or expand your facilities.  Please contact us for more information about the support and training available.",
+    "page": 2
+  }
+},
+{
+  "model": "website.contentobject",
+  "pk": 2,
+  "fields": {
+    "title": "Service Contracts",
+    "body_text": "Support, training, and system maintenance are ongoing needs for any productive movement analysis facility.\r\n\r\nCodamotion can provide the right support package to suit your organisation.  Please contact us for more information.",
+    "page": 2
+  }
+},
+{
+  "model": "website.contentobject",
+  "pk": 3,
+  "fields": {
+    "title": "About Codamotion",
+    "body_text": "Codamotion promotes the development of leading-edge movement analysis products, systems and services which meet global needs.  The organisation operates in collaboration with researchers and movement analysis practitioners around the world.\r\n\r\nThe aim of Codamotion is to provide solutions that enhance as many lives as possible. The Codamotion suite of comprehensive solutions includes 3D movement measurement and analysis systems for research and clinical facilities, as well as hardware and software platforms which integrate movement measurements from Codamotion systems together with data from a wide variety of devices and partner organisations. These innovative software and hardware solutions are underpinned by Codamotion’s educational and support services.",
+    "page": 6
+  }
+},
+{
+  "model": "website.contentobject",
+  "pk": 4,
+  "fields": {
+    "title": "Let's Meet",
+    "body_text": "We attend a number of events both within the UK and further afield and we encourage you to visit us and look forward to meeting. If you would like to arrange a specific meeting time at one of these events then please contact us using the form below.",
+    "page": 7
+  }
+},
+{
+  "model": "website.contentobject",
+  "pk": 5,
+  "fields": {
+    "title": "Welcome",
+    "body_text": "How Charnwood Dynamics Ltd. (Codamotion) Protects Data\r\nThis privacy policy sets out how Charnwood Dynamics Ltd. (Codamotion) uses and protects any information that you give when you use this website.\r\n\r\n## 1.  Web Privacy Policy\r\n\r\nCodamotion is committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement. Codamotion may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from January 2015.\r\n\r\nWe may collect the following information:\r\n\r\n* Name and job title\r\n* Contact information including email address\r\n* Demographic information such as postcode, preferences and interests\r\n* Other information relevant to customer surveys and/or offers\r\n\r\n### What we do with the information we gather\r\n\r\nWe require this information to understand your needs and provide you with a better service, and in particular for the following reasons:\r\n\r\n* Internal record keeping.\r\n* We may use the information to improve our products and services.\r\n* We may periodically send promotional email about new products, special offers or other information which we think you may find interesting using the email address which you have provided. These emails will only ever originate from us, never from a third party.\r\n* From time to time, we may also use your information to contact you for market research purposes. We may contact you by email, phone, fax or mail.\r\n\r\nWe may use the information to customise the website according to your interests.\r\n\r\n## 2. Security\r\n\r\nWe are committed to ensuring that your information is secure. In order to prevent unauthorised access or disclosure we have put in place suitable physical, electronic and managerial procedures to safeguard and secure the information we collect online.\r\n\r\n### How we use cookies\r\n\r\nWe have developed a comprehensive policy which explains how we use cookies and how you you can control cookies in your internet browse.\r\n\r\nPlease see our comprehensive [cookies policy](/cookie-policy).\r\n\r\n### Links to other websites\r\n\r\nOur website may contain links to enable you to visit other websites of interest easily. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question. We will never pass any information about you to an external website.\r\n\r\n### Controlling your personal information\r\n\r\nYou may choose to restrict the collection or use of your personal information in the following ways:\r\n\r\n* Whenever you are asked to fill in a form on the website, look for a box that you can click to indicate that you do not want the information to be used by anybody for direct marketing purposes. If this box isn’t present you can assume that we will not use the information you have entered for direct marketing purposes.\r\n* If you have previously agreed to us using your personal information for direct marketing purposes, you may change your mind at any time by writing to or emailing us at the Privacy Enquiries Address shown below.\r\n\r\nWe will not sell, distribute or lease your personal information to third parties unless we have your permission or are required by law to do so. We may use your personal information to send you promotional information about third parties which we think you may find interesting if you tell us that you wish this to happen. You may request details of personal information which we hold about you under the Data Protection Act 1998 of England. A small fee will be payable.\r\n\r\n### If you would like a copy of the information held on you please write to:\r\n\r\nPrivacy Enquiries Address:\r\n\r\nData Controller,  \r\nCharnwood Dynamics Ltd. (Codamotion),  \r\n2 Victoria Mills,  \r\nRothley,  \r\nLE7 7PJ,   \r\nUnited Kingdom.\r\n\r\nOr use our online form to contact us by clicking this link: [Contact Us](/contact)\r\n\r\nIf you believe that any information we are holding on you is incorrect or incomplete, please write to or email us as soon as possible, at the above address. We will promptly correct any information found to be incorrect.",
+    "page": 10
+  }
+},
+{
+  "model": "website.event",
+  "pk": 1,
+  "fields": {
+    "start_date": "2019-06-30",
+    "end_date": "2019-07-04",
+    "location": "Edinburgh, UK",
+    "title": "ISPGR World Congress 2019",
+    "link": "https://ispgr.org/2019-congress/",
+    "image_url": null,
+    "image": "",
+    "body_text": ""
+  }
+},
+{
+  "model": "website.event",
+  "pk": 2,
+  "fields": {
+    "start_date": "2019-04-25",
+    "end_date": "2019-04-26",
+    "location": "Sheffield, UK",
+    "title": "CMAS 2019 - 18th Annual Meeting of the Clinical Movement Analysis Society",
+    "link": "https://insigneo.org/event/cmas-2019-18th-annual-meeting-of-the-clinical-movement-analysis-society/",
+    "image_url": null,
+    "image": "",
+    "body_text": ""
+  }
+},
+{
+  "model": "website.event",
+  "pk": 3,
+  "fields": {
+    "start_date": "2018-09-10",
+    "end_date": "2018-09-14",
+    "location": "Auckland, New Zealand",
+    "title": "ISBS 2018 - International Society of Biomechanics in Sports",
+    "link": "https://isbs.org/isbs-2018",
+    "image_url": null,
+    "image": "",
+    "body_text": ""
+  }
+},
+{
+  "model": "website.event",
+  "pk": 4,
+  "fields": {
+    "start_date": "2018-09-27",
+    "end_date": "2018-09-29",
+    "location": "Prague, Czech Republic",
+    "title": "ESMAC 2018 - European Society for Movement Analysis in Adults and Children",
+    "link": "http://www.esmac2018.org/",
+    "image_url": null,
+    "image": "",
+    "body_text": ""
+  }
+},
+{
+  "model": "website.event",
+  "pk": 5,
+  "fields": {
+    "start_date": "2018-11-07",
+    "end_date": null,
+    "location": "Loughborough, UK",
+    "title": "Leicester Business Festival 2018 - Innovation in Charnwood Event",
+    "link": "https://lati.org.uk/event/announcing-2018-innovation-incharnwood-showcase-at-holywell-conference-centre",
+    "image_url": null,
+    "image": "",
+    "body_text": ""
+  }
+},
+{
+  "model": "website.event",
+  "pk": 6,
+  "fields": {
+    "start_date": "2018-07-08",
+    "end_date": "2018-07-12",
+    "location": "Dublin, Ireland",
+    "title": "World Congress of Biomechanics (WCB) 2018",
+    "link": "http://wcb2018.com/",
+    "image_url": null,
+    "image": "",
+    "body_text": ""
+  }
+},
+{
+  "model": "website.event",
+  "pk": 7,
+  "fields": {
+    "start_date": "2018-04-12",
+    "end_date": "2018-04-13",
+    "location": "Dublin, Ireland",
+    "title": "CMAS 2018",
+    "link": "https://www.cmas2018.org/",
+    "image_url": null,
+    "image": "",
+    "body_text": ""
+  }
+},
+{
+  "model": "website.event",
+  "pk": 8,
+  "fields": {
+    "start_date": "2017-07-17",
+    "end_date": "2017-07-21",
+    "location": "London, UK",
+    "title": "Rehab Week 2017",
+    "link": "http://www.rehabweek.org/2017",
+    "image_url": null,
+    "image": "",
+    "body_text": ""
+  }
+},
+{
+  "model": "website.event",
+  "pk": 9,
+  "fields": {
+    "start_date": "2017-07-02",
+    "end_date": "2017-07-05",
+    "location": "Seville, Spain",
+    "title": "European Society of Biomechanics (ESB) 2017",
+    "link": "https://esbiomech.org/conference/index.php/esb2017/seville",
+    "image_url": null,
+    "image": "",
+    "body_text": ""
+  }
+},
+{
+  "model": "website.companyinfo",
+  "pk": 1,
+  "fields": {
+    "email": "info@codamotion.com",
+    "phone_number": "0116 230 1060",
+    "address": "Unit 2 Victoria Mills,\r\nFowke Street,\r\nRothley, \r\nLE7 7PJ, \r\nUnited Kingdom",
+    "company_text": "Codamotion® is a division of Charnwood Dynamics Limited, and a registered trademark. Charnwood Dynamics Limited is a company registered in England.\r\n\r\nRegistration number 2152715. Registered office: Unit 2 Victoria Mills, Fowke Street, Rothley, LE7 7PJ, United Kingdom. Web development by [Sam Osborne](https://web.samosborne.me).",
+    "tagline": "Codamotion is a supplier of motion capture equipment to the academic research, clinical and other related life science markets, with the goal of enhancing lives.",
+    "vision": "Our vision is to create advanced technologies to maximise the use of movement analysis around the world, with the goal of enhancing as many lives as possible.  This means that it’s vital for us to be in close contact with all of our customers to maintain a deep understanding of how our customers use movement analysis; and to have close ties with the clinical and scientific movement analysis communities.\r\n\r\nWe work with customers to continually evolve the technology, whether in the form of new product or collaborative research projects to push the barriers of what can be done.\r\n\r\nNot only do we create measurement technology but we also promote platforms which enable communities to operate, such as plugins for research software, source code, and online portals."
+  }
+},
+{
+  "model": "website.teammember",
+  "pk": 1,
+  "fields": {
+    "person_type": "MGMT",
+    "person_name": "Joel Mitchelson Ph.D",
+    "image_url": null,
+    "image": "joel.jpg",
+    "role": "Managing Director",
+    "bio": "Joel joined to take over the Managing Director (CEO) role in 2017, and oversees all aspects of the company. Joel brings with him a wealth of business, research, and engineering experience.  His career has encompassed areas as diverse as computer vision, climate science,  augmented reality, and biomechanics.  Joel also has a deep knowledge of 3D movement analysis and quite literally grew up with it – his father is none other than company founder and inventor of the original technology behind Codamotion, David Mitchelson.  Codamotion thus remains a family business.\r\n\r\n_“It’s a great honour to be able to lead the company as we work with our customers and partners to evolve the movement analysis systems and applications of the future.  Our vision is to maximise the use of movement analysis around the world, with the goal of enhancing lives.  I have seen the markets and technology in this area throughout my life, and am convinced there has never been a more exciting and productive time to be working on this.”_ \r\n– Joel Mitchelson"
+  }
+},
+{
+  "model": "website.teammember",
+  "pk": 2,
+  "fields": {
+    "person_type": "MGMT",
+    "person_name": "Paul Boyd",
+    "image_url": null,
+    "image": "",
+    "role": "Production Manager",
+    "bio": "Paul leads the production team that builds all Codamotion systems at our UK manufacturing facility.  He has over 30 years of production control and production management experience."
+  }
+},
+{
+  "model": "website.teammember",
+  "pk": 3,
+  "fields": {
+    "person_type": "MGMT",
+    "person_name": "Tushar Thaker MSc",
+    "image_url": null,
+    "image": "",
+    "role": "Software and Platforms Product Manager",
+    "bio": "Tushar is in charge of creating products that demonstrate the synergy between complex hardware and intuitive software.\r\n\r\nOne of his main tasks is the ownership of product and platform roadmaps with the company. Tushar has extensive experience developing and maintaining complex real-time applications in 3D motion capture and analysis, including work with other sensor and measurement systems such as force platforms, EMG, gaze-trackers, high-speed video cameras to name some."
+  }
+},
+{
+  "model": "website.teammember",
+  "pk": 4,
+  "fields": {
+    "person_type": "KEYC",
+    "person_name": "Andrew Ward",
+    "image_url": null,
+    "image": "",
+    "role": "Senior Software and Support Engineer",
+    "bio": ""
+  }
+},
+{
+  "model": "website.teammember",
+  "pk": 5,
+  "fields": {
+    "person_type": "KEYC",
+    "person_name": "Melissa Hull",
+    "image_url": null,
+    "image": "",
+    "role": "Support Engineer",
+    "bio": ""
+  }
+},
+{
+  "model": "website.teammember",
+  "pk": 6,
+  "fields": {
+    "person_type": "KEYC",
+    "person_name": "Sarah Charles",
+    "image_url": null,
+    "image": "",
+    "role": "Office Manager",
+    "bio": ""
+  }
+},
+{
+  "model": "website.teammember",
+  "pk": 7,
+  "fields": {
+    "person_type": "ADVS",
+    "person_name": "Sachin Nandha",
+    "image_url": null,
+    "image": "",
+    "role": null,
+    "bio": "Sachin has an Engineering degree (Aerospace), as well as a string of postgraduate qualifications around Religion and Politics. He has 10 years experience of building commercial enterprises and successfully launching products and services in several different sectors, ranging from e-commerce, to engineering, to advisory services."
+  }
+},
+{
+  "model": "website.teammember",
+  "pk": 8,
+  "fields": {
+    "person_type": "ADVS",
+    "person_name": "David Mitchelson",
+    "image_url": null,
+    "image": "",
+    "role": "Company Founder",
+    "bio": "Company founder David Mitchelson continues to provide a wealth of experience and expertise to Codamotion in an advisory capacity.  Examples of the many outstanding contributions that David has made over many years can be found on the history page."
+  }
+},
+{
+  "model": "website.distributor",
+  "pk": 1,
+  "fields": {
+    "area": "USA",
+    "name": "Brain Vision LLC",
+    "order": 1,
+    "website": null,
+    "phone_number": "+1 877 334 4674",
+    "address": "2700 Gateway Centre Boulevard\r\nSuite 600\r\nMorrisville\r\nNC 27560\r\nUSA"
+  }
+},
+{
+  "model": "website.distributor",
+  "pk": 2,
+  "fields": {
+    "area": "China",
+    "name": "RSscan Beijing Ltd.",
+    "order": 1,
+    "website": "http://www.rsscan.com.cn/",
+    "phone_number": "+86 10-51736527",
+    "address": "No.1-1101\r\nBixingyuan\r\nLuozhuangxili\r\nZhichun Road\r\nHaidian District Beijing\r\nChina"
+  }
+},
+{
+  "model": "website.distributor",
+  "pk": 3,
+  "fields": {
+    "area": "Singapore",
+    "name": "Aerobe Pte Ltd",
+    "order": 1,
+    "website": "http://aerobe.com/",
+    "phone_number": "+65 6222 8656",
+    "address": "101 Cecil Street\r\n#17-03 Tong Eng Building\r\nSingapore\r\n069533"
+  }
+},
+{
+  "model": "website.distributor",
+  "pk": 4,
+  "fields": {
+    "area": "Australia",
+    "name": "Aerobe Pty Limited",
+    "order": 1,
+    "website": "http://aerobe.com/",
+    "phone_number": null,
+    "address": "Suite 22\r\n56 Neridah Street\r\nSydney, NSW 2067\r\nAustralia"
+  }
+},
+{
+  "model": "website.distributor",
+  "pk": 5,
+  "fields": {
+    "area": "India",
+    "name": "Aerobe Medicare Pvt Ltd",
+    "order": 1,
+    "website": "http://aerobe.com/",
+    "phone_number": null,
+    "address": "K – 92 B, II Floor\r\nLajpat Nagar – II\r\nNew Delhi, Delhi 110024\r\nIndia"
+  }
+},
+{
+  "model": "website.distributor",
+  "pk": 6,
+  "fields": {
+    "area": "Malaysia",
+    "name": "Aerobe Sdn Bhd",
+    "order": 1,
+    "website": "http://aerobe.com/",
+    "phone_number": null,
+    "address": "6-3-4, Jalan Shelly\r\nQueen’s Avenue\r\n55100 Kuala Lumpur\r\nMalaysia"
+  }
+},
+{
+  "model": "website.testimonial",
+  "pk": 1,
+  "fields": {
+    "quote": "Codamotion is a supplier of motion capture equipment to the academic research, clinical and other related life science markets, with the goal of enhancing lives.",
+    "source": "David Mitchelson, Founder"
+  }
+},
+{
+  "model": "website.testimonial",
+  "pk": 3,
+  "fields": {
+    "quote": "Codamotion can provide the right support package to suit your organisation.",
+    "source": null
+  }
+},
+{
+  "model": "website.testimonial",
+  "pk": 4,
+  "fields": {
+    "quote": "We look forward to meeting you at one of the future events we're attending.",
+    "source": null
+  }
+}
+]
