@@ -1,13 +1,15 @@
 {% load static %}
-			<div class="container-fluid testimonial-block striped-background" style="background-image:url({% static 'website/neurons.jpg' %}">
-				<figure>
-					<blockquote class="blockquote">
-						"{{ page.testimonial.quote }}"
-					</blockquote>
-					{% if page.testimonial.source %}
-						<figcaption class="blockquote-footer">
-							{{ page.testimonial.source }}
-						</figcaption>
-					{% endif %}
-				</figure>
+			<div class="container-fluid testimonial-block striped-background {% if page.testimonial.get_image %}testimonial-image{% endif %}" style="background-image:url({% if page.testimonial.get_image %}'{{ page.testimonial.get_image }}'{% else %}{% static 'website/neurons.jpg' %}{% endif %}">
+				<div class="testimonial-content">
+					<figure>
+						<blockquote class="blockquote">
+							"{{ page.testimonial.quote }}"
+						</blockquote>
+						{% if page.testimonial.source %}
+							<figcaption class="blockquote-footer">
+								{{ page.testimonial.source }}
+							</figcaption>
+						{% endif %}
+					</figure>
+				</div>
 			</div>

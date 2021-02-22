@@ -72,7 +72,7 @@ hr:not([size]) {
   height: 1px;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, .testimonial-block figure .blockquote-footer, h2, .h2, .testimonial-block figure .blockquote, .site-subtitle, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, .testimonial-block .testimonial-content figure .blockquote-footer, h2, .h2, .testimonial-block .testimonial-content figure .blockquote, .site-subtitle, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -88,20 +88,20 @@ h1, .h1 {
   }
 }
 
-h2, .h2, .testimonial-block figure .blockquote, .site-subtitle {
+h2, .h2, .testimonial-block .testimonial-content figure .blockquote, .site-subtitle {
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
-  h2, .h2, .testimonial-block figure .blockquote, .site-subtitle {
+  h2, .h2, .testimonial-block .testimonial-content figure .blockquote, .site-subtitle {
     font-size: 2rem;
   }
 }
 
-h3, .h3, .testimonial-block figure .blockquote-footer {
+h3, .h3, .testimonial-block .testimonial-content figure .blockquote-footer {
   font-size: calc(1.3rem + 0.6vw);
 }
 @media (min-width: 1200px) {
-  h3, .h3, .testimonial-block figure .blockquote-footer {
+  h3, .h3, .testimonial-block .testimonial-content figure .blockquote-footer {
     font-size: 1.75rem;
   }
 }
@@ -6077,7 +6077,7 @@ textarea.form-control-lg {
   display: inline-block !important;
 }
 
-.d-block {
+.d-block, .testimonial-block .testimonial-content {
   display: block !important;
 }
 
@@ -6317,7 +6317,7 @@ textarea.form-control-lg {
   width: 75% !important;
 }
 
-.w-100 {
+.w-100, .testimonial-block .testimonial-content {
   width: 100% !important;
 }
 
@@ -6349,7 +6349,7 @@ textarea.form-control-lg {
   height: 75% !important;
 }
 
-.h-100 {
+.h-100, .testimonial-block .testimonial-content {
   height: 100% !important;
 }
 
@@ -6679,7 +6679,7 @@ textarea.form-control-lg {
   margin-top: 1rem !important;
 }
 
-.mt-4, .testimonial-block figure .blockquote-footer, .component-content, ul {
+.mt-4, .testimonial-block .testimonial-content figure .blockquote-footer, .component-content, ul {
   margin-top: 1.5rem !important;
 }
 
@@ -6949,7 +6949,7 @@ textarea.form-control-lg {
   padding: 3rem !important;
 }
 
-.px-0 {
+.px-0, .testimonial-block {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
@@ -7137,7 +7137,7 @@ textarea.form-control-lg {
   font-style: normal !important;
 }
 
-.fw-light, .testimonial-block figure .blockquote, .testimonial-block figure .blockquote-footer {
+.fw-light, .testimonial-block .testimonial-content figure .blockquote, .testimonial-block .testimonial-content figure .blockquote-footer {
   font-weight: 300 !important;
 }
 
@@ -7205,7 +7205,7 @@ textarea.form-control-lg {
   color: #dc3545 !important;
 }
 
-.text-light, .testimonial-block figure .blockquote, .testimonial-block figure .blockquote-footer, .footer-block a, .footer-block, .card-codamotion {
+.text-light, .testimonial-block .testimonial-content figure .blockquote, .testimonial-block .testimonial-content figure .blockquote-footer, .footer-block a, .footer-block, .card-codamotion {
   color: #f8f9fa !important;
 }
 
@@ -8656,7 +8656,7 @@ textarea.form-control-lg {
     margin-left: 1rem !important;
   }
 
-  .ms-md-4, #main-logo, .testimonial-block figure, .secondary-column {
+  .ms-md-4, #main-logo, .testimonial-block .testimonial-content figure, .secondary-column {
     margin-left: 1.5rem !important;
   }
 
@@ -11519,6 +11519,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.bg-brand {
+  background-color: #0c50ce;
+}
+
 .bg-brand-gradient, .card-codamotion, .page-header, .footer-block {
   background: linear-gradient(to right, #00d0ff 0%, #0c50ce 50%, #6442ff 88%);
 }
@@ -11583,11 +11587,11 @@ textarea.form-control-lg {
   font-family: "Font Awesome 5 Free" !important;
 }
 
-h2, .h2, .testimonial-block figure .blockquote, .site-subtitle {
+h2, .h2, .testimonial-block .testimonial-content figure .blockquote, .site-subtitle {
   font-weight: 400;
 }
 
-h3, .h3, .testimonial-block figure .blockquote-footer {
+h3, .h3, .testimonial-block .testimonial-content figure .blockquote-footer {
   font-weight: 300;
 }
 
@@ -11634,11 +11638,11 @@ label {
   margin-top: 0;
 }
 
-.striped-background.text-light a, .testimonial-block figure .striped-background.blockquote a, .testimonial-block figure .striped-background.blockquote-footer a, .footer-block a.striped-background a, .striped-background.footer-block a, .striped-background.card-codamotion a, .light-links a {
+.striped-background.text-light a, .testimonial-block .testimonial-content figure .striped-background.blockquote a, .testimonial-block .testimonial-content figure .striped-background.blockquote-footer a, .footer-block a.striped-background a, .striped-background.footer-block a, .striped-background.card-codamotion a, .light-links a {
   color: white;
   font-weight: 500;
 }
-.striped-background.text-light a:hover, .testimonial-block figure .striped-background.blockquote a:hover, .testimonial-block figure .striped-background.blockquote-footer a:hover, .footer-block a.striped-background a:hover, .striped-background.footer-block a:hover, .striped-background.card-codamotion a:hover, .striped-background.text-light a:focus, .testimonial-block figure .striped-background.blockquote a:focus, .testimonial-block figure .striped-background.blockquote-footer a:focus, .footer-block a.striped-background a:focus, .striped-background.footer-block a:focus, .striped-background.card-codamotion a:focus, .striped-background.text-light a:active, .testimonial-block figure .striped-background.blockquote a:active, .testimonial-block figure .striped-background.blockquote-footer a:active, .footer-block a.striped-background a:active, .striped-background.footer-block a:active, .striped-background.card-codamotion a:active, .light-links a:hover, .light-links a:focus, .light-links a:active {
+.striped-background.text-light a:hover, .testimonial-block .testimonial-content figure .striped-background.blockquote a:hover, .testimonial-block .testimonial-content figure .striped-background.blockquote-footer a:hover, .footer-block a.striped-background a:hover, .striped-background.footer-block a:hover, .striped-background.card-codamotion a:hover, .striped-background.text-light a:focus, .testimonial-block .testimonial-content figure .striped-background.blockquote a:focus, .testimonial-block .testimonial-content figure .striped-background.blockquote-footer a:focus, .footer-block a.striped-background a:focus, .striped-background.footer-block a:focus, .striped-background.card-codamotion a:focus, .striped-background.text-light a:active, .testimonial-block .testimonial-content figure .striped-background.blockquote a:active, .testimonial-block .testimonial-content figure .striped-background.blockquote-footer a:active, .footer-block a.striped-background a:active, .striped-background.footer-block a:active, .striped-background.card-codamotion a:active, .light-links a:hover, .light-links a:focus, .light-links a:active {
   text-decoration: underline;
 }
 
@@ -11702,7 +11706,7 @@ label {
   border-top: 1px solid black;
 }
 
-.text-light .primary-column, .testimonial-block figure .blockquote .primary-column, .testimonial-block figure .blockquote-footer .primary-column, .card-codamotion .primary-column, .footer-block .primary-column {
+.text-light .primary-column, .testimonial-block .testimonial-content figure .blockquote .primary-column, .testimonial-block .testimonial-content figure .blockquote-footer .primary-column, .card-codamotion .primary-column, .footer-block .primary-column {
   border-color: #fff;
 }
 
@@ -11726,23 +11730,27 @@ label {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: darken;
-  background-color: #0c50ce;
 }
 
 .accordion-header {
   margin: 0 0 0 0;
 }
 
-.testimonial-block {
+.testimonial-image {
+  background-blend-mode: luminosity;
+}
+
+.testimonial-block .testimonial-content {
   padding: 8rem 2rem 5rem 2rem;
+  background: rgba(70, 95, 140, 0.5);
 }
 @media only screen and (max-width: 768px) {
-  .testimonial-block {
+  .testimonial-block .testimonial-content {
     padding-top: 4rem;
   }
 }
 @media only screen and (min-width: 768px) {
-  .testimonial-block figure {
+  .testimonial-block .testimonial-content figure {
     width: 60%;
   }
 }

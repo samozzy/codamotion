@@ -10,6 +10,9 @@ $coda-teal: #00d0ff;
 $coda-navy: #0c50ce;
 $coda-purple: #6442ff;
 $primary: $coda-navy;
+.bg-brand {
+	background-color: $coda-navy; 
+}
 .bg-brand-gradient {
 	background: linear-gradient(to right, $coda-teal 0%,$coda-navy 50%,$coda-purple 88%);
 }
@@ -196,7 +199,6 @@ ul {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-blend-mode: darken;
-	background-color: $coda-navy;
 }
 
 .accordion-header {
@@ -205,25 +207,34 @@ ul {
 .component-content {
 	@extend .mt-4, .mt-md-0;
 }
-.testimonial-block {
-	padding: 8rem 2rem 5rem 2rem;
-	@media only screen and (max-width: 768px) {
-		padding-top: 4rem;
-	}
 
-	figure {
-		@extend .ms-md-4;
-		@media only screen and (min-width: 768px){
-			width: 60%;
+.testimonial-image {
+	background-blend-mode: luminosity;
+}
+.testimonial-block {
+	@extend .px-0;
+	.testimonial-content {
+		padding: 8rem 2rem 5rem 2rem;
+		@extend .w-100, .h-100, .d-block;
+		background: rgba(70,95,140,0.5);
+
+		@media only screen and (max-width: 768px) {
+			padding-top: 4rem;
 		}
-		.blockquote, .blockquote-footer {
-			@extend .text-light, .fw-light;
-		}
-		.blockquote {
-			@extend .h2;
-		}
-		.blockquote-footer {
-			@extend .h3, .mt-4;
+		figure {
+			@extend .ms-md-4;
+			@media only screen and (min-width: 768px){
+				width: 60%;
+			}
+			.blockquote, .blockquote-footer {
+				@extend .text-light, .fw-light;
+			}
+			.blockquote {
+				@extend .h2;
+			}
+			.blockquote-footer {
+				@extend .h3, .mt-4;
+			}
 		}
 	}
 }
