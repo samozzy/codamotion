@@ -115,6 +115,7 @@ class HomeView(BaseView):
 			Page.objects.filter(featured=True),
 			ReasonsToChoose.objects.filter(featured=True),
 			CaseStudy.objects.filter(featured=True),
+			ProductType.objects.filter(featured=True),
 			Product.objects.filter(featured=True),
 			Component.objects.filter(featured=True),
 			Application.objects.filter(featured=True),
