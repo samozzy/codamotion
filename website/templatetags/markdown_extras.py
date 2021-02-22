@@ -5,8 +5,8 @@ import markdown as md
 
 register = template.Library()
 
-
 @register.filter()
 @stringfilter
 def markdown(value):
+	# Takes content in and returns markdownified content 
     return md.markdown(value, extensions=['markdown.extensions.fenced_code'])

@@ -188,7 +188,6 @@ class History(BaseModel):
 class ResearchApplication(BaseModel):
 	lead_text = models.CharField(max_length=300)
 	related_products = models.ManyToManyField(Product) 
-	#TODO: Can we limit the number of related products to 4?
 
 	def __str__(self):
 		return self.title 
@@ -242,12 +241,11 @@ class Page(models.Model):
 		'HIST': 'History',
 		'DISTR': 'Contact Distributors',
 	}
-	# Add the Product Types programmatically 
-	# TODO: Bring this back?
+	# Product Types can be added programmatically using the below:
+	# This is currently disabled as list_data is an experimental feature.
 	# for t in ProductType.objects.all():
 	# 	product_string = 'PR-' + t.name[0:3]
 	# 	model_queryset[product_string] = 'Product - ' + t.name 
-	# TODO: Work out if list data is actually staying at all... 
 
 	list_data_choices = []
 	for m in model_queryset:

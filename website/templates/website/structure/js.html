@@ -17,6 +17,7 @@
 		{% if form %}
 			<script>
 				$("#contact-form").submit(function(event) {
+					// Prevent form submission without ticking the Captcha 
 					var recaptcha = $("#g-recaptcha-response").val();
 					if (recaptcha === "") {
 						event.preventDefault();
