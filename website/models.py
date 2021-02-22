@@ -27,10 +27,13 @@ class BaseModel(models.Model):
 	has_image.boolean = True 
 
 	def get_image(self):
-		if self.image:
-			return self.image.url 
-		elif self.image_url:
-			return self.image_url 
+		if hasattr(self, 'image') or hasattr(self, 'image_url'):
+			if self.image: 
+				return self.image.url 
+			elif hasattr(self, 'image_url'):
+				return self.image_url 
+			else:
+				return None 
 		else:
 			return None 
 
@@ -80,9 +83,10 @@ class CaseStudy(BaseModel):
 
 class ProductType(models.Model):
 	class Meta:
-		ordering = ['name']
+		ordering = ['title']
 
-	name = models.CharField(max_length=50)
+	title = models.CharField(max_length=50)
+	featured = models.BooleanField(default=False)
 	slug = models.SlugField()
 	grid_list = models.BooleanField(default=False,help_text="Use a grid list at the top of the product list page")
 
@@ -91,11 +95,11 @@ class ProductType(models.Model):
 
 	def save(self, *args, **kwargs):
 		if not self.pk:
-			self.slug = slugify(self.name)
+			self.slug = slugify(self.title)
 		super(ProductType, self).save(*args, **kwargs)
 
 	def __str__(self):
-		return self.name 
+		return self.title 
 
 
 class Product(BaseModel):
