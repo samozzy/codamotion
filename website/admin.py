@@ -115,7 +115,7 @@ class ApplicationAdmin(admin.ModelAdmin):
 	formfield_overrides = {
 		models.ManyToManyField: {'widget': CheckboxSelectMultiple},
 	}
-	list_display = ['title','featured','order','has_image']
+	list_display = ['title','featured','order','has_image','reason_to_choose']
 	actions = [make_featured,remove_featured,set_order,move_up,move_down]
 
 class ApplicationInline(admin.TabularInline):
