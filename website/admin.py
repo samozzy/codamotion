@@ -66,7 +66,7 @@ class PageAdmin(admin.ModelAdmin):
 				'image_url',
 				'body_text',
 				'testimonial',
-				('menu', 'parent', 'page_children_html'),
+				'menu',
 				),
 			}),
 		# ('Layout Options', {
